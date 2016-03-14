@@ -81,6 +81,8 @@
 \usepackage{bbm}
 \usepackage{amssymb,amsmath}
 \usepackage{soul}
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -360,7 +362,9 @@ Mapping~1: &\Sigma_{reader} \rightarrow \{ (loc, range, flag) | loc \in R^2 \wed
 \small{A mapping of readers to the cells that their activation ranges intersect is introduced:}
 \pause
 \begin{equation}
+\mathnormal{
 Mapping~2: \Sigma_{reader} \rightarrow 2^C
+}
 \end{equation}
 
 \end{frame}
