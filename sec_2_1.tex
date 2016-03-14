@@ -442,3 +442,50 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
 \end{columns}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{On-line Tracking}
+
+\small{\textrm{Given $\mathnormal{\langle readerID, tagID, t, flag \rangle}$. On-line tracking is intended to infer the trajectory in the time interval between the last observation and the current time or even in the future.}}
+\\~\\
+
+\begin{columns}[c]
+
+  \column{.35\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-1-13.pdf}
+  \end{figure}
+
+
+  \column{.65\textwidth}
+  \footnotesize{
+    \begin{itemize}
+      \item $\mathnormal{flag = START}$, object $\mathnormal{tagID}$ is in the activation range of $\mathnormal{readerID}$ at time $\mathnormal{t}$.
+      \item $\mathnormal{flag = END}$, the object is beyond the activation range of $\mathnormal{readerID}$ and not in the range of any other readers.
+				\begin{itemize}
+					\scriptsize{
+					\item constrains by a circle determined by the most recent observing reader's range.
+					\item further refined if an object has recently been detected by a partitioning reader pair.
+					}
+				\end{itemize}
+    \end{itemize}
+  }
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Research Directions}
+
+\begin{itemize}
+	\item Extend the deployment graphs to accommodate RFID readers with large and overlapping activation ranges. \\~\\
+	\item Using multiple deployment graphs for several positioning technologies. \\~\\
+	\item To enhance on-line tracking. Historical data $\rightarrow$ association rules $\rightarrow$ better prediction.
+\end{itemize}
+
+\end{frame}
