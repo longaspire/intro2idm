@@ -1,0 +1,38 @@
+\begin{frame}
+\frametitle{About This Work...}
+
+\emph{Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}.~\cite{DBLP:conf/cikm/YangLJ09} \\
+B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
+
+\begin{itemize}
+  \item Published in \emph{CIKM' 2009}.
+  \item Application: continuously monitor indoor moving objects for space use analysis or security purposes.
+  \item An incremental, query-aware continuous range query processing technique for objects moving in indoor space.
+  \item Use maxmum-speed constraint on object movement to refine the uncertain results.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Motivation}
+
+\begin{itemize}
+  \item People spend much time in indoor spaces.
+  \\~\\
+  \item Indoor spaces are becoming increasingly larger and complex.
+    \begin{itemize}
+      \item E.g., London Underground, 268 stations, 408 kilometers of network, +4 million daily passegers.
+    \end{itemize}
+  \\~\\
+  \item Indoor monitoring of people can help support.
+    \begin{itemize}
+      \item space use analysis
+      \item security purposes
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
