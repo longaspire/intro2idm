@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  15 MAR 2016 22:36
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  16 MAR 2016 17:08
 entering extended mode
 **E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
 (E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
@@ -785,7 +785,7 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/mat
 )
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-2/2-2-1.pdf, id=414, 235.80286pt x 204.38759pt>
+<figures/2-2/2-2-1.pdf, id=435, 235.80286pt x 204.38759pt>
 File: figures/2-2/2-2-1.pdf Graphic file (type pdf)
  <use figures/2-2/2-2-1.pdf>
 Package pdftex.def Info: figures/2-2/2-2-1.pdf used on input line 111.
@@ -793,7 +793,7 @@ Package pdftex.def Info: figures/2-2/2-2-1.pdf used on input line 111.
 
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-2/2-2-2.pdf, id=415, 211.20004pt x 123.38998pt>
+<figures/2-2/2-2-2.pdf, id=436, 211.20004pt x 123.38998pt>
 File: figures/2-2/2-2-2.pdf Graphic file (type pdf)
  <use figures/2-2/2-2-2.pdf>
 Package pdftex.def Info: figures/2-2/2-2-2.pdf used on input line 111.
@@ -814,7 +814,7 @@ Package pdftex.def Info: figures/2-2/2-2-2.pdf used on input line 111.
 ]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-2/2-2-3.pdf, id=623, 206.28036pt x 79.10553pt>
+<figures/2-2/2-2-3.pdf, id=648, 206.28036pt x 79.10553pt>
 File: figures/2-2/2-2-3.pdf Graphic file (type pdf)
  <use figures/2-2/2-2-3.pdf>
 Package pdftex.def Info: figures/2-2/2-2-3.pdf used on input line 138.
@@ -884,7 +884,7 @@ Overfull \vbox (7.79076pt too high) detected at line 175
 ]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-4.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-2/2-2-4.pdf, id=1129, 244.8869pt x 258.1344pt>
+<figures/2-2/2-2-4.pdf, id=1176, 244.8869pt x 258.1344pt>
 File: figures/2-2/2-2-4.pdf Graphic file (type pdf)
  <use figures/2-2/2-2-4.pdf>
 Package pdftex.def Info: figures/2-2/2-2-4.pdf used on input line 201.
@@ -924,36 +924,140 @@ Package pdftex.def Info: figures/2-2/2-2-4.pdf used on input line 201.
 ]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-5.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-2/2-2-5.pdf, id=1424, 124.14581pt x 143.82834pt>
+<figures/2-2/2-2-5.pdf, id=1483, 124.14581pt x 143.82834pt>
 File: figures/2-2/2-2-5.pdf Graphic file (type pdf)
  <use figures/2-2/2-2-5.pdf>
-Package pdftex.def Info: figures/2-2/2-2-5.pdf used on input line 253.
-(pdftex.def)             Requested size: 122.91406pt x 142.40585pt.
+Package pdftex.def Info: figures/2-2/2-2-5.pdf used on input line 261.
+(pdftex.def)             Requested size: 92.1879pt x 106.80658pt.
  [28
 
  <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-5.pdf>]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-6.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-2/2-2-6.pdf, id=1507, 242.6154pt x 133.23074pt>
+<figures/2-2/2-2-6.pdf, id=1567, 242.6154pt x 133.23074pt>
 File: figures/2-2/2-2-6.pdf Graphic file (type pdf)
  <use figures/2-2/2-2-6.pdf>
-Package pdftex.def Info: figures/2-2/2-2-6.pdf used on input line 272.
+Package pdftex.def Info: figures/2-2/2-2-6.pdf used on input line 280.
 (pdftex.def)             Requested size: 208.95485pt x 114.74696pt.
  [29
 
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-6.pdf>]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [30
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-6.pdf>]
+
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-7.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-2/2-2-7.pdf, id=1650, 246.31111pt x 241.39485pt>
+File: figures/2-2/2-2-7.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-7.pdf>
+Package pdftex.def Info: figures/2-2/2-2-7.pdf used on input line 307.
+(pdftex.def)             Requested size: 147.49782pt x 144.56177pt.
+ [30
+
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-7.pdf>]
+File: figures/2-2/2-2-7.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-7.pdf>
+Package pdftex.def Info: figures/2-2/2-2-7.pdf used on input line 307.
+(pdftex.def)             Requested size: 147.49782pt x 144.56177pt.
+ [31
+
+]
+File: figures/2-2/2-2-7.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-7.pdf>
+Package pdftex.def Info: figures/2-2/2-2-7.pdf used on input line 307.
+(pdftex.def)             Requested size: 147.49782pt x 144.56177pt.
+ [32
+
+]
+File: figures/2-2/2-2-7.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-7.pdf>
+Package pdftex.def Info: figures/2-2/2-2-7.pdf used on input line 307.
+(pdftex.def)             Requested size: 147.49782pt x 144.56177pt.
+ [33
+
+]
+File: figures/2-2/2-2-7.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-7.pdf>
+Package pdftex.def Info: figures/2-2/2-2-7.pdf used on input line 307.
+(pdftex.def)             Requested size: 147.49782pt x 144.56177pt.
+ [34
+
+]
+File: figures/2-2/2-2-7.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-7.pdf>
+Package pdftex.def Info: figures/2-2/2-2-7.pdf used on input line 307.
+(pdftex.def)             Requested size: 147.49782pt x 144.56177pt.
+ [35
+
+]
+
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-8.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-2/2-2-8.pdf, id=1946, 246.80276pt x 176.4984pt>
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [36
+
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-2/2-2-8.pdf>]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [37
+
+]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [38
+
+]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [39
+
+]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [40
+
+]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [41
+
+]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [42
+
+]
+File: figures/2-2/2-2-8.pdf Graphic file (type pdf)
+ <use figures/2-2/2-2-8.pdf>
+Package pdftex.def Info: figures/2-2/2-2-8.pdf used on input line 337.
+(pdftex.def)             Requested size: 147.49782pt x 105.4824pt.
+ [43
+
+]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [44
 
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [31
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [45
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [32
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [46
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_5.tex [33
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_5.tex [47
 
 
- <D:/Program Files (x86)/CTEX/UserData/tex/latex/beamer/base/art/beamericonarticle.pdf>] [34
+ <D:/Program Files (x86)/CTEX/UserData/tex/latex/beamer/base/art/beamericonarticle.pdf>] [48
 
-]) [35
+]) [49
 
 
 ]
@@ -974,19 +1078,19 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 17075 strings out of 495354
- 332519 string characters out of 3182739
- 414514 words of memory out of 3000000
- 19697 multiletter control sequences out of 15000+200000
+ 17117 strings out of 495354
+ 333041 string characters out of 3182739
+ 418945 words of memory out of 3000000
+ 19709 multiletter control sequences out of 15000+200000
  19884 words of font info for 71 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,20n,64p,438b,998s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.
 pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmti8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intro2idm.pdf (35 pages, 1396216 bytes).
+Output written on intro2idm.pdf (49 pages, 1613435 bytes).
 PDF statistics:
- 1950 PDF objects out of 2073 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2713 PDF objects out of 2984 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
