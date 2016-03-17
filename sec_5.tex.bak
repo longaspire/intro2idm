@@ -36,22 +36,17 @@ B.~Yang, H.~Lu, and C.~S. Jensen.
 
 \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
 \footnotesize{
-
-\bibitem{DBLP:conf/icde/LuYCJ11}
-H.~Lu, B.~Yang, and C.~S. Jensen.
-\newblock Spatio-temporal Joins on Symbolic Indoor Tracking Data.
-\newblock In {\em {ICDE}}, pp. 816--827, 2011.
-
 \bibitem{DBLP:conf/icde/LuCJ12}
 H.~Lu, X.~Cao, and C.~S. Jensen.
 \newblock A foundation for efficient indoor distance-aware query processing.
 \newblock In {\em ICDE}, pp. 438--449, 2012.
 
-\bibitem{DBLP:conf/icde/XieLP13}
-X.~Xie, H.~Lu, and T.~B. Pedersen.
-\newblock Efficient distance-aware query evaluation on indoor moving objects.
-\newblock In {\em ICDE}, pp. 434--445, 2013.
 
+
+\bibitem{DBLP:conf/icde/LuYCJ11}
+H.~Lu, B.~Yang, and C.~S. Jensen.
+\newblock Spatio-temporal Joins on Symbolic Indoor Tracking Data.
+\newblock In {\em {ICDE}}, pp. 816--827, 2011.
 }
 \end{thebibliography}
 

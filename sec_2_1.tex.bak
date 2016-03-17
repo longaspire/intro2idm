@@ -344,7 +344,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
       \item If two consecutive reading sequences are \emph{contiguous}, they should stem from a partitioning pair, which map to an edge
       \item Otherwise, should come from either a single $\mathnormal{PRE}$ or a $\mathnormal{PAR}$ reader
       \item A $\mathnormal{PAR}$ is replaced by the set of corresponding edges according to $\mathnormal{G_{RFID}.{l_e}^{-1}}$
-      \item A $\mathnormal{PRE}$ always corresponds to one or several cells according to $\mathnormal{Mapping~2}$
+      \item A $\mathnormal{PRE}$ always coresponds to one or several cells according to $\mathnormal{Mapping~2}$
     \end{itemize}
   }
   \end{columns}
