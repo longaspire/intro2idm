@@ -4,9 +4,9 @@
 \beamer@subsectionintoc {2}{1}{2.1 Graph Model Based Indoor Tracking}{6}{0}{2}
 \beamer@subsectionintoc {2}{2}{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}{6}{0}{2}
 \beamer@subsectionintoc {2}{3}{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space}{6}{0}{2}
-\beamer@subsectionintoc {2}{4}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{8}{0}{2}
-\beamer@subsectionintoc {2}{5}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}{8}{0}{2}
-\beamer@subsectionintoc {2}{6}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}{8}{0}{2}
-\beamer@sectionintoc {3}{3. Indoor Data Cleansing}{8}{0}{3}
-\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{9}{0}{4}
-\beamer@sectionintoc {5}{5. Appendix}{10}{0}{5}
+\beamer@subsectionintoc {2}{4}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{19}{0}{2}
+\beamer@subsectionintoc {2}{5}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}{19}{0}{2}
+\beamer@subsectionintoc {2}{6}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}{19}{0}{2}
+\beamer@sectionintoc {3}{3. Indoor Data Cleansing}{19}{0}{3}
+\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{20}{0}{4}
+\beamer@sectionintoc {5}{5. Appendix}{21}{0}{5}

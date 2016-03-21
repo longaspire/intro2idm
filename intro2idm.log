@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  17 MAR 2016 22:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  21 MAR 2016 21:46
 entering extended mode
 **E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
 (E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
@@ -778,35 +778,87 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/mat
 ) [6
 
 
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
 ]
 
-! LaTeX Error: There's no line here to end.
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-3/2-3-1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-3/2-3-1.pdf, id=524, 200.64261pt x 172.2947pt>
+File: figures/2-3/2-3-1.pdf Graphic file (type pdf)
+ <use figures/2-3/2-3-1.pdf>
+Package pdftex.def Info: figures/2-3/2-3-1.pdf used on input line 81.
+(pdftex.def)             Requested size: 159.79204pt x 137.21547pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 \end{frame}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Overfull \hbox (0.53865pt too wide) in paragraph at lines 81--81
+$[]$\OT1/cmss/m/n/8 .  
+ []
 
-[7
+[13
 
-]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [8
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-3/2-3-1.pdf>]
+
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-3/2-3-2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-3/2-3-2.pdf, id=619, 248.67455pt x 142.89786pt>
+File: figures/2-3/2-3-2.pdf Graphic file (type pdf)
+ <use figures/2-3/2-3-2.pdf>
+Package pdftex.def Info: figures/2-3/2-3-2.pdf used on input line 113.
+(pdftex.def)             Requested size: 147.49782pt x 84.75816pt.
+ [14
+
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-3/2-3-2.pdf>]
+
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-3/2-3-3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-3/2-3-3.pdf, id=727, 246.29324pt x 114.49576pt>
+File: figures/2-3/2-3-3.pdf Graphic file (type pdf)
+ <use figures/2-3/2-3-3.pdf>
+Package pdftex.def Info: figures/2-3/2-3-3.pdf used on input line 147.
+(pdftex.def)             Requested size: 147.49782pt x 68.57043pt.
+ [15
+
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-3/2-3-3.pdf>]
+File: figures/2-3/2-3-3.pdf Graphic file (type pdf)
+ <use figures/2-3/2-3-3.pdf>
+Package pdftex.def Info: figures/2-3/2-3-3.pdf used on input line 147.
+(pdftex.def)             Requested size: 147.49782pt x 68.57043pt.
+ [16
+
+]
+File: figures/2-3/2-3-3.pdf Graphic file (type pdf)
+ <use figures/2-3/2-3-3.pdf>
+Package pdftex.def Info: figures/2-3/2-3-3.pdf used on input line 147.
+(pdftex.def)             Requested size: 147.49782pt x 68.57043pt.
+ [17
+
+]
+File: figures/2-3/2-3-3.pdf Graphic file (type pdf)
+ <use figures/2-3/2-3-3.pdf>
+Package pdftex.def Info: figures/2-3/2-3-3.pdf used on input line 147.
+(pdftex.def)             Requested size: 147.49782pt x 68.57043pt.
+ [18
+
+]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [19
 
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [9
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [20
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [10
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [21
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_5.tex [11
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_5.tex [22
 
 
- <D:/Program Files (x86)/CTEX/UserData/tex/latex/beamer/base/art/beamericonarticle.pdf>] [12
+ <D:/Program Files (x86)/CTEX/UserData/tex/latex/beamer/base/art/beamericonarticle.pdf>] [23
 
-]) [13
+]) [24
 
 
 ]
@@ -827,17 +879,19 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16923 strings out of 495354
- 329869 string characters out of 3182739
- 392963 words of memory out of 3000000
- 19603 multiletter control sequences out of 15000+200000
- 15873 words of font info for 57 fonts, out of 3000000 for 9000
+ 17012 strings out of 495354
+ 331455 string characters out of 3182739
+ 403072 words of memory out of 3000000
+ 19659 multiletter control sequences out of 15000+200000
+ 18419 words of font info for 66 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,20n,64p,437b,757s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb>
-Output written on intro2idm.pdf (13 pages, 209848 bytes).
+ 56i,20n,64p,437b,998s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.
+pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Prog
+ram Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on intro2idm.pdf (24 pages, 1100954 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1249 PDF objects out of 1440 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
