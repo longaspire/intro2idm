@@ -83,6 +83,21 @@
 \usepackage{soul}
 \usepackage{sansmathaccent}
 \pdfmapfile{+sansmathaccent.map}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\hypersetup{
+bookmarksdepth=3,
+bookmarksnumbered=true,
+bookmarksopen=true,
+colorlinks,
+citecolor=blue,
+linkcolor=red
+}
+
+\newcommand{\conceptbf}[1]{{\bf{\textrm{\textcolor[rgb]{0,0,0.9}{#1}}}}}
+\newcommand{\fsize}[1]{\footnotesize{#1}}
+\newcommand{\ssize}[1]{\scriptsize{#1}}
+\newcommand{\mn}[1]{\mathnormal{#1}}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -126,7 +141,8 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 \section{1. Outlines} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-\include{sec_1}
+%\include{sec_1}
+%\include{sec_1_ref}
 
 %------------------------------------------------
 \section{2. Indoor Space Models \& Applications} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
@@ -134,15 +150,18 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 
 \subsection{2.1 Graph Model Based Indoor Tracking} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-%\include{sec_2_1}
+% \include{sec_2_1}
+% \include{sec_2_1_ref}
 
 \subsection{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-%\include{sec_2_2}
+% \include{sec_2_2}
+% \include{sec_2_2_ref}
 
 \subsection{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
 \include{sec_2_3}
+\include{sec_2_3_ref}
 
 \subsection{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
@@ -168,7 +187,7 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 \section{5. Appendix} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-\include{sec_5}
+%\include{sec_5}
 
 
 %----------------------------------------------------------------------------------------

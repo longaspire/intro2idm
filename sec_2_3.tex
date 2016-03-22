@@ -6,7 +6,7 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 
 \begin{itemize}
   \item Published in year 2010 at the \emph{EDBT} conference.
-  \item \emph{Minimal Indoor Walking Distance}(MIWD) along with algorithms and data structures are proposed for distance computing and storage.
+  \item \conceptbf{Minimal Indoor Walking Distance}(MIWD) along with algorithms and data structures are proposed for distance computing and storage.
   \item Effective object indexing structures, also capture the uncertainty of object locations.
   \item On this foundation, Probabilistic threshold $k$NN (PT$k$NN) query is studied.
 \end{itemize}
@@ -18,7 +18,7 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 \frametitle{Motivation}
 
 \begin{itemize}
-  \item Indoor positioning makes it possible to support interesting queries over large populations of moving objects.
+  \item Indoor positioning makes it possible to support interesting queries over large populations of moving objects.\cite{jensen2010indoor}
     \begin{itemize}
       \item shopping mall, airports, office buildings
       \item $k$NN queries over indoor moving objects enables the detection of approaching potential threats at sensitive locations in a subway system
@@ -37,21 +37,21 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 \begin{frame}
 \frametitle{Minimal Indoor Walking Distance}
 
-\emph{Minimal Indoor Walking Distance}(MIWD) is used as the distance metric in indoor spaces.
+\conceptbf{Minimal Indoor Walking Distance}(MIWD) is used as the distance metric in indoor spaces.
 \pause
 
-The mapping $\mathnormal{Rooms}$ determines the room of an indoor position:
+The mapping $\mn{Rooms}$ determines the room of an indoor position:
 \pause
 \begin{equation}
-\mathnormal{Rooms: positions \rightarrow \Sigma_{rooms}}
+\mn{Rooms: positions \rightarrow \Sigma_{rooms}}
 \end{equation}
 
 \pause
 
-The mapping $\mathnormal{Doors}$ maps a room to the doors that connect the room to an adjacent room:
+The mapping $\mn{Doors}$ maps a room to the doors that connect the room to an adjacent room:
 \pause
 \begin{equation}
-\mathnormal{Doors: \Sigma_{rooms} \rightarrow 2^{\Sigma_{doors}}}
+\mn{Doors: \Sigma_{rooms} \rightarrow 2^{\Sigma_{doors}}}
 \end{equation}
 
 \end{frame}
@@ -69,10 +69,10 @@ The mapping $\mathnormal{Doors}$ maps a room to the doors that connect the room 
 
   \column{.48\textwidth}
   \begin{itemize}
-    \scriptsize{
-    \item intra-room obstructed distance, termed as $\mathnormal{d_o}$. E.g., $\mathnormal{d_o(p_2, p_3) = |p_2p_3|}$ and $\mathnormal{d_o(p_4, p_5) = |p_4c|+|cp_5|}$.
-    \item if in different rooms, it should take into account the doors connecting the rooms. E.g., $\mathnormal{d_{MIN}(p_1, p_2) = |p_1d_{32}| + |d_{17}p_9|}$.
-    \item if there exist several paths, the correct path should be the shortest one. E.g., $\mathnormal{d_{MIN}(p_6, p_7) = |p_6d_{12}| + |d_{12}p_7|}$ $\mathnormal{\neq |p_6d_{15}| + |d_{15}d_{13}| + |d_{13}p_7|}$.
+    \ssize{
+    \item intra-room obstructed distance, termed as $\mn{d_o}$. E.g., $\mn{d_o(p_2, p_3) = |p_2p_3|}$ and $\mn{d_o(p_4, p_5) = |p_4c|+|cp_5|}$.
+    \item if in different rooms, it should take into account the doors connecting the rooms. E.g., $\mn{d_{MIN}(p_1, p_2) = |p_1d_{32}| + |d_{17}p_9|}$.
+    \item if there exist several paths, the correct path should be the shortest one. E.g., $\mn{d_{MIN}(p_6, p_7) = |p_6d_{12}| + |d_{12}p_7|}$ $\mn{\neq |p_6d_{15}| + |d_{15}d_{13}| + |d_{13}p_7|}$.
     }
   \end{itemize}
 
@@ -85,7 +85,7 @@ The mapping $\mathnormal{Doors}$ maps a room to the doors that connect the room 
 \begin{frame}
 \frametitle{Minimal Indoor Walking Distance}
 
-\emph{Doors Graph} is capable of retrieving the connecting doors between two rooms, which is convenient for computing MIWD.
+\conceptbf{Doors Graph} is capable of retrieving the connecting doors between two rooms, which is convenient for computing MIWD.
 
 \begin{columns}[c]
 
@@ -97,12 +97,12 @@ The mapping $\mathnormal{Doors}$ maps a room to the doors that connect the room 
   \column{.52\textwidth}
     \begin{block}{Doors Graph}
       \textrm{
-      \footnotesize{
+      \fsize{
       \begin{itemize}
-        \item $\mathnormal{G_{d} = \{ D, E, l_{weight} \}}$
-        \item $\mathnormal{D = \Sigma_{doors}}$ is the set of the vertices
-        \item $\mathnormal{E}$: An edge $\mathnormal{\{ d_i, d_j \}}$ exists if a room $\mathnormal{rm}$ exists in $\mathnormal{\Sigma_{rooms}}$ such that $\mathnormal{\{ d_i, d_j \} \subseteq Doors(rm)}$
-        \item $\mathnormal{l_{weight}: E \rightarrow R}$ assigns to an edge the obstructed distance between the two doors as $\mathnormal{d_o(d_i, d_j)}$
+        \item $\mn{G_{d} = \{ D, E, l_{weight} \}}$
+        \item $\mn{D = \Sigma_{doors}}$ is the set of the vertices
+        \item $\mn{E}$: An edge $\mn{\{ d_i, d_j \}}$ exists if a room $\mn{rm}$ exists in $\mn{\Sigma_{rooms}}$ such that $\mn{\{ d_i, d_j \} \subseteq Doors(rm)}$
+        \item $\mn{l_{weight}: E \rightarrow R}$ assigns to an edge the obstructed distance between the two doors as $\mn{d_o(d_i, d_j)}$
       \end{itemize}
       }
       }
@@ -117,19 +117,19 @@ The mapping $\mathnormal{Doors}$ maps a room to the doors that connect the room 
 \begin{frame}
 \frametitle{Minimal Indoor Walking Distance}
 
-All door-to-door shortest path distances can be computed and recorded in a hash table $\mathrm{D2D}$ according to the Doors Graph.
+All \conceptbf{door-to-door shortest path distances} can be computed and recorded in a hash table $\mathrm{D2D}$ according to the Doors Graph.
 \pause
 \begin{equation}
-  \mathrm{D2D}: \mathnormal{ \{ (d_p, d_j) \} \rightarrow R, ~~d_p, d_q \in \Sigma_{doors} }.
+  \mathrm{D2D}: \mn{ \{ (d_p, d_j) \} \rightarrow R, ~~d_p, d_q \in \Sigma_{doors} }.
 \end{equation}
 \pause
-Consequently, for two positions $\mathnormal{p}$ and $\mathnormal{q}$ in different rooms.
+Consequently, for two positions $\mn{p}$ and $\mn{q}$ in different rooms.
 \pause
 \begin{equation}
-  \mathnormal{d_{MIN}(d_p, d_q) = d_o(p, d_p) + \mathrm{D2D}(d_p, d_q) + d_o(d_q, q)}
+  \mn{d_{MIN}(d_p, d_q) = d_o(p, d_p) + \mathrm{D2D}(d_p, d_q) + d_o(d_q, q)}
 \end{equation}
-where $\mathnormal{d_p(d_q)}$ ranges over all doors of room $\mathnormal{p(q)}$.
-
+where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
+\pause
 \begin{columns}[c]
 
   \column{.48\textwidth}
@@ -138,10 +138,10 @@ where $\mathnormal{d_p(d_q)}$ ranges over all doors of room $\mathnormal{p(q)}$.
     \end{figure}
 
   \column{.52\textwidth}
-    \scriptsize{
+    \ssize{
     it is possible to adapt this notion of distance to accommodate other semantics. For example, a person might prefer a longer indoor path that passes as few doos as possible.
     }
-    
+
 \end{columns}
 
 \end{frame}

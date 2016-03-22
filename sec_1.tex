@@ -1,10 +1,110 @@
+\subsection{1.1 At the Beginning} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+%------------------------------------------------
+%------------------------------------------------
+
 \begin{frame}
 \frametitle{Aims}
+
 \begin{itemize}
-\item To give a brief review introduction to \emph{indoor data management techniques}.
-\\~\\
-\item To review a series of works in this field, including their proposed \emph{models}, \emph{indexes} and \emph{algorithms}.
-\\~\\
-\item To discuss how to bring those advanced theoretical contents into practice.
+  \item To give a brief review introduction to \emph{indoor data management techniques}. \\~\\
+  \item To review a series of works in this field, including their proposed \emph{models}, \emph{indexes} and \emph{algorithms}. \\~\\
+  \item To discuss how to bring those advanced theoretical contents into practice.
 \end{itemize}
+
+\end{frame}
+
+\subsection{1.2 A New Data Management Frontier} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+%------------------------------------------------
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Great Indoors}
+
+\begin{itemize}
+  \item Research on data management with an outdoor setting provides part of an enabling foundation for growing LBS industry.
+    \begin{itemize}
+      \item objects may move in \emph{Euclidean space} (possibly constrained).
+      \item or some form of spatial network.
+      \item GPS or GPS-like positioning is assumed explicitly or implicitly.
+    \end{itemize}
+  \item People lead large parts of their lives in indoor spaces.
+    \begin{itemize}
+      \item London Heathrow Airport, ~180,000 passengers daily.
+      \item Tokyo Subway, 8.7 million passenger rides daily in 2008.
+      \item ...
+    \end{itemize}
+    \item Indoor differs from outdoor in important ways, thus calls for new research.
+\end{itemize}
+
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Indoor Vs. Outdoor}
+
+\begin{itemize}
+  \fsize{
+  \item To provide a wide range of indoor location-based services akin to those enabled by GPS-based positioning in outdoor settings.
+  \item Symbolic models rather than geometric models are often used for modeling indoor spaces~\cite{becker2005location}.
+    \begin{itemize}
+      \ssize{
+      \item indoor entities like rooms and hallways enable as well as constrain movement
+      \item uses may be positioned in terms of the discrete indoor entities rather than use coordinates (lat, lon)
+      \item conventional Euclidean distance is not generally applicable in indoor spaces
+      \item indoor space can be modeled using a graph model to indicate accessibility between locations
+      }
+    \end{itemize}
+  \item Proximity-based indoor positioning differs fundamentally from GPS-like positioning
+    \begin{itemize}
+      \ssize{
+      \item proximity analysis~\cite{hightower2001location} are unable to report velocities or accurate locations
+      \item an object is detected when it enters the activation range of a positioning device
+      \item deployment graph is created that captures the deployment of positioning devices
+      }
+    \end{itemize}
+  }
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Example Ongoing Research}
+
+The goal of \conceptbf{indoor tracking} is to capture the position of an object at any time in time. By exploiting the floor plan, the deployment graph, and maximum speeds limit, it is possible to minimize the posiible region(s) an object can be at a particular time.\\~\\
+
+Due to the discrete nature of indoor space, hashing may be applied for \conceptbf{indoor indexing}.
+\begin{itemize}
+  \ssize{
+  \item Map devices to the active objects in their ranges
+  \item Map cells to the deterministic objects they contain
+  \item Map cells to the non-deterministic objects they contain
+  \item Map objects to the cell or cells they are or can be located in
+  }
+\end{itemize}
+It is interesting to extend the R-tree to index large volumes of historical indoor tracking data.
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Research Directions}
+
+\begin{enumerate}
+  \fsize{
+  \item to integrate different types of positioning technologies in order to improve positioning accuracy
+  \item to integrate with outdoor positioning to enable services that cross the indoor/outdoor boundary
+  \item to accommodate distances in indoor models that enables distance-aware queries for security and social-network applications
+  \item to mine patterns or association rules on large volumes of real tracking data
+  \item to consider more advanced models of object movement, e.g., probabilistic analysis
+  \item to develop benchmarks for indoor moving object data management
+  }
+\end{enumerate}
+
+~\\
+\hfill \ssize{\textit{\textrm{Brought up by Christian S. Jensen and Hua Lu in year 2010~\cite{jensen2010indoor}}}}.
+
 \end{frame}

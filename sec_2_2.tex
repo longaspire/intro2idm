@@ -40,18 +40,18 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 \frametitle{Preliminaries: Indoors vs. Outdoors}
 
 \begin{itemize}
-  \item Modeling of indoor spaces do not assume
+  \item Modeling of indoor spaces do not assume~\cite{jensen2010indoor}
     \begin{itemize}
       \item Euclidean space. (since obstacles render movement more constrained)
       \item Spatial network. (since indoor movement is less constrained than movements in polylines)
     \end{itemize}
 
-  \item Instead indoor spaces are characterized by entities.
+  \item Instead indoor spaces are characterized by entities~\cite{DBLP:conf/mdm/JensenLY09}.
     \begin{itemize}
       \item Doors, rooms, hallways, staircase, etc.
     \end{itemize}
 
-  \item \textbf{Symbolic models} are more suitable.
+  \item \conceptbf{Symbolic models} are more suitable~\cite{becker2005location}.
 
   \item \emph{GPS} and \emph{cellular tracking} do not work indoors.
 
@@ -69,13 +69,13 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 
   \column{.57\textwidth}
   \begin{itemize}
-    \footnotesize{
+    \fsize{
     %\item More advanced compared to \emph{RFID Deployment Graph}.
     \item Two types of positioning devices
       \begin{itemize}
-        \scriptsize{
-        \item Partitioning Device -- \emph{undirected} (\textbf{UP}), e.g., $\mathnormal{d_{21}}$ -- \emph{directed} (\textbf{DP}), e.g., $\mathnormal{d_{11}}$ and $\mathnormal{d_{11'}}$
-        \item Presence Device -- (\textbf{PR})
+        \ssize{
+        \item Partitioning Device -- \emph{undirected} (\conceptbf{UP}), e.g., $\mn{d_{21}}$ -- \emph{directed} (\conceptbf{DP}), e.g., $\mn{d_{11}}$ and $\mn{d_{11'}}$
+        \item Presence Device -- (\conceptbf{PR})
         }
       \end{itemize}
     \item Note an indoor space is partitioned into \emph{activation ranges} and \emph{cells}
@@ -84,12 +84,12 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
   \begin{block}{Deployment Graph}
     \textrm{
     \begin{itemize}
-      \scriptsize{
-      \item $\mathnormal{G = \{C, E, \Sigma_{devices}, l_E\}}$
-      \item $\mathnormal{C}$: the set of cells
-      \item $\mathnormal{E}$: the set of edges, $\mathnormal{\{ c_i, c_j \}}$ where $\mathnormal{c_i, c_j \in C}$
-      \item $\mathnormal{\Sigma_{devices}}$: a mapping from $\mathnormal{deviceID}$ to activation range and type
-      \item $\mathnormal{l_E}$ maps an edge to a set of positioning devices, i.e., $\mathnormal{E \rightarrow 2^{\Sigma_{devices}}}$
+      \ssize{
+      \item $\mn{G = \{C, E, \Sigma_{devices}, l_E\}}$
+      \item $\mn{C}$: the set of cells
+      \item $\mn{E}$: the set of edges, $\mn{\{ c_i, c_j \}}$ where $\mn{c_i, c_j \in C}$
+      \item $\mn{\Sigma_{devices}}$: a mapping from $\mn{deviceID}$ to activation range and type
+      \item $\mn{l_E}$ maps an edge to a set of positioning devices, i.e., $\mn{E \rightarrow 2^{\Sigma_{devices}}}$
       }
     \end{itemize}
     }
@@ -124,12 +124,12 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
   \vspace{-10pt}
   %\column{.43\textwidth}
   \begin{itemize}
-    \item An object is in an \textbf{active state} when it is inside the activation range of a positioning device.
-    \item Otherwise the object is in an \textbf{inactive state}
+    \item An object is in an \conceptbf{active state} when it is inside the activation range of a positioning device.
+    \item Otherwise the object is in an \conceptbf{inactive state}
     \item When an object is in the inactive state it is
       \begin{itemize}
-        \item \textbf{nondeterministic} if it can be in more than one cell
-        \item \textbf{deterministic} if it is in one specific cell
+        \item \conceptbf{nondeterministic} if it can be in more than one cell
+        \item \conceptbf{deterministic} if it is in one specific cell
       \end{itemize}
   \end{itemize}
 
@@ -142,32 +142,32 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 \begin{frame}
 \frametitle{Indexing Indoor Moving Objects}
 
-\textbf{The proposed indexing scheme uses 4 hash tables}
+\conceptbf{The proposed indexing scheme uses 4 hash tables}
 \\~\\
 \pause
 
-\footnotesize{
+\fsize{
 \emph{Device Hash Table(DHT)} maps each device to a set of active objects:
 \pause
-$$\mathnormal{DHT[deviceID] = O_A;~deviceID \in \Sigma_{devices}, O_A \subseteq O_{indoor}}$$
+$$\mn{DHT[deviceID] = O_A;~deviceID \in \Sigma_{devices}, O_A \subseteq O_{indoor}}$$
 \\~\\
 \pause
 
 \emph{Cell Deterministic Hash Table(CDHT)} maps each cell to a set of deterministic objects:
 \pause
-$$\mathnormal{CDHT[cellID] = O_D;~cellID \in C, O_D \subseteq O_{indoor}}$$
+$$\mn{CDHT[cellID] = O_D;~cellID \in C, O_D \subseteq O_{indoor}}$$
 \\~\\
 \pause
 
 \emph{Cell Nondeterministic Hash Table(CNHT)} maps each cell to a set of nondeterministic objects:
 \pause
-$$\mathnormal{CNHT[cellID] = O_N;~cellID \in C, O_N \subseteq O_{indoor}}$$
+$$\mn{CNHT[cellID] = O_N;~cellID \in C, O_N \subseteq O_{indoor}}$$
 \\~\\
 \pause
 
 \emph{Object Hash Table(OHT)} maps objects to their current data(state, time, cell(s) the object can be in)
 \pause
-$$\mathnormal{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
+$$\mn{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
 \\~\\
 \pause
 }
@@ -187,13 +187,14 @@ $$\mathnormal{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
     \end{figure}
 
   \column{.53\textwidth}
-  \scriptsize{
+  \ssize{
     \begin{enumerate}
-      \item Line 1: \textrm{reset $\mathnormal{IDSet}$} \pause
-      \item Lines 2--12: \textrm{$\mathnormal{O.flag}$ is ENTER so check the object's previous state. Remove $\mathnormal{O}$ from the corresponding table according its previous state} \pause
-      \item Lines 13--14: \textrm{add $\mathnormal{O}$ to table of active objects (DHT), and update $\mathnormal{O}$'s in the objects' table (OHT)} \pause
-      \item Lines 16--17: \textrm{$\mathnormal{O.flag}$ is LEAVE so remove the object from DHT. Get the possible cells that $\mathnormal{O}$ can move to} \pause
-      \item Lines 18--25: \textrm{if the device is undirected, set $\mathnormal{O}$ in OHT and add $\mathnormal{O}$ to CNHT for the cells in sSet, else apply the same to CDHT}
+      \pause
+      \item Line 1: \textrm{reset $\mn{IDSet}$} \pause
+      \item Lines 2--12: \textrm{$\mn{O.flag}$ is ENTER so check the object's previous state. Remove $\mn{O}$ from the corresponding table according its previous state} \pause
+      \item Lines 13--14: \textrm{add $\mn{O}$ to table of active objects (DHT), and update $\mn{O}$'s in the objects' table (OHT)} \pause
+      \item Lines 16--17: \textrm{$\mn{O.flag}$ is LEAVE so remove the object from DHT. Get the possible cells that $\mn{O}$ can move to} \pause
+      \item Lines 18--25: \textrm{if the device is undirected, set $\mn{O}$ in OHT and add $\mn{O}$ to CNHT for the cells in sSet, else apply the same to CDHT}
     \end{enumerate}
   }
   \end{columns}
@@ -208,16 +209,16 @@ $$\mathnormal{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
 \begin{itemize}
   \item A \emph{Continuous Range Monitoring Query} (CRMQ)
     \begin{itemize}
-      \item takes an \textbf{indoor spatial range} $\bf \mathnormal{R}$ as parameter
-      \item keeps reporting the objects when it is registered for a certain time frame $\mathnormal{[t_s, t_e]}$
+      \item takes an \conceptbf{indoor spatial range} $\bf \mn{R}$ as parameter
+      \item keeps reporting the objects when it is registered for a certain time frame $\mn{[t_s, t_e]}$
     \end{itemize}
-  \item The \textbf{query result} $\bf \mathcal{M}$ -- the set of moving objects in $\bf \mathnormal{R}$ - is maintained as follows:
+  \item The \conceptbf{query result} $\bf \mathcal{M}$ -- the set of moving objects in $\bf \mn{R}$ - is maintained as follows:
     \begin{equation*}
-      \mathnormal{
+      \mn{
       \forall t \in [t_s, t_e]: o \in CRMQ[R](\mathcal{M})  \Leftrightarrow o \in \mathcal{M} \wedge pos_{\mathcal{M}}(o, t) \in R
       }
     \end{equation*}
-    where $\mathnormal{pos_\mathcal{M}}$ is a function that can determine the position of object $\mathnormal{o}$ at time $\mathnormal{t}$
+    where $\mn{pos_\mathcal{M}}$ is a function that can determine the position of object $\mn{o}$ at time $\mn{t}$
   \item Multiple monitoring queries may coexist
 \end{itemize}
 
@@ -228,11 +229,11 @@ $$\mathnormal{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
 \begin{frame}
 \frametitle{Critical Devices}
 
-\scriptsize{
+\ssize{
 For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new observation can potentially change the query result (either certain or uncertain). Use a \emph{Device Query Hash Table} (DQHT) to record the relationships:
 \vspace{-5pt}
 \begin{equation*}
-  \mathnormal{DQHT[deviceID] = \{ (queryID, CLASS) \}}
+  \mn{DQHT[deviceID] = \{ (queryID, CLASS) \}}
 \end{equation*}
 }
 
@@ -247,12 +248,17 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
   \column{.8\textwidth}
     \vspace{-15pt}
     \begin{itemize}
-      \scriptsize{
-      \item $\mathrm{CLASS1}$ -- \textrm{Device is fully covered in $\mathnormal{R}$ along with cells, e.g., $\mathnormal{(device_{16}, query_2)}$}
-      \item $\mathrm{CLASS2}$ -- \textrm{Device is fully covered but corresponding cells are not,  e.g., $\mathnormal{(device_{13}, query_1)}$}
-      \item $\mathrm{CLASS3}$ -- \textrm{Device intersects with the query range $\mathnormal{R}$,  e.g., $\mathnormal{(device_{16}, query_1)}$}
-      \item $\mathrm{CLASS4}$ -- \textrm{Device is disjoint from $\mathnormal{R}$ and at least one of its corresponding cells in $\mathnormal{C_{ic} = \{ c|c \sqcap R \neq \varnothing \}}$,  e.g., $\mathnormal{(device_{1}, query_1)}$}
-      \item $\mathrm{CLASS5}$ -- \textrm{Device is disjoint from $\mathnormal{R}$ and at least one of its corresponding cells in $\mathnormal{C_{ex} = \{ c| \{ c, c'\} \in G.E, c' \in C_{ic} \}}$, but none of them are in $\mathnormal{C_{ic}}$, e.g., $\mathnormal{(device_{10}, query_2)}$}
+      \ssize{
+      \pause
+      \item $\mathrm{CLASS1}$ -- \textrm{Device is fully covered in $\mn{R}$ along with cells, e.g., $\mn{(device_{16}, query_2)}$}
+      \pause
+      \item $\mathrm{CLASS2}$ -- \textrm{Device is fully covered but corresponding cells are not,  e.g., $\mn{(device_{13}, query_1)}$}
+      \pause
+      \item $\mathrm{CLASS3}$ -- \textrm{Device intersects with the query range $\mn{R}$,  e.g., $\mn{(device_{16}, query_1)}$}
+      \pause
+      \item $\mathrm{CLASS4}$ -- \textrm{Device is disjoint from $\mn{R}$ and at least one of its corresponding cells in $\mn{C_{ic} = \{ c|c \sqcap R \neq \varnothing \}}$,  e.g., $\mn{(device_{1}, query_1)}$}
+      \pause
+      \item $\mathrm{CLASS5}$ -- \textrm{Device is disjoint from $\mn{R}$ and at least one of its corresponding cells in $\mn{C_{ex} = \{ c| \{ c, c'\} \in G.E, c' \in C_{ic} \}}$, but none of them are in $\mn{C_{ic}}$, e.g., $\mn{(device_{10}, query_2)}$}
       }
     \end{itemize}
 
@@ -268,8 +274,8 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
 \begin{itemize}
   \item To handle concurrent \textrm{CRMQ}s, a \emph{Query Hash Table} is created hold the results
     \begin{itemize}
-      \item $\mathnormal{QHT[queryID] = (CR, UR);~ CR \subseteq O_{indoor}, UR \subseteq O_{indoor}}$
-      \item where $\mathnormal{CR}$ is the certain result and $\mathnormal{UR}$ is the uncertain result
+      \item $\mn{QHT[queryID] = (CR, UR);~ CR \subseteq O_{indoor}, UR \subseteq O_{indoor}}$
+      \item where $\mn{CR}$ is the certain result and $\mn{UR}$ is the uncertain result
     \end{itemize}
   \item Overview
     \begin{figure}[tb]
@@ -292,13 +298,14 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
   \end{figure}
 
 \column{.6\textwidth}
-\scriptsize{
+\ssize{
   \begin{enumerate}
+    \pause
     \item Lines 1--9: \textrm{Initialization} \pause
-    \item Lines 10--14: \textrm{Add possible devices to CriticalDeviceList $\mathnormal{cd}$ ($\mathrm{CLASS1}$ and $\mathrm{CLASS2}$)} \pause
+    \item Lines 10--14: \textrm{Add possible devices to CriticalDeviceList $\mn{cd}$ ($\mathrm{CLASS1}$ and $\mathrm{CLASS2}$)} \pause
     \item Lines 15--16: \textrm{Add possible $\mathrm{CLASS3}$ devices} \pause
     \item Lines 17--20: \textrm{Add possible $\mathrm{CLASS4}$ devices} \pause
-    \item Line 21: \textrm{Determine extended cell set $\mathnormal{C_{ex}}$} \pause
+    \item Line 21: \textrm{Determine extended cell set $\mn{C_{ex}}$} \pause
     \item Lines 22--25: \textrm{Add possible $\mathrm{CLASS5}$ devices}
   \end{enumerate}
 }
@@ -320,12 +327,13 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
 
 \column{.6\textwidth}
 \vspace{-10pt}
-\scriptsize{
+\ssize{
   \begin{enumerate}
+    \pause
     \item Lines 26--27: \textrm{Add active objects from DHT to the certain result} \pause
     \item Lines 28--29: \textrm{Intersected device set, add active objects from DHT to the uncertain result} \pause
     \item Lines 30--31: \textrm{From covered cells, add deterministic objects to the certain result} \pause
-    \item Lines 32-37: \textrm{If more than one cell, check nondeterministic objects. If all its possible cells are in $\mathnormal{C_c}$ add the object to the certain result, else uncertain result} \pause
+    \item Lines 32-37: \textrm{If more than one cell, check nondeterministic objects. If all its possible cells are in $\mn{C_c}$ add the object to the certain result, else uncertain result} \pause
     \item Lines 38--39: \textrm{Only one cell. Nondeterministic objects are added to the uncertain result} \pause
     \item Lines 40--41: \textrm{Intersected set. Add all objects to the uncertain result} \pause
     \item Line 42: \textrm{Results added to QHT} \pause
@@ -342,10 +350,10 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
 \frametitle{Query Result Updates}
 
 \begin{itemize}
-  \footnotesize{
+  \fsize{
   \item When an object enters the activation range of a critical device:
     \begin{itemize}
-      \scriptsize{
+      \ssize{
       \item For $\mathrm{CLASS1}$ or $\mathrm{CLASS2}$ devices the object is the certain result
       \item For $\mathrm{CLASS3}$ devices the object is possibly in the query range
       \item For $\mathrm{CLASS4}$ or $\mathrm{CLASS5}$ devices the object is not in the query range
@@ -353,7 +361,7 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
     \end{itemize}
   \item When an object leaves:
     \begin{itemize}
-      \scriptsize{
+      \ssize{
       \item For $\mathrm{CLASS1,3,5}$ devices there are no changes
       \item For $\mathrm{CLASS2}$ devices the object may still be in the query range, thus it is moved to the uncertain result
       \item For $\mathrm{CLASS4}$ devices the object may be in a cell that intersects with the query range and it added to the uncertain result
@@ -386,10 +394,10 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
   \end{figure}
 
 \column{.7\textwidth}
-  \footnotesize{
-  Consider $\mathnormal{query_1}$, after the object $\mathnormal{o}$ leaves a $\mathrm{CLASS2}$ critical device $\mathnormal{devoce_{13}}$, it should be moved from certain to uncertain result.
+  \fsize{
+  Consider $\mn{query_1}$, after the object $\mn{o}$ leaves a $\mathrm{CLASS2}$ critical device $\mn{devoce_{13}}$, it should be moved from certain to uncertain result.
   \\~\\
-  Let $\mathnormal{V_{max}}$ be the maximum speed, if $\mathnormal{R_1 = V_{max} * \Delta t}$, the certain result can be maintained without updating for an extra period of time $\mathnormal{\Delta t}$.
+  Let $\mn{V_{max}}$ be the maximum speed, if $\mn{R_1 = V_{max} * \Delta t}$, the certain result can be maintained without updating for an extra period of time $\mn{\Delta t}$.
   }
 \end{columns}
 
@@ -413,10 +421,10 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
   \end{figure}
 
 \column{.7\textwidth}
-  \footnotesize{
-  Consider $\mathnormal{query_1}$, after the object $\mathnormal{o}$ leaves a $\mathrm{CLASS2}$ critical device $\mathnormal{devoce_{13}}$, it should be moved from certain to uncertain result.
+  \fsize{
+  Consider $\mn{query_1}$, after the object $\mn{o}$ leaves a $\mathrm{CLASS2}$ critical device $\mn{devoce_{13}}$, it should be moved from certain to uncertain result.
   \\~\\
-  Let $\mathnormal{V_{max}}$ be the maximum speed, if $\mathnormal{R_1 = V_{max} * \Delta t}$, the certain result can be maintained without updating for an extra period of time $\mathnormal{\Delta t}$.
+  Let $\mn{V_{max}}$ be the maximum speed, if $\mn{R_1 = V_{max} * \Delta t}$, the certain result can be maintained without updating for an extra period of time $\mn{\Delta t}$.
   }
 \end{columns}
 
@@ -427,16 +435,16 @@ For a \textrm{CRMQ} query, a \emph{critical device} is one from which a new obse
 \begin{frame}
 \frametitle{Probabilistic Analysis of Uncertain Results}
 
-\footnotesize{\textrm{
-To analyze probability that $\mathnormal{o}$ is in the query range $\mathnormal{R}$. Assume that the possible locations in a given indoor space conform a uniform distribution within all reachable regions constrained by its maximum speed.
+\fsize{\textrm{
+To analyze probability that $\mn{o}$ is in the query range $\mn{R}$. Assume that the possible locations in a given indoor space conform a uniform distribution within all reachable regions constrained by its maximum speed.
 }}
 \\~\\
 \textit{1. Probabilities for Active Objects}
 \\~\\
-Formally, the probability that an active object $\mathnormal{o}$ is in the range $\mathnormal{R}$ is defined as:
+Formally, the probability that an active object $\mn{o}$ is in the range $\mn{R}$ is defined as:
 
 \begin{equation}
-  \mathnormal{prob(o \Theta R) = \frac{Area(Devices(d).ActRange \sqcap R)}{Area(Devices(d).ActRange)}}
+  \mn{prob(o \Theta R) = \frac{Area(Devices(d).ActRange \sqcap R)}{Area(Devices(d).ActRange)}}
 \end{equation}
 
 \begin{columns}[c]
@@ -448,7 +456,7 @@ Formally, the probability that an active object $\mathnormal{o}$ is in the range
   \end{figure}
 
 \column{.7\textwidth}
-  Consider $\mathnormal{device_{16}}$, a $\mathrm{CLASS3}$ device for $\mathnormal{query_1}$, the probability for an active object in $\mathnormal{device_{16}}$ to be in the query range is calculated as ...
+  Consider $\mn{device_{16}}$, a $\mathrm{CLASS3}$ device for $\mn{query_1}$, the probability for an active object in $\mn{device_{16}}$ to be in the query range is calculated as ...
 
 \end{columns}
 
@@ -463,7 +471,7 @@ Formally, the probability that an active object $\mathnormal{o}$ is in the range
 \\~\\
 For the case that after leaving $\mathrm{CLASS2,3,4}$ devices, the probabilities for inactive objects can be defined based on the maximum speed constraint.
 \\~\\
-An example for an inactive object that just leaves $\mathnormal{device_{12}}$...
+An example for an inactive object that just leaves $\mn{device_{12}}$...
 \vspace{-5pt}
 \begin{figure}[tb]
   \includegraphics[width=0.7\columnwidth]{figures/2-2/2-2-10.pdf}
