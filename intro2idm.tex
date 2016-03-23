@@ -84,6 +84,7 @@
 \usepackage{sansmathaccent}
 \pdfmapfile{+sansmathaccent.map}
 \usepackage{hyperref}
+\usepackage[export]{adjustbox}
 \usepackage{bookmark}
 \hypersetup{
 bookmarksdepth=3,
@@ -98,6 +99,10 @@ linkcolor=red
 \newcommand{\fsize}[1]{\footnotesize{#1}}
 \newcommand{\ssize}[1]{\scriptsize{#1}}
 \newcommand{\mn}[1]{\mathnormal{#1}}
+\renewcommand{\emph}[1]{\textit{\textrm{#1}}}
+\newenvironment{smitemize}{\begin{itemize}\small}{\end{itemize}}
+\newenvironment{fitemize}{\begin{itemize}\footnotesize}{\end{itemize}}
+\newenvironment{sitemize}{\begin{itemize}\scriptsize}{\end{itemize}}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -160,12 +165,13 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 
 \subsection{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-\include{sec_2_3}
-\include{sec_2_3_ref}
+% \include{sec_2_3}
+% \include{sec_2_3_ref}
 
 \subsection{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-%\include{sec_2_4}
+\include{sec_2_4}
+\include{sec_2_4_ref}
 
 \subsection{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
