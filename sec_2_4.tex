@@ -278,3 +278,159 @@ In general terms, an object $\mn{o_i}$'s location can be modeled as a random var
 \end{columns}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Join Probability Evaluation}
+
+\begin{definition}[the \emph{same X} predicate]
+  \textrm{
+  \ssize{
+    termed as $\mn{P_X}$, where $\mn{X}$ represents an indoor region type. $\mn{IR_X}$ represents all $\mn{X}$ type regions ($\mn{X}$-regions).
+  }
+  }
+\end{definition}
+~\\
+\begin{example}[the \emph{same room} predicate]
+  \textrm{
+  \ssize{
+    Given two objects $\mn{o_i, o_j}$ at a time point $\mn{t}$, the \emph{same room} predicate $\mn{P_X(o_i, o_j, t)}$ evaluates to true if both $\mn{o_i, o_j}$ were located in a same room $\mn{rm \in IR_X}$. Other predicates can be \emph{same floor, same reserach group (maps to several rooms)}.
+  }
+  }
+\end{example}
+~\\
+The \emph{same X} predicates are more practical than Euclidean distance based join predicates in indoor space.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Join Probability Evaluation}
+\vspace{-10pt}
+\begin{definition}[``be located at'' predicate probability]
+  \textrm{
+  \ssize{
+    Given an object $\mn{o_i}$, an $\mn{X}$-region $\mn{x_l \in IR_X}$, and a time $\mn{t}$, predicate $\Theta(o_i, x_l, t)$ indicate that $\mn{o_i}$ was located in $\mn{x_l}$ at $\mn{t}$. The probability that $\mn{\Theta}$ is satisfied is defined as:
+    \begin{equation*}
+      \mn{pr(\Theta(o_i, x_l, t)) = \frac{Area(UR(o_i, t) \cap x_l)}{Area(UR(o_i, t))}}
+    \end{equation*}
+  }
+  }
+\end{definition}
+
+\begin{definition}[the \emph{same X} predicate probability]
+  \textrm{
+  \ssize{
+    The probability that $\mn{o_i}$ and $\mn{o_j}$ were located in the same $\mn{x_l}$ at $\mn{t}$, indicated by $\mn{pr(P_{x_l}(o_i, o_j, t))}$ is defined as:
+    \begin{equation*}
+      \mn{pr(P_{x_l}(o_i, o_j, t)) = pr(\Theta(o_i, x_l, t)) \cdot pr(\Theta(o_j, x_l, t)) }
+    \end{equation*}
+    Therefore, the porbability that $\mn{o_i}$ and $\mn{o_j}$ satisfy a \emph{same X} predicate at time $\mn{t}$ can be defined as:
+    \begin{equation*}
+      \mn{pr(P_X(o_i, o_j, t)) = \max_{x_l \in IR_X} pr(P_{x_l}(o_i, o_j, t)) }
+    \end{equation*}
+  }
+  }
+\end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Indexing the Indoor Tracking Data}
+
+\textrm{to determine the \emph{Uncertainty Region} during join processing, it needs to retrieve the records $\mn{rd_{cov}}$ and $\mn{rd_{pre}}$ for active objects or $\mn{rd_{pre}}$ and $\mn{rd_{suc}}$ for inactive state.}
+\\~\\
+to index $\mn{OTT}$ with an augmented 1D R-tree, where each leaf entry has the form $\mn{(t^{\vdash},t^{\dashv},Ptr_{p},Ptr_{c})}$. $\mn{t^{\vdash} = rd_p.t_e}$, $\mn{t^{\dashv} = rd_c.t_e}$, $\mn{Ptr_p}$ and $\mn{Ptr_c}$ points to $\mn{rd_p}$ and $\mn{rd_c}$ respectively.
+
+\begin{fitemize}
+  \item if $\mn{t \geq rd_c.t_s}$, $\mn{o_i}$ is active, $\mn{rd_p \rightarrow rd_{pre}}$ and $\mn{rd_c \rightarrow rd_{cov}}$;
+  \item if $\mn{t < rd_c.t_s}$, $\mn{o_i}$ is inactive, $\mn{rd_p \rightarrow rd_{pre}}$ and $\mn{rd_c \rightarrow rd_{suc}}$;
+\end{fitemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Accessing $\mn{X}$-Regions}
+
+\textrm{object locations are bounded by either device detection ranges or cells.}
+
+\begin{columns}[c]
+
+  \column{.54\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-4/2-4-6.pdf}
+  \end{figure}
+
+  \column{0.48\textwidth}
+  \begin{sitemize}
+    \item $\mn{CovD2X: D \rightarrow IR_X}$ maps a device to an $\mn{X}$-Region that fully covers the device's detection range;
+    \item $\mn{IntD2X: D \rightarrow IR_X}$ maps a device to an $\mn{X}$-Region that only intersects the device's detection range;
+    \item $\mn{CovC2X: C \rightarrow IR_X}$ maps a cell to an $\mn{X}$-Region that fully covers this cell;
+    \item $\mn{IntC2X: C \rightarrow IR_X}$ maps a cell to an $\mn{X}$-Region that only intersects with;
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Processing PTISSJ Queries: Partitioning Phase}
+
+\begin{columns}[c]
+
+  \column{.47\textwidth}
+  \vspace{-10pt}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-4/2-4-7.pdf}
+  \end{figure}
+
+  \column{0.53\textwidth}
+  \begin{fitemize}
+    \item all indoor objects are partitioned into buckets that each refers to a distinct $\mn{X}$-region
+    \item first, A1R-tree is searched to get all leaf entries whose interval $\mn{(t^{\vdash},t^{\dashv}]}$ contains the join time $\mn{t}$
+    \item second, the spatial examination obtains all relevant $\mn{X}$-region in which $\mn{o_i}$ may be at time $\mn{t}$
+    \item the relevant probabilities are evaluated for each object, and the necessary records are generated and added to relevant buckets, for each $\mn{p_l = pr(\Theta(o_i, x_l, t))}$, if it is larger than threshold $\mn{M}$, insert the record into buckets.
+  \end{fitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Processing PTISSJ Queries: Partitioning Phase}
+
+\begin{columns}[c]
+
+  \column{.5\textwidth}
+  \textbf{Active State}~\\
+  \ssize{
+  \textrm{object $\mn{o_i}$ must be in device $\mn{dev}$'s detection range at time $\mn{t}$}.~\\
+  \begin{enumerate}
+    \item if the detection range is fully covered by an $\mn{X}$-region $\mn{x_l}$, as indicated by $\mn{CovD2X(dev_c) = x_l}$, a record $\mn{(o_i, 1.0)}$ is added to $\mn{x_l}$'s bucket;
+    \item otherwise, $\mn{dev_c}$'s detection range intersects with each $\mn{X}$-region in $\mn{CovD2X(dev_c)}$, evaluated the probability, if it is larger than $\mn{M}$, add to the bucket.
+  \end{enumerate}
+  }
+
+  \column{0.5\textwidth}
+  \textbf{Inactive State}~\\
+  \ssize{
+  \textrm{object $\mn{o_i}$ must be in a cell in $\mn{Cells_{mid} = D2C(dev_p) \cap D2C(dev_c)}$}.~\\
+  \begin{enumerate}
+    \item if $\mn{Cells_{mid}}$ is the singleton set and the cell is covered by one $\mn{X}$-region $\mn{x_l}$, indicated by $\mn{CovC2X(c)= x_l}$, a record $\mn{(o_i, 1.0)}$ is added to $\mn{x_l}$'s bucket;
+    \item otherwise, the single cell $\mn{c}$ in $\mn{Cells_{mid}}$ intersects with several $\mn{X}$-regions (indicated by $\mn{CovC2X(c)}$), or $\mn{Cells_{mid}}$ contains several cells.
+  \end{enumerate}
+  }
+
+\end{columns}
+
+\end{frame}

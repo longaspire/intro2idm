@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  23 MAR 2016 15:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  23 MAR 2016 22:23
 entering extended mode
 **E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
 (E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
@@ -795,61 +795,27 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 122.
  (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.nav)
-Overfull \hbox (2.1447pt too wide) detected at line 122
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 126.
 
-
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
 [1
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [2
 
-[2
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [3
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [4
 
-[3
-
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[4
-
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_4.tex
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[5
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_4.tex [5
 
 
-]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[6
+] [6
 
 ]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-4/2-4-1.pdf, id=357, 526.48703pt x 166.53717pt>
+<figures/2-4/2-4-1.pdf, id=405, 526.48703pt x 166.53717pt>
 File: figures/2-4/2-4-1.pdf Graphic file (type pdf)
  <use figures/2-4/2-4-1.pdf>
 Package pdftex.def Info: figures/2-4/2-4-1.pdf used on input line 63.
@@ -865,70 +831,35 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input line 63.
  ("D:\Program Files (x86)\CTEX\UserData\tex\latex\sansmathaccent\ot1mathkerncmss.fd"
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[7
+) [7
 
  <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-1.pdf>]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-4/2-4-2.pdf, id=512, 170.81958pt x 144.01404pt>
+<figures/2-4/2-4-2.pdf, id=566, 170.81958pt x 144.01404pt>
 File: figures/2-4/2-4-2.pdf Graphic file (type pdf)
  <use figures/2-4/2-4-2.pdf>
 Package pdftex.def Info: figures/2-4/2-4-2.pdf used on input line 85.
 (pdftex.def)             Requested size: 159.79204pt x 134.72055pt.
+ [8
 
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-2.pdf>] [9
 
-[8
+] [10
 
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-2.pdf>]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+] [11
 
-[9
-
-]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[10
-
-]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[11
-
-]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[12
+] [12
 
 ]
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-4/2-4-3.pdf, id=823, 208.66255pt x 77.78862pt>
+<figures/2-4/2-4-3.pdf, id=907, 208.66255pt x 77.78862pt>
 File: figures/2-4/2-4-3.pdf Graphic file (type pdf)
  <use figures/2-4/2-4-3.pdf>
 Package pdftex.def Info: figures/2-4/2-4-3.pdf used on input line 185.
 (pdftex.def)             Requested size: 138.2795pt x 51.55072pt.
-
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[13
+ [13
 
  <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-3.pdf>]
 File: figures/2-4/2-4-2.pdf Graphic file (type pdf)
@@ -938,7 +869,7 @@ Package pdftex.def Info: figures/2-4/2-4-2.pdf used on input line 234.
 
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-4.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-4/2-4-4.pdf, id=959, 237.57066pt x 99.86308pt>
+<figures/2-4/2-4-4.pdf, id=1049, 237.57066pt x 99.86308pt>
 File: figures/2-4/2-4-4.pdf Graphic file (type pdf)
  <use figures/2-4/2-4-4.pdf>
 Package pdftex.def Info: figures/2-4/2-4-4.pdf used on input line 234.
@@ -946,11 +877,6 @@ Package pdftex.def Info: figures/2-4/2-4-4.pdf used on input line 234.
 
 Overfull \hbox (6.23108pt too wide) in paragraph at lines 234--234
 []  
- []
-
-
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
  []
 
 [14
@@ -963,7 +889,7 @@ Package pdftex.def Info: figures/2-4/2-4-2.pdf used on input line 280.
 
 
 pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-5.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-4/2-4-5.pdf, id=1068, 239.67342pt x 102.49191pt>
+<figures/2-4/2-4-5.pdf, id=1164, 239.67342pt x 102.49191pt>
 File: figures/2-4/2-4-5.pdf Graphic file (type pdf)
  <use figures/2-4/2-4-5.pdf>
 Package pdftex.def Info: figures/2-4/2-4-5.pdf used on input line 280.
@@ -972,57 +898,54 @@ Package pdftex.def Info: figures/2-4/2-4-5.pdf used on input line 280.
 Overfull \vbox (8.28183pt too high) detected at line 280
  []
 
-
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
 [15
 
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-5.pdf>]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_4_ref.tex
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-5.pdf>] [16
 
-[16
+] [17
 
+] [18
 
+]
 
- <D:/Program Files (x86)/CTEX/UserData/tex/latex/beamer/base/art/beamericonarticle.pdf>]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-6.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-4/2-4-6.pdf, id=1425, 257.01772pt x 215.49509pt>
+File: figures/2-4/2-4-6.pdf Graphic file (type pdf)
+ <use figures/2-4/2-4-6.pdf>
+Package pdftex.def Info: figures/2-4/2-4-6.pdf used on input line 380.
+(pdftex.def)             Requested size: 165.93446pt x 139.12643pt.
+ [19
 
-[17
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-6.pdf>]
 
-]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-7.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figures/2-4/2-4-7.pdf, id=1539, 256.49126pt x 374.2261pt>
+File: figures/2-4/2-4-7.pdf Graphic file (type pdf)
+ <use figures/2-4/2-4-7.pdf>
+Package pdftex.def Info: figures/2-4/2-4-7.pdf used on input line 405.
+(pdftex.def)             Requested size: 144.4266pt x 210.72435pt.
 
-[18
-
-
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
-
-[19
-
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
+Overfull \vbox (4.3151pt too high) detected at line 405
  []
 
 [20
 
-]
-Overfull \hbox (2.1447pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][] [] [] []  
- []
+ <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-4/2-4-7.pdf>] [21
 
-[21
+]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_4_ref.tex [22
+
+
+
+ <D:/Program Files (x86)/CTEX/UserData/tex/latex/beamer/base/art/beamericonarticle.pdf>] [23
+
+]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [24
+
+
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [25
+
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [26
+
+] [27
 
 ]
 \tf@nav=\write5
@@ -1040,19 +963,20 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 18045 strings out of 495354
- 347959 string characters out of 3182739
- 435721 words of memory out of 3000000
- 20665 multiletter control sequences out of 15000+200000
- 18175 words of font info for 64 fonts, out of 3000000 for 9000
+ 18095 strings out of 495354
+ 348640 string characters out of 3182739
+ 443751 words of memory out of 3000000
+ 20699 multiletter control sequences out of 15000+200000
+ 21974 words of font info for 78 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,21n,67p,547b,1048s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intro2idm.pdf (21 pages, 1538500 bytes).
+<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on intro2idm.pdf (27 pages, 1783297 bytes).
 PDF statistics:
- 1590 PDF objects out of 1728 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2155 PDF objects out of 2487 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -35,35 +35,47 @@
 \headcommand {\beamer@framepages {14}{14}}
 \headcommand {\slideentry {2}{4}{11}{15/15}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{2.1 Graph Model Based Indoor Tracking}}\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{5}{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{5}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\slideentry {2}{4}{12}{16/16}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {16}{16}}
 \headcommand {\slideentry {2}{4}{13}{17/17}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{18}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}}\headcommand {\beamer@subsectionpages {5}{17}}
-\headcommand {\beamer@subsectionentry {0}{2}{6}{18}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}}\headcommand {\beamer@subsectionpages {18}{17}}
-\headcommand {\sectionentry {3}{3. Indoor Data Cleansing}{18}{3. Indoor Data Cleansing}{0}}
-\headcommand {\beamer@sectionpages {4}{17}}
-\headcommand {\beamer@subsectionpages {18}{17}}
-\headcommand {\slideentry {3}{0}{1}{18/18}{}{0}}
+\headcommand {\slideentry {2}{4}{14}{18/18}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{19}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {18}{18}}
-\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\slideentry {4}{0}{2}{19/19}{}{0}}
+\headcommand {\slideentry {2}{4}{15}{19/19}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\sectionentry {5}{5. Appendix}{20}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {19}{19}}
-\headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\slideentry {5}{0}{3}{20/20}{}{0}}
+\headcommand {\slideentry {2}{4}{16}{20/20}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {5}{0}{4}{21/21}{}{0}}
+\headcommand {\slideentry {2}{4}{17}{21/21}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@partpages {1}{21}}
-\headcommand {\beamer@subsectionpages {20}{21}}
-\headcommand {\beamer@sectionpages {20}{21}}
-\headcommand {\beamer@documentpages {21}}
-\headcommand {\def \inserttotalframenumber {21}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{2.1 Graph Model Based Indoor Tracking}}\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{5}{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{5}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}}\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\slideentry {2}{4}{18}{22/22}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {2}{4}{19}{23/23}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{24}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}}\headcommand {\beamer@subsectionpages {5}{23}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{24}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}}\headcommand {\beamer@subsectionpages {24}{23}}
+\headcommand {\sectionentry {3}{3. Indoor Data Cleansing}{24}{3. Indoor Data Cleansing}{0}}
+\headcommand {\beamer@sectionpages {4}{23}}
+\headcommand {\beamer@subsectionpages {24}{23}}
+\headcommand {\slideentry {3}{0}{1}{24/24}{}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{25}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {24}{24}}
+\headcommand {\beamer@subsectionpages {24}{24}}
+\headcommand {\slideentry {4}{0}{2}{25/25}{}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\sectionentry {5}{5. Appendix}{26}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {25}{25}}
+\headcommand {\beamer@subsectionpages {25}{25}}
+\headcommand {\slideentry {5}{0}{3}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {5}{0}{4}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@partpages {1}{27}}
+\headcommand {\beamer@subsectionpages {26}{27}}
+\headcommand {\beamer@sectionpages {26}{27}}
+\headcommand {\beamer@documentpages {27}}
+\headcommand {\def \inserttotalframenumber {27}}
