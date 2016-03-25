@@ -80,10 +80,10 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
     a labeled, undirected graph.
       \textrm{
       \begin{itemize}
-        \item $\mn{G_{conn} = \{V, E_d, \Sigma_{door}\}}$
-        \item $\mn{V}$: each separate partition is represented as a vertex
-        \item $\mn{E_d}$: each door is captured as an edge%, i.e., $\mn{(\{v_i,v_j}, k)}$
-        \item $\mn{\Sigma_{door}}$: a set of edge labels that represent connections
+        \item $G_{conn} = \{V, E_d, \Sigma_{door}\}$
+        \item $V$: each separate partition is represented as a vertex
+        \item $E_d$: each door is captured as an edge%, i.e., $(\{v_i,v_j}, k)$
+        \item $\Sigma_{door}$: a set of edge labels that represent connections
       \end{itemize}
       }
     \end{block}
@@ -110,10 +110,10 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
     a labeled, directed graph.
       \textrm{
       \begin{itemize}
-        \item $\mn{G_{accs} = \{V, E, \Sigma_{door}, l_e\}}$
-        \item $\mn{V}$: the set of vertices
-        \item $\mn{E}$: the set of directed edges, i.e., $\mn{E=\{\langle v_i, v_j\rangle | v_i, v_j \in V \wedge v_i \neq v_j\}}$
-        \item $\mn{l_e}$: a function that maps edges to subsets of the set of doors, i.e., $\mn{l_e : E \rightarrow 2^{\Sigma_{door}}}$
+        \item $G_{accs} = \{V, E, \Sigma_{door}, l_e\}$
+        \item $V$: the set of vertices
+        \item $E$: the set of directed edges, i.e., $E=\{\langle v_i, v_j\rangle | v_i, v_j \in V \wedge v_i \neq v_j\}$
+        \item $l_e$: a function that maps edges to subsets of the set of doors, i.e., $l_e : E \rightarrow 2^{\Sigma_{door}}$
       \end{itemize}
       }
     \end{block}
@@ -133,7 +133,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   The \textrm{\em Building Partitions Mapping} is defined as:
   \pause
   \begin{equation}
-  \mn{BuildingPartitions: V \rightarrow Ploygons}
+  BuildingPartitions: V \rightarrow Ploygons
   \end{equation}
   \\~\\
   \pause
@@ -141,7 +141,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   The \textrm{\em Doors Mapping} is defined as:
   \pause
   \begin{equation}
-  \mn{Doors: \Sigma_{door} \rightarrow Line~Segments}
+  Doors: \Sigma_{door} \rightarrow Line~Segments
   \end{equation}
 
 \end{frame}
@@ -187,10 +187,10 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
     a labeled, directed graph.
       \textrm{
       \begin{itemize}
-        \item $\mn{G_{RFID} = \{C, E_r, \Sigma_{reader}, l_e\}}$
-        \item $\mn{C}$: the set of the vertices
-        \item $\mn{E_r}$: An edge is an ordered pair $\mn{\langle c_i, c_j \rangle}$ of distinct vertices from $\mn{C}$
-        \item $\mn{l_e}$ maps an edge to a partitioning reader (pair), i.e., $\mn{E_r \rightarrow 2^{\Sigma_{reader}} \cup 2^{\Sigma_{reader} \times \Sigma_{reader}}}$
+        \item $G_{RFID} = \{C, E_r, \Sigma_{reader}, l_e\}$
+        \item $C$: the set of the vertices
+        \item $E_r$: An edge is an ordered pair $\langle c_i, c_j \rangle$ of distinct vertices from $C$
+        \item $l_e$ maps an edge to a partitioning reader (pair), i.e., $E_r \rightarrow 2^{\Sigma_{reader}} \cup 2^{\Sigma_{reader} \times \Sigma_{reader}}$
       \end{itemize}
       }
     \end{block}
@@ -206,7 +206,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   \small{Each cell created by partitioning readers corresponds to one or more base graph partitions.}
   \pause
   \begin{equation}
-  \mn{Cells: V \rightarrow C}
+  Cells: V \rightarrow C
   \end{equation}
   \\~\\
   \pause
@@ -215,8 +215,8 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   \pause
   \begin{equation}
   \begin{split}
-  \mn{Mapping~1}: & \mn{\Sigma_{reader} \rightarrow \{ (loc, range, flag)~|~loc \in R^2 \wedge} \\
-    & \mn{range \in (0,d_{max}] \wedge flag \in \{ PAR, PRE \} \}}
+  Mapping~1: & \Sigma_{reader} \rightarrow \{ (loc, range, flag)~|~loc \in R^2 \wedge \\
+    & range \in (0,d_{max}] \wedge flag \in \{ PAR, PRE \} \}
   \end{split}
   \end{equation}
   \\~\\
@@ -225,9 +225,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   \small{A mapping of readers to the cells that their activation ranges intersect is introduced as:}
   \pause
   \begin{equation}
-  \mn{
   Mapping~2: \Sigma_{reader} \rightarrow 2^C
-  }
   \end{equation}
 
 \end{frame}
@@ -248,11 +246,11 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   \ssize{
     \begin{enumerate}
       \pause
-      \item Input: \textrm{the reader set $\mn{R}$, the connectivity base graph $\mn{G_{conn}}$, the accessibility graph $\mn{G_{accs}}$} \pause
-      \item Lines 1--2: \textrm{Initialize $\mn{G_{RFID}}$, $\mn{DR}$, $\mn{CCs}$} \pause
-      \item Lines 3--8: \textrm{the relationship of which door is covered by which readers is captured in $\mn{DR}$} \pause
-      \item Lines 9--13: \textrm{a deployment graph vertex is created for each $\mn{CC}$, mapping $\mn{Cells}$ is also stored} \pause
-      \item Lines 14--20: \textrm{for each door in $\mn{DR}$, determine if its edges' head and tail are mapped to different cells. If so, add an edge to deployment graph. Function $\mn{readersequence}$ returns the possible reader sequence for that edge}
+      \item Input: \textrm{the reader set $R$, the connectivity base graph $G_{conn}$, the accessibility graph $G_{accs}$} \pause
+      \item Lines 1--2: \textrm{Initialize $G_{RFID}$, $DR$, $CCs$} \pause
+      \item Lines 3--8: \textrm{the relationship of which door is covered by which readers is captured in $DR$} \pause
+      \item Lines 9--13: \textrm{a deployment graph vertex is created for each $CC$, mapping $Cells$ is also stored} \pause
+      \item Lines 14--20: \textrm{for each door in $DR$, determine if its edges' head and tail are mapped to different cells. If so, add an edge to deployment graph. Function $readersequence$ returns the possible reader sequence for that edge}
     \end{enumerate}
   }
   \end{columns}
@@ -274,7 +272,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
     \end{figure}
     \ssize{\textit{
       1. each reader detects and reports tags with a sampling rate \\
-      2. formatted as $\mn{\langle readerID, tagID, t \rangle}$
+      2. formatted as $\langle readerID, tagID, t \rangle$
     }}
 
   \column{.53\textwidth}
@@ -312,9 +310,9 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
 
   \column{.53\textwidth}
     \begin{itemize}
-        \item $\mn{Flag \in \{ START, END \}}$
-        \item $\mn{START} \rightarrow$ \textrm{enters the range}
-        \item $\mn{END} \rightarrow$ \textrm{leaves the range}
+        \item $Flag \in \{ START, END \}$
+        \item $START \rightarrow$ \textrm{enters the range}
+        \item $END \rightarrow$ \textrm{leaves the range}
     \end{itemize}
 
   \end{columns}
@@ -344,9 +342,9 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
     \begin{itemize}
       \item Step 1 transforms an RFID reading sequence to corresponding vertices or edges in deployment graph
       \item If two consecutive reading sequences are \emph{contiguous}, they should stem from a partitioning pair, which map to an edge
-      \item Otherwise, should come from either a single $\mn{PRE}$ or a $\mn{PAR}$ reader
-      \item A $\mn{PAR}$ is replaced by the set of corresponding edges according to $\mn{G_{RFID}.{l_e}^{-1}}$
-      \item A $\mn{PRE}$ always corresponds to one or several cells according to $\mn{Mapping~2}$
+      \item Otherwise, should come from either a single $PRE$ or a $PAR$ reader
+      \item A $PAR$ is replaced by the set of corresponding edges according to $G_{RFID}.{l_e}^{-1}$
+      \item A $PRE$ always corresponds to one or several cells according to $Mapping~2$
     \end{itemize}
   }
   \end{columns}
@@ -393,25 +391,25 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
 \column{.48\textwidth}
 \begin{itemize}
 \ssize{
-  \item Calculate the \emph{possible region} $\mn{\Theta}$ according to maximum speed limit
+  \item Calculate the \emph{possible region} $\Theta$ according to maximum speed limit
 
   \item Circle based possible region
     \begin{itemize}
       \tiny{
-        \item locations: $\mn{P_{9'}}$, $\mn{P_{1'}}$
-        \item activation ranges: $\mn{R_{9'}}$, $\mn{R_{1'}}$
-        \item for $\mn{t_x \in [ t_5, t_6 ]}$, $\mn{\Delta t_1 = t_x - reading_2.t^{\vdash}}$, $\mn{\Delta t_2 = reading_3.t^{\dashv} - t_x}$
-        \item $\mn{R_3 = R_{9'} + V_{max} * \Delta t_1}$, $\mn{R_5 = R_{1'} + V_{max} * \Delta t_2}$
+        \item locations: $P_{9'}$, $P_{1'}$
+        \item activation ranges: $R_{9'}$, $R_{1'}$
+        \item for $t_x \in [ t_5, t_6 ]$, $\Delta t_1 = t_x - reading_2.t^{\vdash}$, $\Delta t_2 = reading_3.t^{\dashv} - t_x$
+        \item $R_3 = R_{9'} + V_{max} * \Delta t_1$, $R_5 = R_{1'} + V_{max} * \Delta t_2$
       }
     \end{itemize}
 
   \item Ellipse based possible region
   \begin{itemize}
       \tiny{
-        \item foci: two points belonging to the circle centered at $\mn{P_{9'}}$, $\mn{P_{1'}}$
+        \item foci: two points belonging to the circle centered at $P_{9'}$, $P_{1'}$
         \item length of major axis is:
           \begin{equation*}
-            \mn{2a = V_{max} * (\Delta t_1 + \Delta t_2)}
+            2a = V_{max} * (\Delta t_1 + \Delta t_2)
           \end{equation*}
       }
   \end{itemize}
@@ -426,20 +424,20 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
 \tiny{
   \pause
   $\left.\begin{matrix}
-  \mn{(reading_1, reader_{9}, tag_1, t_1, t_2)}~~\\
-  \mn{(reading_2, reader_{9'}, tag_1, t_3, t_4)}~~\\
-  \mn{(reading_3, reader_{1'}, tag_1, t_7, t_8)}~~\\
-  \mn{(reading_4, reader_{1}, tag_1, t_9, t_10)}~~
+  (reading_1, reader_{9}, tag_1, t_1, t_2)~~\\
+  (reading_2, reader_{9'}, tag_1, t_3, t_4)~~\\
+  (reading_3, reader_{1'}, tag_1, t_7, t_8)~~\\
+  (reading_4, reader_{1}, tag_1, t_9, t_10)~~
   \end{matrix}\right\} \overset{Step~1}{\rightarrow} \pause$ \\~\\~\\
 
   $\left.\begin{matrix}
-  \mn{(tag_1, [t_1,t_4], e\langle 10,9 \rangle, reader_{9}, reader_{9'})}~~\\
-  \mn{(tag_1, [t_7,t_{10}], e\langle 9,1 \rangle, reader_{1'}, reader_{1})}~~
+  (tag_1, [t_1,t_4], e\langle 10,9 \rangle, reader_{9}, reader_{9'})~~\\
+  (tag_1, [t_7,t_{10}], e\langle 9,1 \rangle, reader_{1'}, reader_{1})~~
   \end{matrix}\right\} \overset{Step~2}{\rightarrow} \pause$ \\~\\~\\
 
-  $\mn{(tag_1, [t_5,t_6], c_9, reader_{9'}, reader_{1'})} \overset{Step~3}{\rightarrow} \pause$ \\~\\~\\
+  $(tag_1, [t_5,t_6], c_9, reader_{9'}, reader_{1'}) \overset{Step~3}{\rightarrow} \pause$ \\~\\~\\
 
-  $\mn{(tag_1, [t_5,t_6], c_9 \cup \Theta(reader_{9'}, reader_{1'}, t_5, t_6))}$
+  $(tag_1, [t_5,t_6], c_9 \cup \Theta(reader_{9'}, reader_{1'}, t_5, t_6))$
 }
 
 \end{columns}
@@ -451,7 +449,7 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
 \begin{frame}
 \frametitle{On-line Tracking}
 
-\small{\textrm{Given $\mn{\langle readerID, tagID, t, flag \rangle}$. \conceptbf{On-line tracking} is intended to infer the trajectory in the time interval between the last observation and the current time or even in the future.}}
+\small{\textrm{Given $\langle readerID, tagID, t, flag \rangle$. \conceptbf{On-line tracking} is intended to infer the trajectory in the time interval between the last observation and the current time or even in the future.}}
 \\~\\
 
 \begin{columns}[c]
@@ -465,8 +463,8 @@ C.~S. Jensen, H.~Lu, and B.~Yang.\\~\\
   \column{.65\textwidth}
   \fsize{
     \begin{itemize}
-      \item $\mn{flag = START}$, object $\mn{tagID}$ is in the activation range of $\mn{readerID}$ at time $\mn{t}$.
-      \item $\mn{flag = END}$, the object is beyond the activation range of $\mn{readerID}$ and not in the range of any other readers.
+      \item $flag = START$, object $tagID$ is in the activation range of $readerID$ at time $t$.
+      \item $flag = END$, the object is beyond the activation range of $readerID$ and not in the range of any other readers.
 				\begin{itemize}
 					\ssize{
 					\item constrains by a circle determined by the most recent observing reader's range.

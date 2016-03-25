@@ -1,0 +1,26 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  24 MAR 2016 21:13
+entering extended mode
+**E:/WeiYun/GitHub/intro2IDM/intro2idm/sec_1.tex
+(E:/WeiYun/GitHub/intro2IDM/intro2idm/sec_1.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+! Undefined control sequence.
+l.1 \subsection
+               {1.1 At the Beginning} % A subsection can be created just bef...
+
+? 
+! Emergency stop.
+l.1 \subsection
+               {1.1 At the Beginning} % A subsection can be created just bef...
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 495354
+ 188 string characters out of 3182739
+ 44842 words of memory out of 3000000
+ 3276 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5i,0n,1p,213b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -6,7 +6,7 @@ H.~Lu, B.~Yang, and C.~S. Jensen.\\~\\
 
 \begin{itemize}
   \item Published at \emph{ICDE' 2011}.
-  \item Studies the probabilistic, spatio-temporal joins on historical indoor tracking data.
+  \item Studies the probabilistic, spatio-temporal joins on hisorical indoor tracking data.
   \item Two-phase hash-based algorithms are proposed for the point and interval joins.
   \item A filter-and-refine framework, along with spatial indexes and pruning rules.
 \end{itemize}
@@ -144,7 +144,7 @@ The joins are effectively \emph{self-joins} because all tracking data is contain
 
 \textrm{For outdoor moving objects~\cite{cheng2004querying}, \conceptbf{Uncertainty Region}, denoted by ${UR(o_i,t)}$, is a region such that ${o_i}$ must be in this region at time ${t}$.}\\~
 
-In general terms, an object ${o_i}$'s location can be modeled as a random variable ${l}$ associated with a probability density function ${f_{o_i}(l,t)}$ that has non-zero values only in ${o_i}$'s uncertainty region ${UR(o_i, t)}$.~\cite{DBLP:conf/edbt/YangLJ10}
+In general terms, an object ${o_i}$'s location can be modeled as a random variable ${l}$ associated with a probability density function ${f_{o_i}(l,t)}$ that has non-zero values only in ${o_i}$'s suncertainty region ${UR(o_i, t)}$.~\cite{DBLP:conf/edbt/YangLJ10}
 
 \begin{equation}
   {\int_{l \in UR(o_i,t)} f_{o_i}(l,t) dl = 1}
@@ -294,7 +294,7 @@ In general terms, an object ${o_i}$'s location can be modeled as a random variab
 \begin{example}[the \emph{same room} predicate]
   \textrm{
   \ssize{
-    Given two objects ${o_i, o_j}$ at a time point ${t}$, the \emph{same room} predicate ${P_X(o_i, o_j, t)}$ evaluates to true if both ${o_i, o_j}$ were located in a same room ${rm \in IR_X}$. Other predicates can be \emph{same floor, same research group (maps to several rooms)}.
+    Given two objects ${o_i, o_j}$ at a time point ${t}$, the \emph{same room} predicate ${P_X(o_i, o_j, t)}$ evaluates to true if both ${o_i, o_j}$ were located in a same room ${rm \in IR_X}$. Other predicates can be \emph{same floor, same reserach group (maps to several rooms)}.
   }
   }
 \end{example}
@@ -326,7 +326,7 @@ The \emph{same X} predicates are more practical than Euclidean distance based jo
     \begin{equation*}
       {pr(P_{x_l}(o_i, o_j, t)) = pr(\Theta(o_i, x_l, t)) \cdot pr(\Theta(o_j, x_l, t)) }
     \end{equation*}
-    Therefore, the probability that ${o_i}$ and ${o_j}$ satisfy a \emph{same X} predicate at time ${t}$ can be defined as:
+    Therefore, the porbability that ${o_i}$ and ${o_j}$ satisfy a \emph{same X} predicate at time ${t}$ can be defined as:
     \begin{equation*}
       {pr(P_X(o_i, o_j, t)) = \max_{x_l \in IR_X} pr(P_{x_l}(o_i, o_j, t)) }
     \end{equation*}
@@ -490,15 +490,15 @@ to index ${OTT}$ with an augmented 1D R-tree, where each leaf entry has the form
 \begin{frame}
 \frametitle{Processing PT${k}$ISSJ Queries: Join Phase}
 
-\begin{block}{\textrm{Pruning Rule 2}}
+\begin{block}{\textrm{Prunning Rule 2}}
   \textrm{A record ${(objectID, [t_x, t_y])}$ is pruned if ${t_y - t_x + 1 < k}$. }
 \end{block}
 ~\\
-\begin{block}{\textrm{Pruning Rule 3}}
+\begin{block}{\textrm{Prunning Rule 3}}
   \textrm{If a bucket contains only one record, or all its records involve only one object, the bucket is pruned. }
 \end{block}
 ~\\
-\begin{block}{\textrm{Pruning Rule 4}}
+\begin{block}{\textrm{Prunning Rule 4}}
   \textrm{Two records ${(objectID_1, [t_x, t_y])}$ and ${(objectID_2, [t_u, t_v])}$ do not satisfy the join predicate if ${|[t_x, t_y] \cap [t_u, t_v]| < k}$.}
 \end{block}
 
@@ -520,7 +520,7 @@ to index ${OTT}$ with an augmented 1D R-tree, where each leaf entry has the form
   \column{0.48\textwidth}
   \begin{titemize}
     \item first, records with as same ${objectID}$ and adjacent time intervals are merged into one records, after merging, pruning is done on the bucket according to the above-mentioned rules.
-    \item next, the remaining records in ${X}$-region buckets are processed with relevant probabilities evaluated.
+    \item next, the ramaining records in ${X}$-region buckets are processed with relevant probabilities evaluated.
     \item \emph{the plane sweep}~\cite{pfoser1999capturing}, only if two object's record pair have their overlapping time interval contain at least ${k}$ timestamps, the probability is evaluated.
     \item if two objects have been found to join in one bucket, skip all record pairs involving the two in all remaining buckets.
     \item skip the remaining evaluation, when the calculated probability (after ${k}$ time points) has already greater than ${M}$, even the whole time interval is not finished.

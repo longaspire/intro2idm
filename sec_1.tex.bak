@@ -74,7 +74,7 @@
 \begin{frame}
 \frametitle{Example Ongoing Research}
 
-The goal of \conceptbf{indoor tracking} is to capture the position of an object at any time in time. By exploiting the floor plan, the deployment graph, and maximum speeds limit, it is possible to minimize the possible region(s) an object can be at a particular time.\\~\\
+The goal of \conceptbf{indoor tracking} is to capture the position of an object at any time in time. By exploiting the floor plan, the deployment graph, and maximum speeds limit, it is possible to minimize the posiible region(s) an object can be at a particular time.\\~\\
 
 Due to the discrete nature of indoor space, hashing may be applied for \conceptbf{indoor indexing}.
 \begin{itemize}

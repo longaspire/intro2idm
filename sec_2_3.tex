@@ -24,7 +24,7 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
       \item $k$NN queries over indoor moving objects enables the detection of approaching potential threats at sensitive locations in a subway system
     \end{itemize}
 
-  \item Existing $k$NN techniques in spatial and spatialtemporal databases are inapplicable in indoor spaces.
+  \item Existing $k$NN techniques in spatial and spatiotemporal databases are inapplicable in indoor spaces.
     \begin{itemize}
       \item complex entities and topologies
       \item indoor positioning techniques differ fundamentally from outdoor GPS, low sampling frequency and accuracy
@@ -40,18 +40,18 @@ B.~Yang, H.~Lu, and C.~S. Jensen.\\~\\
 \conceptbf{Minimal Indoor Walking Distance}(MIWD) is used as the distance metric in indoor spaces.
 \pause
 
-The mapping $\mn{Rooms}$ determines the room of an indoor position:
+The mapping ${Rooms}$ determines the room of an indoor position:
 \pause
 \begin{equation}
-\mn{Rooms: positions \rightarrow \Sigma_{rooms}}
+{Rooms: positions \rightarrow \Sigma_{rooms}}
 \end{equation}
 
 \pause
 
-The mapping $\mn{Doors}$ maps a room to the doors that connect the room to an adjacent room:
+The mapping ${Doors}$ maps a room to the doors that connect the room to an adjacent room:
 \pause
 \begin{equation}
-\mn{Doors: \Sigma_{rooms} \rightarrow 2^{\Sigma_{doors}}}
+{Doors: \Sigma_{rooms} \rightarrow 2^{\Sigma_{doors}}}
 \end{equation}
 
 \end{frame}
@@ -70,9 +70,9 @@ The mapping $\mn{Doors}$ maps a room to the doors that connect the room to an ad
   \column{.48\textwidth}
   \begin{itemize}
     \ssize{
-    \item intra-room obstructed distance, termed as $\mn{d_o}$. E.g., $\mn{d_o(p_2, p_3) = |p_2p_3|}$ and $\mn{d_o(p_4, p_5) = |p_4c|+|cp_5|}$.
-    \item if in different rooms, it should take into account the doors connecting the rooms. E.g., $\mn{d_{MIN}(p_1, p_2) = |p_1d_{32}| + |d_{17}p_9|}$.
-    \item if there exist several paths, the correct path should be the shortest one. E.g., $\mn{d_{MIN}(p_6, p_7) = |p_6d_{12}| + |d_{12}p_7|}$ $\mn{\neq |p_6d_{15}| + |d_{15}d_{13}| + |d_{13}p_7|}$.
+    \item intra-room obstructed distance, termed as ${d_o}$. E.g., ${d_o(p_2, p_3) = |p_2p_3|}$ and ${d_o(p_4, p_5) = |p_4c|+|cp_5|}$.
+    \item if in different rooms, it should take into account the doors connecting the rooms. E.g., ${d_{MIN}(p_1, p_2) = |p_1d_{32}| + |d_{17}p_9|}$.
+    \item if there exist several paths, the correct path should be the shortest one. E.g., ${d_{MIN}(p_6, p_7) = |p_6d_{12}| + |d_{12}p_7|}$ ${\neq |p_6d_{15}| + |d_{15}d_{13}| + |d_{13}p_7|}$.
     }
   \end{itemize}
 
@@ -99,10 +99,10 @@ The mapping $\mn{Doors}$ maps a room to the doors that connect the room to an ad
       \textrm{
       \fsize{
       \begin{itemize}
-        \item $\mn{G_{d} = \{ D, E, l_{weight} \}}$
-        \item $\mn{D = \Sigma_{doors}}$ is the set of the vertices
-        \item $\mn{E}$: An edge $\mn{\{ d_i, d_j \}}$ exists if a room $\mn{rm}$ exists in $\mn{\Sigma_{rooms}}$ such that $\mn{\{ d_i, d_j \} \subseteq Doors(rm)}$
-        \item $\mn{l_{weight}: E \rightarrow R}$ assigns to an edge the obstructed distance between the two doors as $\mn{d_o(d_i, d_j)}$
+        \item ${G_{d} = \{ D, E, l_{weight} \}}$
+        \item ${D = \Sigma_{doors}}$ is the set of the vertices
+        \item ${E}$: An edge ${\{ d_i, d_j \}}$ exists if a room ${rm}$ exists in ${\Sigma_{rooms}}$ such that ${\{ d_i, d_j \} \subseteq Doors(rm)}$
+        \item ${l_{weight}: E \rightarrow R}$ assigns to an edge the obstructed distance between the two doors as ${d_o(d_i, d_j)}$
       \end{itemize}
       }
       }
@@ -120,15 +120,15 @@ The mapping $\mn{Doors}$ maps a room to the doors that connect the room to an ad
 All \conceptbf{door-to-door shortest path distances} can be computed and recorded in a hash table $\mathrm{D2D}$ according to the Doors Graph.
 \pause
 \begin{equation}
-  \mathrm{D2D}: \mn{ \{ (d_p, d_j) \} \rightarrow R, ~~d_p, d_q \in \Sigma_{doors} }.
+  \mathrm{D2D}: { \{ (d_p, d_j) \} \rightarrow R, ~~d_p, d_q \in \Sigma_{doors} }.
 \end{equation}
 \pause
-Consequently, for two positions $\mn{p}$ and $\mn{q}$ in different rooms.
+Consequently, for two positions ${p}$ and ${q}$ in different rooms.
 \pause
 \begin{equation}
-  \mn{d_{MIN}(d_p, d_q) = d_o(p, d_p) + \mathrm{D2D}(d_p, d_q) + d_o(d_q, q)}
+  {d_{MIN}(d_p, d_q) = d_o(p, d_p) + \mathrm{D2D}(d_p, d_q) + d_o(d_q, q)}
 \end{equation}
-where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
+where ${d_p(d_q)}$ ranges over all doors of room ${p(q)}$.
 \pause
 \begin{columns}[c]
 
@@ -139,7 +139,7 @@ where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
 
   \column{.52\textwidth}
     \ssize{
-    it is possible to adapt this notion of distance to accommodate other semantics. For example, a person might prefer a longer indoor path that passes as few doos as possible.
+    it is possible to adapt this notion of distance to accommodate other semantics. For example, a person might prefer a longer indoor path that passes as few doors as possible.
     }
 
 \end{columns}
@@ -153,13 +153,13 @@ where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
 
   each device detects and reports the observed objects at a relatively high sampling rate.\\~
 
-  A reading $\mn{(deviceID, objectID, t)}$ states that object $\mn{objectID}$ is detected by device $\mn{objectID}$ at time $\mn{t}$.\\~
+  A reading ${(deviceID, objectID, t)}$ states that object ${objectID}$ is detected by device ${objectID}$ at time ${t}$.\\~
 
   Only its first and last appearances in a device's range are of interest.\\~
 
   \begin{fitemize}
-    \item $\mn{flag = ENTER}$ indicates that the object is entering the device's activation range
-    \item $\mn{flag = LEAVE}$ indicates that the object is leaving the device's activation range
+    \item ${flag = ENTER}$ indicates that the object is entering the device's activation range
+    \item ${flag = LEAVE}$ indicates that the object is leaving the device's activation range
   \end{fitemize}
 
 \end{frame}
@@ -178,7 +178,7 @@ where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
     \item Two types of positioning devices
       \begin{itemize}
         \ssize{
-        \item Partitioning Device -- \emph{undirected} (\conceptbf{UP}), e.g., $\mn{d_{21}}$ -- \emph{directed} (\conceptbf{DP}), e.g., $\mn{d_{11}}$ and $\mn{d_{11'}}$
+        \item Partitioning Device -- \emph{undirected} (\conceptbf{UP}), e.g., ${d_{21}}$ -- \emph{directed} (\conceptbf{DP}), e.g., ${d_{11}}$ and ${d_{11'}}$
         \item Presence Device -- (\conceptbf{PR})
         }
       \end{itemize}
@@ -189,11 +189,11 @@ where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
     \textrm{
     \begin{itemize}
       \ssize{
-      \item $\mn{G = \{C, E, \Sigma_{devices}, l_E\}}$
-      \item $\mn{C}$: the set of cells
-      \item $\mn{E}$: the set of edges, $\mn{\{ c_i, c_j \}}$ where $\mn{c_i, c_j \in C}$
-      \item $\mn{\Sigma_{devices}}$: a mapping from $\mn{deviceID}$ to activation range and type
-      \item $\mn{l_E}$ maps an edge to a set of positioning devices, i.e., $\mn{E \rightarrow 2^{\Sigma_{devices}}}$
+      \item ${G = \{C, E, \Sigma_{devices}, l_E\}}$
+      \item ${C}$: the set of cells
+      \item ${E}$: the set of edges, ${\{ c_i, c_j \}}$ where ${c_i, c_j \in C}$
+      \item ${\Sigma_{devices}}$: a mapping from ${deviceID}$ to activation range and type
+      \item ${l_E}$ maps an edge to a set of positioning devices, i.e., ${E \rightarrow 2^{\Sigma_{devices}}}$
       }
     \end{itemize}
     }
@@ -253,25 +253,25 @@ where $\mn{d_p(d_q)}$ ranges over all doors of room $\mn{p(q)}$.
 \fsize{
 \emph{Device Hash Table(DHT)} maps each device to a set of active objects:
 \pause
-$$\mn{DHT[deviceID] = O_A;~deviceID \in \Sigma_{devices}, O_A \subseteq O_{indoor}}$$
+$${DHT[deviceID] = O_A;~deviceID \in \Sigma_{devices}, O_A \subseteq O_{indoor}}$$
 \\~\\
 \pause
 
 \emph{Cell Deterministic Hash Table(CDHT)} maps each cell to a set of deterministic objects:
 \pause
-$$\mn{CDHT[cellID] = O_D;~cellID \in C, O_D \subseteq O_{indoor}}$$
+$${CDHT[cellID] = O_D;~cellID \in C, O_D \subseteq O_{indoor}}$$
 \\~\\
 \pause
 
 \emph{Cell Nondeterministic Hash Table(CNHT)} maps each cell to a set of nondeterministic objects:
 \pause
-$$\mn{CNHT[cellID] = O_N;~cellID \in C, O_N \subseteq O_{indoor}}$$
+$${CNHT[cellID] = O_N;~cellID \in C, O_N \subseteq O_{indoor}}$$
 \\~\\
 \pause
 
 \emph{Object Hash Table(OHT)} maps objects to their current data(state, time, cell(s) the object can be in)
 \pause
-$$\mn{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
+$${OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
 \\~\\
 \pause
 }
@@ -294,11 +294,11 @@ $$\mn{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
   \ssize{
     \begin{enumerate}
       \pause
-      \item Line 1: \textrm{reset $\mn{IDSet}$} \pause
-      \item Lines 2--12: \textrm{$\mn{O.flag}$ is ENTER so check the object's previous state. Remove $\mn{O}$ from the corresponding table according its previous state} \pause
-      \item Lines 13--14: \textrm{add $\mn{O}$ to table of active objects (DHT), and update $\mn{O}$'s in the objects' table (OHT)} \pause
-      \item Lines 16--17: \textrm{$\mn{O.flag}$ is LEAVE so remove the object from DHT. Get the possible cells that $\mn{O}$ can move to} \pause
-      \item Lines 18--25: \textrm{if the device is undirected, set $\mn{O}$ in OHT and add $\mn{O}$ to CNHT for the cells in sSet, else apply the same to CDHT}
+      \item Line 1: \textrm{reset ${IDSet}$} \pause
+      \item Lines 2--12: \textrm{${O.flag}$ is ENTER so check the object's previous state. Remove ${O}$ from the corresponding table according its previous state} \pause
+      \item Lines 13--14: \textrm{add ${O}$ to table of active objects (DHT), and update ${O}$'s in the objects' table (OHT)} \pause
+      \item Lines 16--17: \textrm{${O.flag}$ is LEAVE so remove the object from DHT. Get the possible cells that ${O}$ can move to} \pause
+      \item Lines 18--25: \textrm{if the device is undirected, set ${O}$ in OHT and add ${O}$ to CNHT for the cells in sSet, else apply the same to CDHT}
     \end{enumerate}
   }
   \end{columns}
@@ -310,12 +310,12 @@ $$\mn{OHT[objectID] = (STATE, t, IDSet);~objectID \in O_{indoor}}$$
 \begin{frame}
 \frametitle{Deriving Uncertain Regions for Indoor Moving Objects}
 
-\textrm{For outdoor moving objects~\cite{cheng2004querying}, \conceptbf{Uncertainty Region}, denoted by $\mn{UR(o,t)}$, is a region such that $\mn{o}$ must be in this region at time $\mn{t}$.}\\~
+\textrm{For outdoor moving objects~\cite{cheng2004querying}, \conceptbf{Uncertainty Region}, denoted by ${UR(o,t)}$, is a region such that ${o}$ must be in this region at time ${t}$.}\\~
 
-In general terms, an object $\mn{o_i}$'s location can be modeled as a random variable with a probability density function $\mn{f_{o_i}(x,y,t)}$ that has non-zero values only in $\mn{o_i}$'s suncertainty region $\mn{UR(o_i, t)}$.
+In general terms, an object ${o_i}$'s location can be modeled as a random variable with a probability density function ${f_{o_i}(x,y,t)}$ that has non-zero values only in ${o_i}$'s uncertainty region ${UR(o_i, t)}$.
 
 \begin{equation}
-  \mn{\int_{UR(o_i,t)} f_{o_i}(x,y,t) dx dy = 1}
+  {\int_{UR(o_i,t)} f_{o_i}(x,y,t) dx dy = 1}
 \end{equation}
 
 \end{frame}
@@ -327,7 +327,7 @@ In general terms, an object $\mn{o_i}$'s location can be modeled as a random var
 
 Assume that an \emph{indoor object} has the same probability to be located anywhere inside its uncertainty region:
 \begin{equation}
-  \mn{f_{o_i}(x,y,t) = \frac{1}{Area(UR(o_i, t))}, ~~(x,y) \in UR(o_i, t)}
+  {f_{o_i}(x,y,t) = \frac{1}{Area(UR(o_i, t))}, ~~(x,y) \in UR(o_i, t)}
 \end{equation}
 
 \begin{fitemize}
@@ -352,15 +352,15 @@ Assume that an \emph{indoor object} has the same probability to be located anywh
 
   \column{.58\textwidth}
   \begin{fitemize}
-      \item assume $\mn{o}$ left $\mn{device_{16}}$ at time $\mn{t}$, intersection of maximum-speed constrained circle $\mn{C_{MSC}(o, device_{16}, t)}$ and cell $\mn{c_{11}}$.
-      \item suppose $\mn{o}$ left $\mn{device_{10}}$ at time $\mn{t}$, $\mn{UR}$ is the intersection between room 10 and $\mn{C_{MSC}(o, device_{10}, t)}$.
+      \item assume ${o}$ left ${device_{16}}$ at time ${t}$, intersection of maximum-speed constrained circle ${C_{MSC}(o, device_{16}, t)}$ and cell ${c_{11}}$.
+      \item suppose ${o}$ left ${device_{10}}$ at time ${t}$, ${UR}$ is the intersection between room 10 and ${C_{MSC}(o, device_{10}, t)}$.
     \end{fitemize}
 
 \end{columns}
 
 \begin{fitemize}
-  \item as time $\mn{t}$ passes by, $\mn{UR}$ therefore contains two parts...
-  \item uncertainty region of an active object can be refined as the intersection of the activation range of device and $\mn{C_{MSC}}$. suppose $\mn{o}$ left $\mn{device_{10}}$ and then is detected by $\mn{device_{12}}$, its uncertainty region is the intersection of $\mn{C_{MSC}(o, device_{10}, t)}$ and activation range of $\mn{device_{12}}$.
+  \item as time ${t}$ passes by, ${UR}$ therefore contains two parts...
+  \item uncertainty region of an active object can be refined as the intersection of the activation range of device and ${C_{MSC}}$. suppose ${o}$ left ${device_{10}}$ and then is detected by ${device_{12}}$, its uncertainty region is the intersection of ${C_{MSC}(o, device_{10}, t)}$ and activation range of ${device_{12}}$.
 \end{fitemize}
 
 \end{frame}
@@ -372,11 +372,11 @@ Assume that an \emph{indoor object} has the same probability to be located anywh
 
 \begin{definition}[Indoor Probabilistic Threshold $k$NN Query]
   \label{ptknnquery}
-  \textrm{Given a set of indoor moving objects $\mn{O = \{ o_1, o_2,...,o_n \}}$ and a threshold value $\mn{T \in (0,1]}$, a PT$\mn{k}$NN query issued at time $\mn{t}$ with query location $\mn{q}$ returns a result set $\mathbb{R} = \mn{\{ A | A \subseteq O \wedge |A| = k \wedge prob(A) > T \} }$, where $\mn{prob(A)}$ is the probability that $\mn{A}$ contains the $\mn{k}$ nearest neighbors of the query location $\mn{q}$ at time $\mn{t}$.}
+  \textrm{Given a set of indoor moving objects ${O = \{ o_1, o_2,...,o_n \}}$ and a threshold value ${T \in (0,1]}$, a PT${k}$NN query issued at time ${t}$ with query location ${q}$ returns a result set $\mathbb{R} = {\{ A | A \subseteq O \wedge |A| = k \wedge prob(A) > T \} }$, where ${prob(A)}$ is the probability that ${A}$ contains the ${k}$ nearest neighbors of the query location ${q}$ at time ${t}$.}
 \end{definition}
 
 ~\\~
-\small{when the number of moving objects incrases, the number of $\mn{k}$-subsets ($\mn{A}$ in Definition~\ref{ptknnquery}) in the result set $\mathbb{R}$ increase exponentially. Specifically, there are $\mn{\binom{n}{k}}$ possible $\mn{k}$-subsets for a PT$\mn{k}$NN query over $\mn{n}$ objects.}
+\small{when the number of moving objects increases, the number of ${k}$-subsets (${A}$ in Definition~\ref{ptknnquery}) in the result set $\mathbb{R}$ increase exponentially. Specifically, there are ${\binom{n}{k}}$ possible ${k}$-subsets for a PT${k}$NN query over ${n}$ objects.}
 
 \end{frame}
 
@@ -387,9 +387,9 @@ Assume that an \emph{indoor object} has the same probability to be located anywh
 
 \large{Three techniques are proposed to speed up PT$k$NN query processing:}
 \begin{enumerate}
-  \item minimum indoor walking distances between the query location and the (uncertainty regions of) objects are uesd to prune the objects too far away to be in any possible $\mn{k}$-subset, results in a subset $\mn{O' \subseteq O}$.
-  \item for all $\mn{k}$-subsets of $\mn{O'}$, cost-efficient probability estimates are used to prune the $\mn{k}$-subsets whose probabilities definitely are lower than the threshold $\mn{T}$.
-  \item for each remaining $\mn{k}$-subset $\mn{A}$, add $\mn{A}$ to $\mathbb{R}$ only if $\mn{prob(A) > T}$.
+  \item minimum indoor walking distances between the query location and the (uncertainty regions of) objects are used to prune the objects too far away to be in any possible ${k}$-subset, results in a subset ${O' \subseteq O}$.
+  \item for all ${k}$-subsets of ${O'}$, cost-efficient probability estimates are used to prune the ${k}$-subsets whose probabilities definitely are lower than the threshold ${T}$.
+  \item for each remaining ${k}$-subset ${A}$, add ${A}$ to $\mathbb{R}$ only if ${prob(A) > T}$.
 \end{enumerate}
 
 \end{frame}
@@ -400,11 +400,11 @@ Assume that an \emph{indoor object} has the same probability to be located anywh
 \frametitle{PT$k$NN Query Processing}
 
 \footnotesize{
-%Define the minimum and maximum MIWD between q and an uncertain object $\mn{o_i}$.
-Let $\mn{s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty region of $\mn{o_i}$:
+%Define the minimum and maximum MIWD between q and an uncertain object ${o_i}$.
+Let ${s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty region of ${o_i}$:
 \pause
 \begin{equation}
-  \mn{s_i = \min_{p \in UR(o_i,t)} d_{MIW}(q, p);~~~~l_i = \max_{p \in UR(o_i,t)} d_{MIW}(q, p)}
+  {s_i = \min_{p \in UR(o_i,t)} d_{MIW}(q, p);~~~~l_i = \max_{p \in UR(o_i,t)} d_{MIW}(q, p)}
 \end{equation}
 }
 
@@ -417,9 +417,9 @@ Let $\mn{s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty regi
 
 \column{.46\textwidth}
 \begin{fitemize}
-  \item $\mn{o_1}$ is being observed by $\mn{device_{12}}$
-  \item $\mn{o_2, o_3, o_4}$ recently left $\mn{device_{20}, device_{2'}, device_{33}}$ respectively
-  \item $\mn{o_4}$'s MIWD computation should take into account the door connectivity
+  \item ${o_1}$ is being observed by ${device_{12}}$
+  \item ${o_2, o_3, o_4}$ recently left ${device_{20}, device_{2'}, device_{33}}$ respectively
+  \item ${o_4}$'s MIWD computation should take into account the door connectivity
 \end{fitemize}
 
 \end{columns}
@@ -432,12 +432,12 @@ Let $\mn{s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty regi
 \frametitle{PT$k$NN Query Processing}
 
 \begin{definition}[k-bound]
-  \textrm{Let $\mn{f}$ be the $\mn{k}$th minimal one of all objects' $\mn{l_i}$s. If $\mn{s_i}$ of object $\mn{o_i}$ is greater than $\mn{f}$, object $\mn{o_i}$ has no chance to be in any $\mn{k}$-subset of the result set $\mathbb{R}$. This $\mn{f}$ value is called the k-bound.~\cite{cheng2009evaluating}}
+  \textrm{Let ${f}$ be the ${k}$th minimal one of all objects' ${l_i}$s. If ${s_i}$ of object ${o_i}$ is greater than ${f}$, object ${o_i}$ has no chance to be in any ${k}$-subset of the result set $\mathbb{R}$. This ${f}$ value is called the k-bound.~\cite{cheng2009evaluating}}
 \end{definition}
 
 ~\\
 \begin{itemize}
-  \item k-bound can be calculated and updated dynamically during the distance based pruning as soon as $k$ objects have been seen from $\mn{O}$.
+  \item k-bound can be calculated and updated dynamically during the distance based pruning as soon as $k$ objects have been seen from ${O}$.
   \item by taking advantage of indoor space distance definition, the computation cost can be further reduced. E.g., the objects in the same cell can be pruned if one is pruned by the k-bound.
 \end{itemize}
 
@@ -459,11 +459,11 @@ Let $\mn{s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty regi
   \ssize{
     \begin{enumerate}
       \pause
-      \item Lines 1--4: \textrm{initialization: candidate object set $\mn{O'}$, k-bound $\mn{f}$, cell set $\mn{seeds}$ records the examined cells, min-heap $\mn{H \langle \langle d, v \rangle \rangle}$ gives priority to doors closer to location $\mn{q}$} \pause
-      \item Lines 5--8: \textrm{if $\mn{q}$ is in $\mn{dev}$'s activation range, active objects in $\mn{dev}$ are added to $\mn{O'}$, the nearby objects are added are also added to $\mn{O'}$} \pause
-      \item Lines 9--13: \textrm{if not, the covering cell $\mn{c}$ is added to set $\mn{seeds}$, add both deterministic and nondeterministic objects to $\mn{O'}$} \pause
-      \item Lines 14--15: \textrm{determine the k-bound from the current $\mn{O'}$} \pause
-      \item Lines 17-30: \textrm{expansion step followed Dijkstra, stops when the entry's distance is too far away, if $\mn{|O'|>k}$ then update $\mn{f}$ and reduce the candidate set $\mn{O'}$} \pause
+      \item Lines 1--4: \textrm{initialization: candidate object set ${O'}$, k-bound ${f}$, cell set ${seeds}$ records the examined cells, min-heap ${H \langle \langle d, v \rangle \rangle}$ gives priority to doors closer to location ${q}$} \pause
+      \item Lines 5--8: \textrm{if ${q}$ is in ${dev}$'s activation range, active objects in ${dev}$ are added to ${O'}$, the nearby objects are added are also added to ${O'}$} \pause
+      \item Lines 9--13: \textrm{if not, the covering cell ${c}$ is added to set ${seeds}$, add both deterministic and nondeterministic objects to ${O'}$} \pause
+      \item Lines 14--15: \textrm{determine the k-bound from the current ${O'}$} \pause
+      \item Lines 17-30: \textrm{expansion step followed Dijkstra, stops when the entry's distance is too far away, if ${|O'|>k}$ then update ${f}$ and reduce the candidate set ${O'}$} \pause
     \end{enumerate}
   }
   \end{columns}
@@ -475,28 +475,28 @@ Let $\mn{s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty regi
 \begin{frame}
 \frametitle{Probability Threshold Based Pruning}
 
-\textit{\textrm{There can still be $\mn{\binom{|O'|}{k}}$ possible $\mn{k}$-subsets in result set $\mathbb{R}$.}}
+\textit{\textrm{There can still be ${\binom{|O'|}{k}}$ possible ${k}$-subsets in result set $\mathbb{R}$.}}
 \\~\\
 \ssize{
   \pause
-  Given an object $\mn{o_i}$, let $\mn{P_{o_i}(r)}$ be the cumulative distribution function that $\mn{o_i}$'s MIWD to the query location $\mn{q}$ is $\mn{r}$:
+  Given an object ${o_i}$, let ${P_{o_i}(r)}$ be the cumulative distribution function that ${o_i}$'s MIWD to the query location ${q}$ is ${r}$:
   \pause
   \begin{equation}
-    \mn{ P_{o_i}(r) = Pr(d_{MIW}(q, o_i) \leq r) }
+    { P_{o_i}(r) = Pr(d_{MIW}(q, o_i) \leq r) }
   \end{equation}
   ~\\
-  Let $\mn{A}$ be a $\mn{k}$-subset of $\mn{O'}$. The probability $\mn{Prob(A)}$ that $\mn{A}$ contains the $\mn{k}$ nearest neighbors of $\mn{q}$ satisfies:
+  Let ${A}$ be a ${k}$-subset of ${O'}$. The probability ${Prob(A)}$ that ${A}$ contains the ${k}$ nearest neighbors of ${q}$ satisfies:
   \pause
   \begin{equation}
-    \mn{ Prob(A) \leq \prod_{o_i \in A} P_{o_i}(f) }
+    { Prob(A) \leq \prod_{o_i \in A} P_{o_i}(f) }
   \end{equation}
   ~\\
-  If $\mn{P_{o_i}(f)}$ is less than the threshold $\mn{T}$, any $\mn{k}$-subset $\mn{A}$ that contains $\mn{o_i}$ satisfies:
+  If ${P_{o_i}(f)}$ is less than the threshold ${T}$, any ${k}$-subset ${A}$ that contains ${o_i}$ satisfies:
   \pause
   \begin{equation}
-    \mn{ Prob(A) \leq \prod_{o_i \in A} P_{o_i}(f) \leq P_{o_i}(f) \leq T }
+    { Prob(A) \leq \prod_{o_i \in A} P_{o_i}(f) \leq P_{o_i}(f) \leq T }
   \end{equation}
-  Therefore, if $\mn{P_{o_i}(f) \leq T}$, $\mn{o_i}$ can be safely pruned from the candidate.
+  Therefore, if ${P_{o_i}(f) \leq T}$, ${o_i}$ can be safely pruned from the candidate.
 }
 
 \end{frame}
@@ -506,13 +506,13 @@ Let $\mn{s_i (l_i)}$ be the minimum(maximum) MIWD from q to the uncertainty regi
 \begin{frame}
 \frametitle{Probability Evaluation}
 
-\textit{\textrm{After probability threshold pruning, each $\mn{k}$-subset $\mn{A}$ in $\mathbb{R}$ may have their $\mn{Prob(A)}$ greater than $\mn{T}$.}}
+\textit{\textrm{After probability threshold pruning, each ${k}$-subset ${A}$ in $\mathbb{R}$ may have their ${Prob(A)}$ greater than ${T}$.}}
 \\~\\
 \ssize{
-Define $\mn{Prob(A)}$ as:
+Define ${Prob(A)}$ as:
 \pause
 \begin{equation}
-  \mn{ Prob(A) = \sum_{o_z \in A} \int_{0}^{+\infty}p_{o_z}(r) \prod_{o_i \in A \setminus \{ o_z\}} P_{o_i}(r) \prod_{o_j \in O' \setminus A} (1 - P_{o_j}(r)) dr}
+  { Prob(A) = \sum_{o_z \in A} \int_{0}^{+\infty}p_{o_z}(r) \prod_{o_i \in A \setminus \{ o_z\}} P_{o_i}(r) \prod_{o_j \in O' \setminus A} (1 - P_{o_j}(r)) dr}
 \end{equation}
 \pause
 }
@@ -525,10 +525,10 @@ Define $\mn{Prob(A)}$ as:
 
   \column{.58\textwidth}
   \begin{sitemize}
-    \item $\mn{o_z}$ is the $\mn{k}$-th nearest neighbor of $\mn{q}$.
+    \item ${o_z}$ is the ${k}$-th nearest neighbor of ${q}$.
     \item to evaluate the probabilities efficiently, a partition based approximate evaluation method is used.
-    \item let an array $\mn{sl}$ records all the minimum distances $\mn{s_i}$ in $\mn{O'}$ and the maximum distances $\mn{l_i}$ that satisfy $\mn{l_i \leq f}$.
-    \item $\mn{sl}$ should have $\mn{g = |O'| + k}$ elements, sort it in ascending order.
+    \item let an array ${sl}$ records all the minimum distances ${s_i}$ in ${O'}$ and the maximum distances ${l_i}$ that satisfy ${l_i \leq f}$.
+    \item ${sl}$ should have ${g = |O'| + k}$ elements, sort it in ascending order.
   \end{sitemize}
 \end{columns}
 
@@ -540,7 +540,7 @@ Define $\mn{Prob(A)}$ as:
 \frametitle{Research Directions}
 
 \begin{itemize}
-  \item Analyzing historical trajectory data may discover associations among object movements, which can be used to design more efficient group pruning in processing a PT$\mn{k}$NN query
+  \item Analyzing historical trajectory data may discover associations among object movements, which can be used to design more efficient group pruning in processing a PT${k}$NN query
   \\~\\
   \item Regarding the uncertainty model of indoor moving objects, it is also interesting to conduct probabilistic analysis on other kinds of object distribution.
 \end{itemize}
