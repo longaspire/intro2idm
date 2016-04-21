@@ -7,6 +7,7 @@
 \beamer@subsectionintoc {2}{4}{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}{5}{0}{2}
 \beamer@subsectionintoc {2}{5}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}{5}{0}{2}
 \beamer@subsectionintoc {2}{6}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}{5}{0}{2}
-\beamer@sectionintoc {3}{3. Indoor Data Cleansing}{36}{0}{3}
-\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{37}{0}{4}
-\beamer@sectionintoc {5}{5. Appendix}{38}{0}{5}
+\beamer@subsectionintoc {2}{7}{2.7 Distance-Aware Join for Indoor Moving Objects}{5}{0}{2}
+\beamer@sectionintoc {3}{3. Indoor Data Cleansing}{9}{0}{3}
+\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{10}{0}{4}
+\beamer@sectionintoc {5}{5. Appendix}{11}{0}{5}

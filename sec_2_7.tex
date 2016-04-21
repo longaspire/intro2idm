@@ -1,0 +1,54 @@
+\begin{frame}
+\frametitle{About This Work...}
+
+\emph{Distance-Aware Join for Indoor Moving Objects}.~\cite{xie2015distance} \\
+X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
+
+\begin{itemize}
+  \item Published at \emph{TKDE' 2015}.
+  \item Study efficient evaluation of distance-aware join operations on indoor moving objects, semi-range join and semi-neighborhood join.
+  \item Design a composite index for indoor space as well as objects.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Motivation}
+
+\begin{itemize}
+  \item People spend a large part of their lives in indoor spaces.
+
+  \item the New Town Plaza in Hong Kong covers 200,000 square meters and consists of 34 interconnected buildings. The weekend traffic is as high as 320,000 people as reported in 2004.
+
+  \item A large Danish hospital logistic system, requires tracking up to 164,000 objects, including around 10,000 persons, 10,000 pieces of equipment, 70,000 aids and 70,000 materials over 10 floors.
+
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Distance-Aware Joins}
+
+\begin{example}[Indoor distance-based monitoring]
+  \ssize{
+  In a shopping plaza, a covey of mobile security guards are patrolling and monitoring the surrounding people for the suspicious, which may appear within a range. The range can be specified by a distance threshold $\epsilon$.
+  }
+\end{example}
+
+\begin{example}[Indoor facility tracking]
+  \ssize{
+  In a large hospital logistic system, it is time-critical to monitor patients in special care or nurses on the ward with their nearest medical facilities, such as a medical staff. The number of nearby facilities can be specified by a parameter $k$.
+  }
+\end{example}
+
+\begin{example}[Indoor data analysis]
+  \ssize{
+  Many algorithms related to similarity search and data mining can be constructed on top of a join query. For indoor spatial databases, the join operator is an important primitive that allows efficient distance-aware analysis.
+  }
+\end{example}
+
+\end{frame}

@@ -1,7 +1,7 @@
 \begin{frame}
 \frametitle{About This Work...}
 
-\emph{Efficient Distance-aware Query Evaluation on Indoor Moving Objects}.~\cite{DBLP:conf/icde/XieLP13} \\
+\emph{Efficient Distance-Aware Query Evaluation on Indoor Moving Objects}.~\cite{DBLP:conf/icde/XieLP13} \\
 X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
 
 \begin{itemize}
@@ -491,5 +491,130 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
 \textbf{Insertion.}~\textrm{To insert an object $O$, search the $ind$R-tree to find the leaf nodes $\{ P_i \}$ that overlap with $O$'s uncertainty region. Also insert a new entry to $o-table$.}\\~\\
 
 \textbf{Deletion.}~\textrm{To delete an object $O$, use the $o-table$ to find the $ind$R-tree leaf nodes $\{ P_i \}$ that overlap with $O$'s uncertainty region. For each $P_i$, $O$ is removed from its associated bucket. Also the entry for $O$ is deleted from the $o-table$.}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Query Semantics}
+
+\begin{definition}[Indoor Range Query, iRQ]
+  Given a query point $q \in \mathbb{I}$ and a distance value $r$, the \emph{iRQ} returns objects whose indoor distances are smaller than $r$. Formally, $iRQ_{q,r}(\mathbb{O}) = \{ O | |q,O|_I \leq r, O \in \mathbb{O}\}$.
+\end{definition}
+
+\begin{definition}[Indoor $k$ Nearest Neighbor Query, ikNNQ]
+  Given a query point $q \in \mathbb{I}$ and a parameter $k$, the \emph{ikNNQ} returns $k$ objects whose indoor distances to $q$ are the smallest among all objects. Formally, $ikNN_{q,k}(\mathbb{O}) = \{ O | O \in \mathbb{O}\}$, where $|ikNN_{q,k}(\mathbb{O})| = k, \forall O_i \in ikNN_{q,k}(\mathbb{O}), \forall O_j \in \mathbb{O} \setminus ikNN_{q,k}(\mathbb{O}), |q,O_i|_I \leq |q,O_j|_I$.
+\end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Efficient Query Evaluation}
+
+\begin{enumerate}
+  \fsize{
+  \item \conceptbf{Filtering Phase} locates the source partition that contains the query point and retrieves condidate partitions as well as candidate objects.
+  \item \conceptbf{Subgraph Phase} constructs a subgraph based on candidate partitions, and uses the doors of the source partition as sources to compute the shortest indoor paths that are to be used in the subsequent two phases.
+  \item \conceptbf{Prunning Phase}, upper/lower distance bounds for objects are calculated to further reduce the number of candidate objects.
+  \item \conceptbf{Refinement Phase}, the indoor distances for the remaining objects are computed and the qualifying objects are returned as the query results.
+  }
+\end{enumerate}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Indoor Range Query}
+
+\begin{columns}[c]
+
+  \column{0.2\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-6/2-6-13.pdf}
+  \end{figure}
+
+
+  \column{0.8\textwidth}
+  \begin{example}
+    \ssize{
+    The circle $\bigodot(q,r)$ is the query region represented in the Euclidean space. Object $O_1$ is pruned away in filtering phase, since $|q, O_1|_{minE} > r$. After deriving the upper/lower bounds for the remaining objects in the pruning phase, $O_3$ is qualified. For the undetermined object $O_2$, the exact indoor distance is calculated and compared to $r$.
+    }
+  \end{example}
+
+\end{columns}
+
+\begin{columns}[c]
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-6/2-6-14.pdf}
+  \end{figure}
+
+  \column{0.6\textwidth}
+  \begin{sitemize}
+    \item in the filtering, iRQ calls $RangeSearch$ to search the geometric layer.
+    \item lines 5--10: iRQ makes use of the topological upper/lower bounds to approximate indoor distances and compare them to $r$.
+    \item lines 11--13: the exact indoor distances are only computed for those objects whose bounds cover $r$.
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Indoor $k$ Nearest Neighbor Query}
+
+\begin{columns}[c]
+
+  \column{0.16\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-6/2-6-15.pdf}
+  \end{figure}
+
+
+  \column{0.84\textwidth}
+  \begin{example}
+    \ssize{
+    $kSeedsSelection$ finds $O_2$ and $O_3$ as seeds. Because $O_2$'s topological looser upper bound is longer, it is chosen as the kbound. Through the range search, $O_1$ is excluded since $|q,O_1|_K > kbound$.
+    }
+  \end{example}
+
+\end{columns}
+
+\begin{columns}[c]
+
+  \column{0.35\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-6/2-6-16.pdf}
+  \end{figure}
+
+  \column{0.65\textwidth}
+  \begin{sitemize}
+    \item in the filtering, ikNNQ calls $kSeedsSelection$ to return an object $R_1^o$ and a partition set $R_1^p$.
+    \item $R_1^o$ contains $k$ objects taht are in query point $q$'s partition or in the closet adjacent partitions. $R_1^p$ is the set of all those involved partition.
+    \item ikNNQ derives \emph{Topological Looser Upper Bounds} for the $k$ objects and choose the longest one as $kounds = \max_{seed_i \in R_1^o}\{ |q,seed_i|_I.TLU \}$.
+    \item Line 4: a range search $\bigodot(q,kound)$ is done on the tree tier.
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Research Directions}
+
+  \begin{itemize}
+  	\item it is of interest to study other query types using the distance bounds and the composite index proposed in this paper.
+    \item it is useful to estimate the selectivity for indoor distance aware queries and make use of it in further optimizing queries over uncetain object.
+    \item it is of benificial to reuse computational efforts on indoor distances when multiple, related queries are issued within a short period of time.
+  \end{itemize}
 
 \end{frame}

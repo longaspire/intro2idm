@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  14 APR 2016 14:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.28)  21 APR 2016 10:02
 entering extended mode
 **E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
 (E:/WeiYun/GitHub/intro2IDM/intro2idm/intro2idm.tex
@@ -660,7 +660,7 @@ Package: beamerfontthemeserif 2010/06/17  (rcs-revision d02a7cf4d8ae)
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 98.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 98.
 Package hyperref Info: Option `colorlinks' set `true' on input line 98.
- (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.aux (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_6.aux))
+ (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.aux (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_7.aux) (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_7_ref.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
@@ -752,492 +752,77 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 126.
  (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.nav)
-Overfull \hbox (23.38435pt too wide) detected at line 126
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 130.
 
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
 [1
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [2
 
-[2
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [3
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [4
 
-[3
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_7.tex [5
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
 
-[4
+] [6
 
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_6.tex
-
-LaTeX Warning: Citation `DBLP:conf/icde/XieLP13' on page 5 undefined on input line 14.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
-("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+ ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
  ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 14.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
  ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
+) [7
 
-[5
+]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_7_ref.tex [8
 
 
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
 
-[6
+]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [9
 
-]
 
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-1.pdf, id=468, 219.50708pt x 173.0766pt>
-File: figures/2-6/2-6-1.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-1.pdf>
-Package pdftex.def Info: figures/2-6/2-6-1.pdf used on input line 45.
-(pdftex.def)             Requested size: 230.46739pt x 181.72258pt.
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [10
 
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
+] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc) [11
 
-[7
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-1.pdf>]
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 8 undefined on input line 63.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[8
-
-]
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 9 undefined on input line 63.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[9
-
-]
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 10 undefined on input line 63.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[10
-
-]
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 11 undefined on input line 63.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[11
-
-]
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 12 undefined on input line 63.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[12
-
-]
-
-LaTeX Warning: Citation `pfoser1999capturing' on page 13 undefined on input line 77.
-
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 13 undefined on input line 77.
-
-
-LaTeX Warning: Citation `DBLP:conf/edbt/YangLJ10' on page 13 undefined on input line 77.
-
-
-LaTeX Warning: Citation `pfoser1999capturing' on page 13 undefined on input line 77.
-
-
-LaTeX Warning: Citation `cheng2003evaluating' on page 13 undefined on input line 77.
-
-
-LaTeX Warning: Citation `cheng2004querying' on page 13 undefined on input line 77.
-
-
-LaTeX Warning: Citation `kriegel2007probabilistic' on page 13 undefined on input line 77.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[13
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[14
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[15
-
-]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-2.pdf, id=1075, 91.10446pt x 116.9459pt>
-File: figures/2-6/2-6-2.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-2.pdf>
-Package pdftex.def Info: figures/2-6/2-6-2.pdf used on input line 133.
-(pdftex.def)             Requested size: 73.75125pt x 94.67212pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[16
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-2.pdf>]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-4.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-4.pdf, id=1216, 84.62114pt x 117.73386pt>
-File: figures/2-6/2-6-4.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-4.pdf>
-Package pdftex.def Info: figures/2-6/2-6-4.pdf used on input line 162.
-(pdftex.def)             Requested size: 61.45703pt x 85.50845pt.
-
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-3.pdf, id=1217, 226.00735pt x 52.56036pt>
-File: figures/2-6/2-6-3.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-3.pdf>
-Package pdftex.def Info: figures/2-6/2-6-3.pdf used on input line 162.
-(pdftex.def)             Requested size: 245.83282pt x 57.17253pt.
-
-Overfull \vbox (4.6973pt too high) detected at line 162
- []
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[17
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-4.pdf> <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-3.pdf>]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-5.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-5.pdf, id=1406, 90.9286pt x 116.15697pt>
-File: figures/2-6/2-6-5.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-5.pdf>
-Package pdftex.def Info: figures/2-6/2-6-5.pdf used on input line 192.
-(pdftex.def)             Requested size: 61.45703pt x 78.50891pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[18
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-5.pdf>]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[19
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[20
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[21
-
-
-]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-6.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-6.pdf, id=1688, 134.55368pt x 134.55368pt>
-File: figures/2-6/2-6-6.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-6.pdf>
-Package pdftex.def Info: figures/2-6/2-6-6.pdf used on input line 265.
-(pdftex.def)             Requested size: 92.1879pt x 92.19128pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[22
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-6.pdf>]
-File: figures/2-6/2-6-6.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-6.pdf>
-Package pdftex.def Info: figures/2-6/2-6-6.pdf used on input line 299.
-(pdftex.def)             Requested size: 92.1879pt x 92.19128pt.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 299.
-
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[23
-
-]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-7.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-7.pdf, id=1853, 260.171pt x 55.71315pt>
-File: figures/2-6/2-6-7.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-7.pdf>
-Package pdftex.def Info: figures/2-6/2-6-7.pdf used on input line 316.
-(pdftex.def)             Requested size: 215.10196pt x 46.06421pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[24
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-7.pdf>]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-8.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-8.pdf, id=1959, 206.29771pt x 102.92953pt>
-File: figures/2-6/2-6-8.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-8.pdf>
-Package pdftex.def Info: figures/2-6/2-6-8.pdf used on input line 339.
-(pdftex.def)             Requested size: 153.64493pt x 76.65825pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[25
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-8.pdf>]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-9.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-9.pdf, id=2067, 508.42116pt x 185.46892pt>
-File: figures/2-6/2-6-9.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-9.pdf>
-Package pdftex.def Info: figures/2-6/2-6-9.pdf used on input line 350.
-(pdftex.def)             Requested size: 307.28987pt x 112.10008pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[26
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-9.pdf>]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-10.pdf, id=2155, 255.54372pt x 152.71654pt>
-File: figures/2-6/2-6-10.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-10.pdf>
-Package pdftex.def Info: figures/2-6/2-6-10.pdf used on input line 368.
-(pdftex.def)             Requested size: 169.01036pt x 101.0076pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[27
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-10.pdf>]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[28
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[29
-
-]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-11.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-11.pdf, id=2369, 174.04926pt x 101.177pt>
-File: figures/2-6/2-6-11.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-11.pdf>
-Package pdftex.def Info: figures/2-6/2-6-11.pdf used on input line 429.
-(pdftex.def)             Requested size: 122.91406pt x 71.45174pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[30
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-11.pdf>]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[31
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[32
-
-]
-
-pdfTeX warning: pdflatex.EXE (file E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-12.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/2-6/2-6-12.pdf, id=2591, 263.9221pt x 87.97467pt>
-File: figures/2-6/2-6-12.pdf Graphic file (type pdf)
- <use figures/2-6/2-6-12.pdf>
-Package pdftex.def Info: figures/2-6/2-6-12.pdf used on input line 473.
-(pdftex.def)             Requested size: 215.10196pt x 71.70474pt.
-
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[33
-
- <E:/WeiYun/GitHub/intro2IDM/intro2idm/figures/2-6/2-6-12.pdf>]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[34
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[35
-
-]) (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[36
-
-
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[37
-
-] (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.toc)
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[38
-
-]
-Overfull \hbox (23.38435pt too wide) has occurred while \output is active
-  [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] []  
- []
-
-[39
+] [12
 
 ]
 \tf@nav=\write5
 \tf@toc=\write6
 \tf@snm=\write7
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
- (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.aux (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_6.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 213.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+ (E:\WeiYun\GitHub\intro2IDM\intro2idm\intro2idm.aux (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_7.aux) (E:\WeiYun\GitHub\intro2IDM\intro2idm\sec_2_7_ref.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 218.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 18123 strings out of 495354
- 347925 string characters out of 3182739
- 449601 words of memory out of 3000000
- 20701 multiletter control sequences out of 15000+200000
- 19920 words of font info for 79 fonts, out of 3000000 for 9000
+ 17909 strings out of 495354
+ 345342 string characters out of 3182739
+ 416744 words of memory out of 3000000
+ 20558 multiletter control sequences out of 15000+200000
+ 11850 words of font info for 45 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,23n,67p,536b,1127s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy5.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intro2idm.pdf (39 pages, 2031954 bytes).
+ 56i,20n,67p,437b,795s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on intro2idm.pdf (12 pages, 216816 bytes).
 PDF statistics:
- 3204 PDF objects out of 3580 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
