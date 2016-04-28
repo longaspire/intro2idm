@@ -90,3 +90,29 @@ As false negatives and false positives abound in raw RFID readings, in order to 
 For example, the detection areas of readers in Zone 2 and 3 have significant overlapping, the positioning of the reader in Zone 4 makes it more likely to detect objects in Zone 3 than objects in Zone 5, or the reader in Zone 3 has high false negative rate.
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Constraints}
+
+\emph{Environmental constraints} can be utilized to improved data cleansing.\\~\\
+
+For example, the maximal capacity of each zone (the number of objects that can reside the same zone) is a constraint.\\~\\
+
+In addition to these pysical constraints, information obtained from other channels can be translated into constraints. E.g., if an extra source indicates that two certain objects are in the same zone, it may help cleanse the data of there two.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Overview of the Approach}
+
+\begin{enumerate}
+  \item By using Bayesian inference, it derives a universal framework of computing the posterior probabilities (of the location of each object).
+  \item Based on the physical characteristic of RFID readers, it proposes an $n$-state detection model to capture likelihoods.
+  \item It devised MH-C, an improved \emph{Metropolis-Hastings} sampler, to sample from the posterior while taking the environmental constraints into consideration.
+\end{enumerate}
+
+\end{frame}
