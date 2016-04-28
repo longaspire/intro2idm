@@ -1,3 +1,4 @@
 *.pdf
+*.log
+*.synctex.gz
 !/figures/*
-
