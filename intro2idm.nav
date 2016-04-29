@@ -39,23 +39,29 @@
 \headcommand {\beamer@framepages {11}{11}}
 \headcommand {\slideentry {3}{1}{7}{12/12}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
 \headcommand {\slideentry {3}{1}{8}{13/13}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{14}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {5}{13}}
-\headcommand {\beamer@subsectionpages {6}{13}}
-\headcommand {\slideentry {4}{0}{9}{14/14}{}{0}}
-\headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {5}{5. Appendix}{15}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {14}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\slideentry {5}{0}{10}{15/15}{}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {5}{0}{11}{16/16}{}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@partpages {1}{16}}
-\headcommand {\beamer@subsectionpages {15}{16}}
-\headcommand {\beamer@sectionpages {15}{16}}
-\headcommand {\beamer@documentpages {16}}
-\headcommand {\def \inserttotalframenumber {16}}
+\headcommand {\slideentry {3}{1}{9}{14/17}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
+\headcommand {\beamer@framepages {14}{17}}
+\headcommand {\slideentry {3}{1}{10}{18/20}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {3}{1}{11}{21/21}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{22}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {5}{21}}
+\headcommand {\beamer@subsectionpages {6}{21}}
+\headcommand {\slideentry {4}{0}{12}{22/22}{}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\sectionentry {5}{5. Appendix}{23}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {22}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\slideentry {5}{0}{13}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {5}{0}{14}{24/24}{}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@partpages {1}{24}}
+\headcommand {\beamer@subsectionpages {23}{24}}
+\headcommand {\beamer@sectionpages {23}{24}}
+\headcommand {\beamer@documentpages {24}}
+\headcommand {\def \inserttotalframenumber {19}}

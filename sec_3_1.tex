@@ -116,3 +116,49 @@ In addition to these pysical constraints, information obtained from other channe
 \end{enumerate}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Notations}
+
+\begin{figure}[tb]
+  \includegraphics[width=\columnwidth]{figures/3-1/3-1-3.pdf}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{A Bayesian Interface Base Approach}
+
+\conceptbf{Bayesian Interface} estimates the probalility of a hypothesis $(x)$ based on observations $(y)$, showing that posterior is proportional to the multiplication of likelihood and prior, i.e., $p(x|y) \propto p(y|x)p(x)$.\\~\\\pause
+
+Suppose there're $m$ zones (each with a reader mounted in the center) and $n$ objects. For each object $o_i$, its location is represented by a random variable $h_i$. A possible distribution of $n$ objects in $m$ zones can be denoted as an instance of the random vector:\pause
+\begin{equation}
+  \hat{H} = \{ h_1, h_2, ..., h_n \}
+\end{equation}
+\pause
+
+where $h_i$ represents the zone ID where object $o_i$ is in. E.g., $h_1 = 2$ denotes that object $o_1$ is in zone 2 in the current instance.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{A Bayesian Interface Base Approach}
+
+For the reader in zone $j$, the raw data (0 or 1) it receives from the RFID tag of objects $o_i$ is denoted as $z_{ij}$. Thr \emph{raw data matrix} for each complete scan from $m$ readers can then be represented as an $n \times m$ matrix $\mathbb{Z} = [z_{ij}]$. \\~\\ \pause
+
+Using the \conceptbf{Bayesian theorem}, where $post(\hat{H}|\mathbb{Z})$ denotes the posterior probability of location vector $\hat{H}$ given the raw data matrix $\mathbb{Z}$. The hypothesis should satisfy all constraints: \pause
+\begin{equation}
+  \begin{split}
+  post(\hat{H}|\mathbb{Z}) = 0 & :\hat{H} \textrm{ is not valid} \\
+  post(\hat{H}|\mathbb{Z}) > 0 & :\hat{H} \textrm{ is valid} \\
+  post(\hat{H_1}|\mathbb{Z}) > post(\hat{H_2}|\mathbb{Z}) & :\hat{H_1} \textrm{ is more likely than } \hat{H_2}
+  \end{split}
+\end{equation}
+
+\end{frame}
