@@ -162,3 +162,235 @@ Using the \conceptbf{Bayesian theorem}, where $post(\hat{H}|\mathbb{Z})$ denotes
 \end{equation}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Computation on Posterior of Each Sample}
+
+\begin{equation*}
+  \begin{split}
+  post(\hat{H}|\mathbb{Z}) & = post(h_1, h_2, ..., h_n | \begin{bmatrix}
+ z_{11} & \cdots & z_{1m} \\
+ \vdots & \ddots & \vdots \\
+ z_{n1} & \cdots & z_{nm}
+\end{bmatrix}) \\
+ & \propto p(\begin{bmatrix}
+z_{11} & \cdots & z_{1m} \\
+\vdots & \ddots & \vdots \\
+z_{n1} & \cdots & z_{nm}
+\end{bmatrix} | h_1, h_2, ..., h_n) \cdot p(h_1, h_2, ..., h_n)
+  \end{split}
+\end{equation*}
+\pause
+
+\emph{Assume that each reader detects the tags of different objects independently.} \pause
+
+\begin{equation*}
+  post(\hat{H}|\mathbb{Z}) \propto \prod_{i}p(z_{i1},z_{i2},...z_{im} | h_1, h_2, ..., h_n) \cdot p(h_1, h_2, ..., h_n)
+\end{equation*}
+
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Computation on Posterior of Each Sample}
+
+\begin{equation*}
+  post(\hat{H}|\mathbb{Z}) \propto \prod_{i}p(z_{i1},z_{i2},...z_{im} | h_1, h_2, ..., h_n) \cdot p(h_1, h_2, ..., h_n)
+\end{equation*}
+\pause
+
+\emph{Assume that each each reader's detection of the same object does not depend on that of other objects, also, the prior distribution of each object does not depend on that of other objects.} \pause
+
+\begin{equation*}
+  \begin{split}
+  post(\hat{H}|\mathbb{Z}) & \propto \prod_{i} p(z_{i1} | h_i) \cdot p(z_{i2} | h_i) \cdot ... \cdot p(z_{im} | h_i) \cdot \prod_{j} p(h_j) \\
+  & = \alpha \cdot \prod_{i} p(z_{i1} | h_i) \cdot p(z_{i2} | h_i) \cdot ... \cdot p(z_{im} | h_i) \cdot \prod_{j} p(h_j)
+  \end{split}
+\end{equation*}
+\pause
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Goal}
+
+Based on the equation, given the raw reading $\mathbb{Z}$ and a hypothesis $\hat{H}$ (the location of each object), one can derive the probability of the hypothesis.\\~\\
+
+However, finding just one valid hypothesis will provide nothing more than a biased answer to queries against the uncertain data.\\~\\
+
+It is \emph{unrealistic} to find all valid hypotheses, thus, the \conceptbf{goal} is to create a large sample set of valid hypotheses, each associated with a weight computed by the posterior computation equation.\\~\\
+
+The sample set of valid hypotheses as a whole enables answering queries with high credibility.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Obstacles}
+
+\begin{itemize}
+  \item A prerequisite for effective hypothesis sampling is to be able to compute the posterior probability of each hypothesis precisely.\\~\\
+  \item The hypothesis space is high dimensional, and the posterior probability is difficult to sample from.\\~\\
+  \item It needs to incorporate constraint management in sampling.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{RFID Reader Detection Model: A simplified 2-State}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.8\columnwidth]{figures/3-1/3-1-4.pdf}
+\end{figure}
+
+A \conceptbf{simplified 2-state detection model} assumes readers' detection regions do not overlap, i.e., a reader is only able to detect the objects in its own zone. Then the likelihood can be estimated:
+
+\begin{equation}
+  p(z_{ij} = 1 | h_i) = \left\{\begin{matrix}
+ r & \text{if}~h_i = j\\
+ 0 & \text{otherwise}
+\end{matrix}\right.
+\end{equation}
+
+\begin{equation}
+  p(z_{ij} = 0 | h_i) = \left\{\begin{matrix}
+ 1-r & \text{if}~h_i = j\\
+ 1 & \text{otherwise}
+\end{matrix}\right.
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{RFID Reader Detection Model: The $n$-State}
+
+The overall detection region of an RFID reader is devided into several sub-regions, each of which corresponds to a zone associated with a unique read rate.
+
+\begin{figure}[tb]
+  \includegraphics[width=0.8\columnwidth]{figures/3-1/3-1-5.pdf}
+\end{figure}
+
+Read rates for different states constitute an arithmetic sequence.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{A Case Study: The 3-State Model}
+
+\begin{columns}[c]
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-1/3-1-6.pdf}
+  \end{figure}
+
+  \column{0.6\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-1/3-1-7.pdf}
+  \end{figure}
+
+\end{columns}
+
+\vspace{10pt}
+\begin{equation}
+  p(z_{ij} = 1 | h_i) = \left\{\begin{matrix}
+ r_{major} & \text{if}~h_i = j\\
+ r_{minor} & \text{if}~h_i \in \{j-1, j+1\}\\
+ 0 & \text{otherwise}
+\end{matrix}\right.
+\end{equation}
+
+\begin{equation}
+  p(z_{ij} = 0 | h_i) = \left\{\begin{matrix}
+  1- r_{major} & \text{if}~h_i = j\\
+  1- r_{minor} & \text{if}~h_i \in \{j-1, j+1\}\\
+ 1 & \text{otherwise}
+\end{matrix}\right.
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Entropy Analysis}
+
+\conceptbf{Entropy} can be used to measure the uncertainty in a system after invalid system states have been eliminated by a data cleansing method.\\~\\
+
+Applying an efficient data cleansing method will lead to systems with smaller entropy.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Entropy versus Read Rate}
+
+
+\ssize{
+  suppose that $y$ denotes the read rate in the 2-state detection model. The probabilistic mass function of $L$ in the 2-state model can be represented as:
+  \begin{equation}
+    p(L=l) = \left\{\begin{matrix}
+    \alpha(1-y)y(1-y)\beta & \text{if}~l = j\\
+    \alpha(1-y)(1-y)y\beta & \text{if}~l \in \{j-1,j+1\}\\
+   0 & \text{otherwise}
+  \end{matrix}\right.
+  \end{equation}
+  where $\alpha$ is the normalizing constant and $\beta$ represents the prior probability (assume that the prior distribution as a uniform distribution)
+}
+
+\begin{block}{Entropy of the 2-State model}
+  \begin{equation}
+    \begin{split}
+      H(L) = & - \alpha(1-y)(1-y)y\beta \cdot ln(\alpha(1-y)(1-y)y\beta) \\
+             & - \alpha(1-y)y(1-y)\beta \cdot ln(\alpha(1-y)y(1-y)\beta) \\
+             & - \alpha(1-y)(1-y)y\beta \cdot ln(\alpha(1-y)(1-y)y\beta) \\
+    \end{split}
+  \end{equation}
+  Because the probabilities on all the locations sum to 1, it has $\alpha\beta = \frac{1}{3(1-y)^2y}$. Therefore, it can be obtained: $  H(L) = -3 \cdot \frac{1}{3} \cdot ln\frac{1}{3} = 1.098 $
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Entropy versus Read Rate}
+
+
+\ssize{
+suppose $x$ is the read rate in the major detection
+region. Then the read rate in the minor detection region can be
+denoted as $x/2$. The probabilistic mass function of $L$ in the 3-state model can be represented as:
+  \begin{equation}
+    p(L=l) = \left\{\begin{matrix}
+    \alpha(1-\frac{x}{2})x(1-\frac{x}{2})\beta & \text{if}~l = j\\
+    \alpha(1-\frac{x}{2})(1-x)\frac{x}{2}\beta & \text{if}~l \in \{j-1,j+1\}\\
+   0 & \text{otherwise}
+  \end{matrix}\right.
+  \end{equation}
+}
+
+% \begin{block}{Entropy of the 3-State model}
+%   \begin{equation}
+%     \begin{split}
+%       H(L) = & - \alpha(1-y)(1-y)y\beta \cdot ln(\alpha(1-y)(1-y)y\beta) \\
+%              & - \alpha(1-y)y(1-y)\beta \cdot ln(\alpha(1-y)y(1-y)\beta) \\
+%              & - \alpha(1-y)(1-y)y\beta \cdot ln(\alpha(1-y)(1-y)y\beta) \\
+%     \end{split}
+%   \end{equation}
+%   Because the probabilities on all the locations sum to 1, it has $\alpha\beta = \frac{1}{3(1-y)^2y}$. Therefore, it can be obtained: $  H(L) = -3 \cdot \frac{1}{3} \cdot ln\frac{1}{3} = 1.098 $
+% \end{block}
+\end{frame}
+
+%------------------------------------------------
