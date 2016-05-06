@@ -31,7 +31,7 @@ To take full advantage of:
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Data Redundancy: Spatial Redundancy}
+\frametitle{Data Redundancy: Spatial Redundancy\cite{jeffery2006adaptive, rao2006deferred}}
 
 \fsize{\textrm{The challenge is how to take advantage of redundancy while avoiding its undesirable effect in data cleansing.}}
 
@@ -424,7 +424,7 @@ denoted as $x/2$. The probabilistic mass function of $L$ in the 3-state model ca
 \begin{frame}
 \frametitle{Markov Chain Monte Carlo}
 
-\conceptbf{Markov Chain Monte Carlo (MCMC)} is a technique to generate samples from the state space by simulating a Markov chain.\\~\\
+\conceptbf{Markov Chain Monte Carlo (MCMC)}\cite{andrieu2003introduction} is a technique to generate samples from the state space by simulating a Markov chain.\\~\\
 
 The formed Markov chain is constructed in such a way that the chain spends more time in the regions with higher importance (i.e., the Markov chain converges to the posterior as its stationary distribution).
 
@@ -505,9 +505,42 @@ Symbol notations used in MH-C algorithm:
   \item Line 2: loads the $n$-state detection model of readers with the objective of computing the likelihood;
   \item Line 3--4: initializes all the resource descriptors and randomly chooses a qualified sample as the first state of the Markov Chain;
   \item Lines 6--17: generate a random sample as the proposal sample dimension by dimension (object by object);
-  \item Lines 8--13: the sampling process.
+  \item Lines 18--21: accept the proposal sample as the next state of Markov chain with the probability of the posterior ratio of the proposal sample over the current sample;
+  \item Lines 22--23: add the next state into the sample set and reset the zone resources.
 \end{sitemize}
 
 \end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Available Queries}
+
+With a large mount of qualified samples, the approach enables two important types of queries against RFID raw data: \\~\\
+
+Given an object and a zone, a \conceptbf{Location Query} returns the porbability that the object is in that zone.\\~\\
+
+Given a zone, a \conceptbf{Remaining Capacity Query} returns the leftover volume of a certain resource available in that zone.\\~\\
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Conclusions}
+
+\ssize{
+The data reported by RFID devices are known to be unreliable.\\~\\
+
+This work proposed a Bayesian inference based approach for cleansing RFID rww data which can take advantage of duplicate readings.\\~\\
+
+In order to evaluate the location and aggregate queries, the approach employs prior knowledge to quantify the degree of uncertainty on the location of each object and remaining capacity in each zone.\\~\\
+
+$n$-State detection model is proposed to capture likelihood and validate that the 3-state model can maximize the system performance.\\~\\
+
+MH-C was devised to efficiently sample from the posterior distribution environmental constraints.
+}
 
 \end{frame}

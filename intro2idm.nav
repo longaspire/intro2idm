@@ -77,23 +77,27 @@
 \headcommand {\beamer@framepages {40}{40}}
 \headcommand {\slideentry {3}{1}{26}{41/41}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
 \headcommand {\slideentry {3}{1}{27}{42/42}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{43}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {5}{42}}
-\headcommand {\beamer@subsectionpages {6}{42}}
-\headcommand {\slideentry {4}{0}{28}{43/43}{}{0}}
+\headcommand {\slideentry {3}{1}{28}{43/43}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\sectionentry {5}{5. Appendix}{44}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {43}{43}}
-\headcommand {\beamer@subsectionpages {43}{43}}
-\headcommand {\slideentry {5}{0}{29}{44/44}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {3}{1}{29}{44/44}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {5}{0}{30}{45/45}{}{0}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{45}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {5}{44}}
+\headcommand {\beamer@subsectionpages {6}{44}}
+\headcommand {\slideentry {4}{0}{30}{45/45}{}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\beamer@partpages {1}{45}}
-\headcommand {\beamer@subsectionpages {44}{45}}
-\headcommand {\beamer@sectionpages {44}{45}}
-\headcommand {\beamer@documentpages {45}}
-\headcommand {\def \inserttotalframenumber {35}}
+\headcommand {\sectionentry {5}{5. Appendix}{46}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {45}{45}}
+\headcommand {\beamer@subsectionpages {45}{45}}
+\headcommand {\slideentry {5}{0}{31}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {5}{0}{32}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {46}{47}}
+\headcommand {\beamer@sectionpages {46}{47}}
+\headcommand {\beamer@documentpages {47}}
+\headcommand {\def \inserttotalframenumber {37}}
