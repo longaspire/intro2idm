@@ -13,6 +13,30 @@
 \headcommand {\beamer@subsectionpages {3}{3}}
 \headcommand {\slideentry {2}{0}{4}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {2}{8}{1}{5/5}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {2}{8}{2}{6/6}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {2}{8}{3}{7/7}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {2}{8}{4}{8/8}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {2}{8}{5}{9/9}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {2}{8}{6}{10/10}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {2}{8}{7}{11/11}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {2}{8}{8}{12/12}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {2}{8}{9}{13/13}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {2}{8}{10}{14/14}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {2}{8}{11}{15/15}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{8}{12}{16/16}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
+\headcommand {\beamer@framepages {16}{16}}
 \headcommand {\beamer@subsectionentry {0}{2}{1}{5}{2.1 Graph Model Based Indoor Tracking}}\headcommand {\beamer@subsectionpages {4}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{2}{5}{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{3}{5}{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
@@ -20,70 +44,31 @@
 \headcommand {\beamer@subsectionentry {0}{2}{5}{5}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{6}{5}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{7}{5}{2.7 Distance-Aware Join for Indoor Moving Objects}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\sectionentry {3}{3. Indoor Data Cleansing}{5}{3. Indoor Data Cleansing}{0}}
-\headcommand {\beamer@sectionpages {4}{4}}
-\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\slideentry {3}{0}{1}{5/5}{}{0}}
-\headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {3}{2}{1}{6/6}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {3}{2}{2}{7/7}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {3}{2}{3}{8/8}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {3}{2}{4}{9/9}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {3}{2}{5}{10/10}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {3}{2}{6}{11/11}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {3}{2}{7}{12/12}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {3}{2}{8}{13/13}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {3}{2}{9}{14/14}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {3}{2}{10}{15/15}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {3}{2}{11}{16/16}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {3}{2}{12}{17/17}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{8}{5}{2.8 Extracting Indoor Spatial Objects from CAD Models}}\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\slideentry {2}{8}{13}{17/17}{2.8 Extracting Indoor Spatial Objects from CAD Models}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {3}{2}{13}{18/18}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
+\headcommand {\sectionentry {3}{3. Indoor Data Cleansing}{18}{3. Indoor Data Cleansing}{0}}
+\headcommand {\beamer@sectionpages {4}{17}}
+\headcommand {\beamer@subsectionpages {5}{17}}
+\headcommand {\slideentry {3}{0}{14}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {3}{2}{14}{19/19}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{19}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {18}{18}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{19}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {19}{18}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{19}{3.2 A Graph Model for False Negative Handling in Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {19}{18}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{19}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {18}{18}}
+\headcommand {\beamer@subsectionpages {19}{18}}
+\headcommand {\slideentry {4}{0}{1}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {3}{2}{15}{20/20}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
+\headcommand {\sectionentry {5}{5. Appendix}{20}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {19}{19}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\slideentry {5}{0}{2}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {3}{2}{16}{21/21}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
+\headcommand {\slideentry {5}{0}{3}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {3}{2}{17}{22/22}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {3}{2}{18}{23/23}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {3}{2}{19}{24/24}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {3}{2}{20}{25/25}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {25}{25}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{6}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\slideentry {3}{2}{21}{26/26}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{0}}
-\headcommand {\beamer@framepages {26}{26}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{27}{3.2 A Graph Model for False Negative Handling in Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {6}{26}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{27}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {5}{26}}
-\headcommand {\beamer@subsectionpages {27}{26}}
-\headcommand {\slideentry {4}{0}{1}{27/27}{}{0}}
-\headcommand {\beamer@framepages {27}{27}}
-\headcommand {\sectionentry {5}{5. Appendix}{28}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {27}{27}}
-\headcommand {\beamer@subsectionpages {27}{27}}
-\headcommand {\slideentry {5}{0}{2}{28/28}{}{0}}
-\headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {5}{0}{3}{29/29}{}{0}}
-\headcommand {\beamer@framepages {29}{29}}
-\headcommand {\beamer@partpages {1}{29}}
-\headcommand {\beamer@subsectionpages {28}{29}}
-\headcommand {\beamer@sectionpages {28}{29}}
-\headcommand {\beamer@documentpages {29}}
-\headcommand {\def \inserttotalframenumber {29}}
+\headcommand {\beamer@partpages {1}{21}}
+\headcommand {\beamer@subsectionpages {20}{21}}
+\headcommand {\beamer@sectionpages {20}{21}}
+\headcommand {\beamer@documentpages {21}}
+\headcommand {\def \inserttotalframenumber {21}}
