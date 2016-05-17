@@ -1,5 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: intro2idm.aux
-A level-1 auxiliary file: sec_2_6.aux
+A level-1 auxiliary file: sec_3_3.aux
+A level-1 auxiliary file: sec_3_3_ref.aux
+The style file: abbrv.bst
 I found no \bibdata command---while reading file intro2idm.aux
-I found no \bibstyle command---while reading file intro2idm.aux
-(There were 2 error messages)
+Warning--I didn't find a database entry for "baba2013graph"
+Warning--I didn't find a database entry for "baba2014handling"
+Warning--I didn't find a database entry for "floerkemeier2004issues"
+Warning--I didn't find a database entry for "derakhshan2007rfid"
+Warning--I didn't find a database entry for "baba2013spatiotemporal"
+Warning--I didn't find a database entry for "DBLP:conf/icde/LuCJ12"
+(There was 1 error message)

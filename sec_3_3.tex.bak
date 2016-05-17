@@ -401,46 +401,24 @@ A sub-case of previous case. Both paths satisfies the spatio-temporal constraint
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Recovering False Negatives: Algorithm}
+\frametitle{Algorithm: \emph{findPath}}
 
 \begin{columns}
 
   \column{0.5\textwidth}
   \begin{figure}[tb]
-    \includegraphics[width=\columnwidth]{figures/3-3/3-3-10.pdf}
+    \includegraphics[width=\columnwidth]{figures/3-3/3-3-8.pdf}
   \end{figure}
 
   \column{0.5\textwidth}
   \begin{sitemize}
-    \item takes a most likely path $path$ and a last timestamp ($prev\_t_e$) a moving object was detected before false negative occurred as input.
-    \item line 5: fill the missing information of each reader in the path one by one by retrieving a minimum travelling time between the current readers and next reader in the path.
-    \item line 6: also retrieve the minimum dwell time of a corresponding reader.
-    \item fill the exact number of readings a reader can generate using a sampling rate and the minimum dwell time of a corresponding reader.
+    \item takes graph model $G_{pdm}$ and two tracking records $tr$, $tr'$ as input.
+    \item calls \emph{findAllPaths} to get all the possible paths between $R_s$ and $R_d$.
+    \item lines 5-15: to check if the path satisfies the temporal constraint, a total traverse time ($T_{cal}$) is calculated, which is a time a moving object takes to traverse a path from $R_s$ to $R_d$.
+    \item lines 17: if $T_{cal}$ is larger than the time object was first tracked the $R_d$, the path is treated as invalid and is deleted from the candidate paths.
+    \item line 20: a most likely path is then estimated based on the maximum likelihood decision rule by using transition probabilities.
   \end{sitemize}
 
-\end{columns}
-
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Recovering False Negatives: Algorithm}
-
-\begin{columns}
-
-  \column{0.5\textwidth}
-  \begin{figure}[tb]
-    \includegraphics[width=\columnwidth]{figures/3-3/3-3-11.pdf}
-  \end{figure}
-
-  \column{0.5\textwidth}
-  \begin{fitemize}
-  \item case a) is a simple case where the information of both reader are present and there is only one reader ($R_{miss}$) which fails to detect a moving object;
-  \item case b) is the case when more than one readers fail to detect a moving object, start from $R_s$ by using the information captured by a graph $G_{pdm}$;
-  \item case c) is a case that $R_{miss}$ somehow fails to detect the object, it is hard to determine the final destination, filling any new data may give rise to false positives.
-  \end{fitemize}
-  
 \end{columns}
 
 \end{frame}
@@ -457,18 +435,5 @@ It focuses one of the main aspects in raw indoor RFID tracking data, namely, \em
 A probabilistic distance-aware graph model is proposed to capture probabilities together with the spatio-temporal constraints implied by the deployment of RFID readers as well as indoor topology.\\~\\
 
 The transition probabilities that capture likely an object move from one reader to another are obtained from the existing data.
-
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Future Work}
-
-It is interesting to consider RSSI parameter of indoor tracking devices. RSSI can be used to derive the distance between an object and the relevant positioning device(s). \\~\\
-
-It is interesting to see if it is possible to conduct data cleansing for different objects individually, if their individual features (e.g., moving speed) are known. \\~\\
-
-It is relevant to conduct high level queries and/or mining tasks on cleansed indoor tracking data to obtain more informative and more precise results.
 
 \end{frame}
