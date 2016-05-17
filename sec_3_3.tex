@@ -1,11 +1,14 @@
 \begin{frame}
 \frametitle{About This Work...}
 
-\emph{A Graph Model for False Negative Handling in Indoor RFID Tracking Data}.~\cite{baba2013graph} \\
+\emph{A Graph Model for False Negative Handling in Indoor RFID Tracking Data}.~\cite{baba2013graph}\\
+A.I.~Baba, H.~Lu, T.B.~Pedersen, X.~Xie\\~\\
+
+\emph{Handling False Negatives in Indoor RFID Data}.~\cite{baba2014handling} \\
 A.I.~Baba, H.~Lu, T.B.~Pedersen, X.~Xie\\~\\
 
 \begin{itemize}
-  \item Published at \emph{SIGSPAITAL' 2013}.
+  \item Published at \emph{SIGSPAITAL' 2013}, \emph{MDM' 2014}.
   \item Focuses on handling \emph{false negatives} which occur when a moving object passes the detection range of an RFID reader but the reader fails to produce any readings.
   \item Proposes the transition probabilities that capture how likely objects move from one RFID reader to another.
 \end{itemize}
@@ -246,6 +249,45 @@ A two-phase solution is designed to handle false negatives in indoor tracking da
 %------------------------------------------------
 
 \begin{frame}
+\frametitle{Topological Scenarios I}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.8\columnwidth]{figures/3-3/3-3-4.pdf}
+\end{figure}
+
+a sigle path from source reader $R_s$ goes to a destination reader $R_d$. Between $R_i$ and $R_j$ there can be none or many readers deployed all connected in linear fashion.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Topological Scenarios II}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.6\columnwidth]{figures/3-3/3-3-5.pdf}
+\end{figure}
+\vspace{-10pt}
+Source reader $R_s$ have many outgoing edges to $R_i$, $R_j$ to $R_n$. Once the candidates paths are found, transitions probabilities captured by each edge of graph can be used to choose the most probable path to reach destination reader $R_d$.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Topological Scenarios III}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.55\columnwidth]{figures/3-3/3-3-6.pdf}
+\end{figure}
+\vspace{-10pt}
+A sub-case of previous case. Both paths satisfies the spatio-temporal constraints equally, making it difficult to directly find a first candidate path. A most likely path will finally be decided on the transition probablities.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
 \frametitle{Detecting False Negatives}
 
 \begin{itemize}
@@ -263,6 +305,79 @@ A two-phase solution is designed to handle false negatives in indoor tracking da
 \end{itemize}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Detecting False Negatives: Algorithm}
+
+\begin{columns}
+
+  \column{0.5\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-3/3-3-7.pdf}
+  \end{figure}
+
+  \column{0.5\textwidth}
+  \begin{sitemize}
+    \item line 3: find out all the outgoing neighbors of the first tracking device ($tr.deviceID$).
+    \item line 4: check if the current device $tr.deviceID$ is not the last device
+    \item lines 5--9: get $tr$'s next tracking record $tr'$ from $ATT$ that involves the same object as $tr$, if next tracking record is null, simply contunue with another object. If there is and $tr'.deviceID$ is equal to one of the neighbors, simply continue the process.
+    \item lines 10-13: otherwise there is false negatives, call the function \emph{FalseNegativeRecovery}.
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Algorithm: \emph{findAllPaths}}
+
+\begin{columns}
+
+  \column{0.5\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-3/3-3-9.pdf}
+  \end{figure}
+
+  \column{0.5\textwidth}
+  \begin{sitemize}
+    \item takes a graph $G_{pdm}$, source reader $R_s$ and destination reader $R_d$ as input.
+    \item returns all the paths between $R_s$ and $R_d$.
+    \item follows an improved depth-first search paradigm, which estimates all the possible paths between two readers.
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Algorithm: \emph{findPath}}
+
+\begin{columns}
+
+  \column{0.5\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-3/3-3-8.pdf}
+  \end{figure}
+
+  \column{0.5\textwidth}
+  \begin{sitemize}
+    \item takes graph model $G_{pdm}$ and two tracking records $tr$, $tr'$ as input.
+    \item calls \emph{findAllPaths} to get all the possible paths between $R_s$ and $R_d$.
+    \item lines 5-15: to check if the path satisfies the temporal constraint, a total traverse time ($T_{cal}$) is calculated, which is a time a moving object takes to traverse a path from $R_s$ to $R_d$.
+    \item lines 17: if $T_{cal}$ is larger than the time object was first tracked the $R_d$, the path is treated as invalid and is deleted from the candidate paths.
+    \item line 20: a most likely path is then estimated based on the maximum likelihood decision rule by using transition probabilities.
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
 
 %------------------------------------------------
 
