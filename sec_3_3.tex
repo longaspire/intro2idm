@@ -83,8 +83,217 @@ A.I.~Baba, H.~Lu, T.B.~Pedersen, X.~Xie\\~\\
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Transition Probabilities} %Probabilistic Distance-Aware Graph Model
+\frametitle{Transition Probabilities}
 
+\conceptbf{Markov Property}: each step a move to next reader (vertice) only depends on current reader and not the readers that precede it, holding a ``memorylessness''.\\~\\ \pause
 
+A moving object at reader $r_i$ moves to a neighboring reader $r_j$ with a probability proportional to the probability weight of the edge $(r_i, r_j)$, i.e., the probability of a transition from $r_i$ to neighboring $r_j$ is : \pause
+\begin{equation}
+  \frac{p(r_i, p_j)}{\sum_{k \in N(r_i)}p(r_i, K)}
+\end{equation}
+
+\pause
+Here, $N(r_i)$ is the set of neighbors of reader $r_i$. The transitional probability $p(r_i, r_j)$ denotes the probability that a moving object is detected by $r_j$ at some time later after $t$ given that it was detected by $r_i$ at time $t$ without any third reader involved in-between.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Transition Probabilities}
+
+\begin{definition}[Transition]
+  A transition takes place when a moving object moves from a reader $r_i$ to another reader $r_j$ without passing through any intermediate readers.
+\end{definition}
+
+\vspace{10pt}
+
+\conceptbf{A transition probability matrix} represents the transition relationship between a finite number of readers:
+\begin{equation}
+  P = \begin{bmatrix}
+p(r_1, r_1) & p(r_1, r_2) & \cdots & p(r_1, r_n)\\
+p(r_2, r_1) & p(r_2, r_2) & \cdots & p(r_2, r_n)\\
+\vdots & \vdots & \vdots & \vdots\\
+p(r_n, r_1) & p(r_n, r_2) & \cdots & p(r_n, r_n)
+\end{bmatrix}
+\end{equation}
+
+\vspace{5pt}
+
+For each deployed reader $r_i$, $\sum_{j=1}^{n}p(p_i,p_j) = 1$.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Transition Probabilities}
+
+The elements of the transition matrix $P$ are then obtained as follows:
+
+\vspace{10pt}
+
+\begin{equation}
+  p(r_i, p_j) = \left\{\begin{matrix}
+\frac{N_{ij}}{N_i} & \text{if}~(r_i, r_j) \in G_{pdm}.E\\
+0 & \text{otherwise}
+\end{matrix}\right.
+\end{equation}
+
+\vspace{10pt}
+
+where $N_{ij}$ is the number of objects moving from $r_i$ to $r_j$, $N_i$ is the total number of objects moving from $r_i$, $G_{pdm}$ is a probabilistic distance-aware graph model.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Probabilistic Distance-Aware Graph Model}
+
+\begin{block}{Probabilistic Distance-Aware Graph Model}
+  $G_{pdm} = (V, E, \mathcal{L}_V, \mathcal{L}_E)$
+  \begin{fitemize}
+    \item $V$ is a set of vertices, each represents a deployed device $r_i$.
+    \item $E$ is the set of edges, where $E = \{ (r_i, r_j) | r_i, r _j \in V \cup r_i \neq r_j \}$, one can move from $r_i$ to $r_j$ without being detected by third reader.
+    \item $\mathcal{L}_V: V \rightarrow \mathcal{R} \times \mathcal{R}$ assigns to a vertex $v_i$ a minimum dwell time and sampling frequency of a corresponding reader $r_i$, i.e., $mathcal{L}_V(r_i) = (d_t, S_f)$.
+    \item $\mathcal{L}_E: E \rightarrow \mathcal{R} \times \mathcal{R}$ assigns to an edge $(r_i, r_j)$ the minimum indoor walking time between two devices $r_i$ and $r_j$ and the probability with which an object can move between them, i.e., $mathcal{L}_E(r_i, r_j) = (t_{i,j}, p_{r_i,r_j})$.
+  \end{fitemize}
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Probabilistic Distance-Aware Graph Model}
+
+\begin{columns}
+
+  \column{0.6\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-3/3-3-2.pdf}
+  \end{figure}
+
+  \column{0.4\textwidth}
+  \begin{fitemize}
+    \item the graph is enhanced from a distance deployment graph proposed in \cite{baba2013spatiotemporal}.
+    \item different readers usually imply different minimum dwell times for detection and different sampling rates.
+    \item the probability weight between two readers will be used to predict the most likely path an object may have taken.
+  \end{fitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Probabilistic Distance-Aware Graph Construction}
+
+\begin{columns}
+
+  \column{0.55\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-3/3-3-3.pdf}
+  \end{figure}
+
+  \column{0.45\textwidth}
+  \begin{enumerate}
+    \ssize{
+    \item lines 2--6: the indoor shortest path $sp$ is found if the edge $(r_i, r_j)$ is not in the graph yet.
+    \item lines 7--9: if $sp$ only contains readers $r_i$ and $r_j$, a new edge is created with the corresponding weights.
+    \item lines 11-16: otherwise, each pair of consecutive readers on $sp$ are processed likewise.
+    \item indoor shortest paths are computed according to the algorithms in \cite{DBLP:conf/icde/LuCJ12}.
+    }
+  \end{enumerate}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Handling False Negatives}
+
+\begin{definition}[Path]
+  A path is a sequence of readers $r_1, r_2, ..., r_n$ where there is an edge connecting $r_i$ and $r_{r+1}$ for $i = 1, 2,...,n$. A path is simple if all $r_i$ are distinct.
+\end{definition}
+
+\begin{definition}[Candidate Path]
+  Given a source reader $R_s$ and a destination reader $R_d$, a path from $R_s$ to $R_d$, represented as $R_s \overset{\delta}{\rightsquigarrow} R_d$ is a candidate path, if a path $\delta$ satisfies the spatio-temporal constraints captured by a graph.
+\end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Handling False Negatives}
+
+\begin{definition}[Most Likely Path]
+  Given a set of candidate path $\{ \delta_m \}_{m=1}^n$, a most likely path is:
+  \begin{equation}
+    \delta^* = {\arg\max}_m \prod_{E_{ij} \in \delta_m} p_{i,j}
+  \end{equation}
+\end{definition}
+
+A two-phase solution is designed to handle false negatives in indoor tracking data, \emph{detecting false negatives} and \emph{recovering false negatives}.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Detecting False Negatives}
+
+\begin{itemize}
+
+  \item take aggregated tracking table $ATT$ as an input, identifies possible false negatives using the probabilistic distance-aware graph model of all deployed readers.
+
+  \item look at each tracking record $tr$ in $ATT$ and find out the neighbors of $tr.deviceID$.
+
+  \item take next tracking record $tr'$ and check if $tr'.deviceID$ is in a list of neighbors of $tr.deviceID$.
+
+  \item if none of neighbors matches, it can be concluded that one or more readers between the two devices have failed to detect a moving object with identity $tr.objectID$.
+
+  \item find the path between the two devices using the above definitions.
+
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Recovering False Negatives}
+
+\begin{itemize}
+
+  \item retrieve a path between source reader $R_s$(tr.deviceID) and destination reader $R_d$(tr'.deviceID) in the graph and fills the missing readings of each reader a path contains between $R_s$ and $R_d$.
+
+  \item the path retrieved is the most likely path, in a set of paths which satisfy the spatio-temporal constraints of subgraph between $R_s$ and $R_d$.
+
+  \item to fill the missing readings, the parameters like, minimum travelling time between readers, minimum dwell time and sampling rate of corresponding reader are used.
+
+  \item the approximate number of raw readings to be filled for each reader is determined as $\frac{\text{minimum dwell time}}{\text{sampling rate}}$.
+
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Conclusion}
+
+This paper studies data cleansing for indoor RFID tracking data.\\~\\
+
+It focuses one of the main aspects in raw indoor RFID tracking data, namely, \emph{false negatives}.\\~\\
+
+A probabilistic distance-aware graph model is proposed to capture probabilities together with the spatio-temporal constraints implied by the deployment of RFID readers as well as indoor topology.\\~\\
+
+The transition probabilities that capture likely an object move from one reader to another are obtained from the existing data.
 
 \end{frame}

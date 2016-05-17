@@ -13,5 +13,5 @@
 \beamer@subsectionintoc {3}{1}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}{6}{0}{3}
 \beamer@subsectionintoc {3}{2}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{6}{0}{3}
 \beamer@subsectionintoc {3}{3}{3.3 A Graph Model for False Negative Handling in Indoor RFID Tracking Data}{6}{0}{3}
-\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{12}{0}{4}
-\beamer@sectionintoc {5}{5. Appendix}{13}{0}{5}
+\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{26}{0}{4}
+\beamer@sectionintoc {5}{5. Appendix}{27}{0}{5}
