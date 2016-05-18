@@ -108,7 +108,7 @@ This paper distinguishes itself from the work~\cite{DBLP:conf/mdm/JensenLY09} in
 \begin{itemize}
   \item This paper considers the overlapping between different positioning devices, whereas work~\cite{DBLP:conf/mdm/JensenLY09} assumes that devices do not overlap.
   \item This paper is intended to decide where an object really is when is is seen by multiple devices, whereas work~\cite{DBLP:conf/mdm/JensenLY09} focuses on tracking the object when it is not seen by any devices.
-  \item In order to support data cleansing, this paper porposes a \emph{Distance-Aware Graph} different from the \emph{Deployment Graph} introduced in Section 2.
+  \item In order to support data cleansing, this paper proposes a \emph{Distance-Aware Graph} different from the \emph{Deployment Graph} introduced in Section 2.
 \end{itemize}
 
 \end{frame}
@@ -130,7 +130,7 @@ This paper distinguishes itself from the work~\cite{DBLP:conf/mdm/JensenLY09} in
 \frametitle{Definitions and Tasks}
 
 \begin{definition}[Temporal Redundant Readings]
-  Two raw readings $rr_i$ and $rr_j$ are temporal redundant readings if $|rr_i.t - tt_j.t| \leq \tau$, $rr_i.deviceID = rr_j.deviceID$ and $rr_i.objectID = rr_j.objectID$, where $\tau$ is an application-specific threshold.
+  Two raw readings $rr_i$ and $rr_j$ are temporal redundant readings if $|rr_i.t - rr_j.t| \leq \tau$, $rr_i.deviceID = rr_j.deviceID$ and $rr_i.objectID = rr_j.objectID$, where $\tau$ is an application-specific threshold.
 \end{definition}
 
 \begin{definition}[Tracking Record]
@@ -385,7 +385,7 @@ This paper distinguishes itself from the work~\cite{DBLP:conf/mdm/JensenLY09} in
 
 It designs a temporal cleansing algorithm to aggregate raw RFID readings temporally such that the data size is compressed without information loss.\\~\\
 
-It designs a spaital cleansing technique: proposing a distance-aware deployment graph to capture the spatiotemporal constrains implied by the deployment of RFID readers as well as the indoor topology.\\~\\
+It designs a spatial cleansing technique: proposing a distance-aware deployment graph to capture the spatiotemporal constrains implied by the deployment of RFID readers as well as the indoor topology.\\~\\
 
 The techniques proposed in this paper also apply to indoor tracking data obtained by other symbolic positioning technologies, like Bluetooth.
 

@@ -22,7 +22,7 @@ X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
   \item In many indoor LBS scenarios, appropriate handling of indoor distances and relevant queries is of critical.
     \begin{fitemize}
       \item a cafe in a mall may send message to nearby shoppers to boost its business
-      \item in a large airport, it important to minitor individuals within a pre-defined range from a sensitive point
+      \item in a large airport, it important to monitor individuals within a pre-defined range from a sensitive point
     \end{fitemize}
 
   \item Indoor spaces are characterized by many special entities and thus render distance calculation very complex.
@@ -213,15 +213,15 @@ $|q,S[j]|_I$ is calculated according to case I or case II, by substituting $S[j]
 \begin{frame}[allowframebreaks]
 \frametitle{Bounds for Indoor Distances}
 
-\conceptbf{Indoor Toplogical ULBounds}
+\conceptbf{Indoor Topological ULBounds}
 
-\begin{lemma}[Toplogical Lower Bounds]
+\begin{lemma}[Topological Lower Bounds]
   \ssize{
   Let $t_{min}(S[i])$ be: $$\min_{d_q \in D(P(q)), d_s \in D(P(S[i]))}|q,d_q|_E + |d_q \overset{*}{\rightarrow} d_s| + |d_s, S[i]|_{minE}$$. Then, $|q,O|_I \geq min\{ t_{min}(S[i]) \}$.
   }
 \end{lemma}
 
-\begin{lemma}[Toplogical Upper Bounds]
+\begin{lemma}[Topological Upper Bounds]
   \ssize{
   Let $t_{max}(S[i])$ be: $$\min_{d_q \in D(P(q)), d_s \in D(P(S[i]))}|q,d_q|_E + |d_q \overset{*}{\rightarrow} d_s| + |d_s, S[i]|_{maxE}$$. Then, $|q,O|_I \leq max\{ t_{max}(S[i]) \}$.
   }
@@ -229,7 +229,7 @@ $|q,S[j]|_I$ is calculated according to case I or case II, by substituting $S[j]
 
 \textrm{a looser topological upper bound is more economic to be derived, it also requires knowing some paths connecting point $q$ and subregion $S[i]$}:
 
-\begin{lemma}[Toplogical Looser Upper Bounds, TLU]
+\begin{lemma}[Topological Looser Upper Bounds, TLU]
   \ssize{
   Let $t_{max}(S[i])$ be: $$\min_{d_q \in D(P(q)), d_s \in D(P(S[i]))}|q,d_q|_E + |d_q \overset{*}{\rightsquigarrow} d_s| + |d_s, S[i]|_{maxE}$$. Then, $|q,O|_I \leq max\{ t_{max}(S[i]) \}$.
   }
@@ -477,7 +477,7 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
 \begin{frame}
 \frametitle{Dynamic Operations on the Topological Layer}
 
-\textbf{Insertion.}~\textrm{When the topological change leads to a new indoor partition $P$, $P$(or its sub-partitions due to decomposition) is inserted into the $ind$R-tree, its leaf node is connected to the adjacent partitions, and the $h-table$ is updated if a decomposition is invovled.}\\~\\
+\textbf{Insertion.}~\textrm{When the topological change leads to a new indoor partition $P$, $P$(or its sub-partitions due to decomposition) is inserted into the $ind$R-tree, its leaf node is connected to the adjacent partitions, and the $h-table$ is updated if a decomposition is involved.}\\~\\
 
 \textbf{Deletion.}~\textrm{From the $ind$R-tree to remove a partition $P$ to be deleted, the links involving $P$ are removed from the adjacent partitions, and $P$'s entry in the $h-table$ is deleted if $P$ is a decomposed sub-partition.}
 
@@ -518,7 +518,7 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
   \fsize{
   \item \conceptbf{Filtering Phase} locates the source partition that contains the query point and retrieves condidate partitions as well as candidate objects.
   \item \conceptbf{Subgraph Phase} constructs a subgraph based on candidate partitions, and uses the doors of the source partition as sources to compute the shortest indoor paths that are to be used in the subsequent two phases.
-  \item \conceptbf{Prunning Phase}, upper/lower distance bounds for objects are calculated to further reduce the number of candidate objects.
+  \item \conceptbf{Pruning Phase}, upper/lower distance bounds for objects are calculated to further reduce the number of candidate objects.
   \item \conceptbf{Refinement Phase}, the indoor distances for the remaining objects are computed and the qualifying objects are returned as the query results.
   }
 \end{enumerate}
@@ -613,8 +613,8 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
 
   \begin{itemize}
   	\item it is of interest to study other query types using the distance bounds and the composite index proposed in this paper.
-    \item it is useful to estimate the selectivity for indoor distance aware queries and make use of it in further optimizing queries over uncetain object.
-    \item it is of benificial to reuse computational efforts on indoor distances when multiple, related queries are issued within a short period of time.
+    \item it is useful to estimate the selectivity for indoor distance aware queries and make use of it in further optimizing queries over uncertain object.
+    \item it is of beneficial to reuse computational efforts on indoor distances when multiple, related queries are issued within a short period of time.
   \end{itemize}
 
 \end{frame}

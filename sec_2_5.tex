@@ -181,7 +181,7 @@ The mapping $P2D$ is used when there's no need to differentiate the directionali
   \ssize{
   \begin{enumerate}
     \item $d_t$ as source door, $d_s$ as destination door, $d2dDistance(d_t, d_s)$ finds the minimum walking distance in a \emph{Dijkstra} way.
-    \item $dist[d_j]$ stores the current shorest path distance from souce $d_s$ to a door $d_j$.
+    \item $dist[d_j]$ stores the current shortest path distance from source $d_s$ to a door $d_j$.
     \item $prev[d_j]$ stores the corresponding previous partition and door pair $(v,d_i)$ through which the algorithm visits the current door $d_j$.
   \end{enumerate}
   }
@@ -419,7 +419,7 @@ an $N$-by-$N$ matrix, denoted as $M_{idx}$. Given a door identifier $d_i$, two i
   \ssize{
   \begin{enumerate}
     \item a nearest neighbor query $Q_{nn}(q,r)$ returns those indoor objects whose distance from $q$ is the samllest among all objects.
-    \item line 2: $nnSearch(B_i, q, dist_{nn})$ searches an object bucket $B_i$ to find the nearest neighbor from $q$, $dist_{nn}$ is the current shortest distance for fast prunning.
+    \item line 2: $nnSearch(B_i, q, dist_{nn})$ searches an object bucket $B_i$ to find the nearest neighbor from $q$, $dist_{nn}$ is the current shortest distance for fast pruning.
     \item lines 4--19: for each door $d_i$ through which one can leave $v$, search is conducted in the similar way as for range query processing.
   \end{enumerate}
   }

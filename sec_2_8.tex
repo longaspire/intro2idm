@@ -53,7 +53,7 @@ A DXF files stores in a key-value style: all the k-v pairs are organized into se
 
 original data in DXF files are low-level graphical elements including \emph{points}, \emph{lines}, \emph{arcs}, \emph{ploylines} and \emph{circles}.\\~\\
 
-However, one indoor spatial object may involve many graphical elements. Due to the large number of graphical elements in a file, it is not trivial to find the right elements that describe an ondoor spatial object.
+However, one indoor spatial object may involve many graphical elements. Due to the large number of graphical elements in a file, it is not trivial to find the right elements that describe an outdoor spatial object.
 
 \begin{columns}
 
@@ -75,7 +75,7 @@ However, one indoor spatial object may involve many graphical elements. Due to t
 \frametitle{Problem State}
 
 \begin{problem}[Extracting CAD Spatial Objects]
-  Given a CAD model (DXF file), return a set of rooms, doors, and the topological relationship between doors and rooms, where each room is represented as a ploygon, each door is represented as a point, and each topological relationship is a pair of (door, room) indicating that a door is connected with a room.
+  Given a CAD model (DXF file), return a set of rooms, doors, and the topological relationship between doors and rooms, where each room is represented as a polygon, each door is represented as a point, and each topological relationship is a pair of (door, room) indicating that a door is connected with a room.
 \end{problem}
 
 \end{frame}
@@ -87,7 +87,7 @@ However, one indoor spatial object may involve many graphical elements. Due to t
 
 \textbf{DOORS}~~As doors are usually represented by arcs, just simply extract all arcs as door candidates and further make a refinement to remove those candidates that are not connected with rooms (after rooms have been recognized)\\~\\
 
-\textbf{ROOMS}~~A rule-based approach is used, considering the following two problems: 1. a room's wall may involve too many lines in CAD models; 2. rooms are not always rectangles and ther may be more than one door associated.\\~\\
+\textbf{ROOMS}~~A rule-based approach is used, considering the following two problems: 1. a room's wall may involve too many lines in CAD models; 2. rooms are not always rectangles and they may be more than one door associated.\\~\\
 
 \textbf{BASIC IDEA}~~to first employ a line-reduction preprocessing to simplify the line set that composed of a room; after that, use a line-extending technique to divide the entire indoor space into a set of geometric shapes; finally, use an MBR-based method to remove duplicated rooms.
 
@@ -96,7 +96,7 @@ However, one indoor spatial object may involve many graphical elements. Due to t
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{The Proposed Method: Difinitions}
+\frametitle{The Proposed Method: Definitions}
 
 \begin{definition}[point-point adjacency]
   Two points are adjacent if their Euclidean distance is below a predefined threshold $\alpha$

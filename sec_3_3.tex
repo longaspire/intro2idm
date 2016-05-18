@@ -92,7 +92,7 @@ A.I.~Baba, H.~Lu, T.B.~Pedersen, X.~Xie\\~\\
 
 A moving object at reader $r_i$ moves to a neighboring reader $r_j$ with a probability proportional to the probability weight of the edge $(r_i, r_j)$, i.e., the probability of a transition from $r_i$ to neighboring $r_j$ is : \pause
 \begin{equation}
-  \frac{p(r_i, p_j)}{\sum_{k \in N(r_i)}p(r_i, K)}
+  \frac{p(r_i, r_j)}{\sum_{k \in N(r_i)}p(r_i, k)}
 \end{equation}
 
 \pause
@@ -137,7 +137,7 @@ The elements of the transition matrix $P$ are then obtained as follows:
 \vspace{10pt}
 
 \begin{equation}
-  p(r_i, p_j) = \left\{\begin{matrix}
+  p(r_i, r_j) = \left\{\begin{matrix}
 \frac{N_{ij}}{N_i} & \text{if}~(r_i, r_j) \in G_{pdm}.E\\
 0 & \text{otherwise}
 \end{matrix}\right.
@@ -159,8 +159,8 @@ where $N_{ij}$ is the number of objects moving from $r_i$ to $r_j$, $N_i$ is the
   \begin{fitemize}
     \item $V$ is a set of vertices, each represents a deployed device $r_i$.
     \item $E$ is the set of edges, where $E = \{ (r_i, r_j) | r_i, r _j \in V \cup r_i \neq r_j \}$, one can move from $r_i$ to $r_j$ without being detected by third reader.
-    \item $\mathcal{L}_V: V \rightarrow \mathcal{R} \times \mathcal{R}$ assigns to a vertex $v_i$ a minimum dwell time and sampling frequency of a corresponding reader $r_i$, i.e., $mathcal{L}_V(r_i) = (d_t, S_f)$.
-    \item $\mathcal{L}_E: E \rightarrow \mathcal{R} \times \mathcal{R}$ assigns to an edge $(r_i, r_j)$ the minimum indoor walking time between two devices $r_i$ and $r_j$ and the probability with which an object can move between them, i.e., $mathcal{L}_E(r_i, r_j) = (t_{i,j}, p_{r_i,r_j})$.
+    \item $\mathcal{L}_V: V \rightarrow \mathcal{R} \times \mathcal{R}$ assigns to a vertex $v_i$ a minimum dwell time and sampling frequency of a corresponding reader $r_i$, i.e., $\mathcal{L}_V(r_i) = (d_t, S_f)$.
+    \item $\mathcal{L}_E: E \rightarrow \mathcal{R} \times \mathcal{R}$ assigns to an edge $(r_i, r_j)$ the minimum indoor walking time between two devices $r_i$ and $r_j$ and the probability with which an object can move between them, i.e., $\mathcal{L}_E(r_i, r_j) = (t_{i,j}, p_{r_i,r_j})$.
   \end{fitemize}
 \end{block}
 
@@ -255,7 +255,7 @@ A two-phase solution is designed to handle false negatives in indoor tracking da
   \includegraphics[width=0.8\columnwidth]{figures/3-3/3-3-4.pdf}
 \end{figure}
 
-a sigle path from source reader $R_s$ goes to a destination reader $R_d$. Between $R_i$ and $R_j$ there can be none or many readers deployed all connected in linear fashion.
+a single path from source reader $R_s$ goes to a destination reader $R_d$. Between $R_i$ and $R_j$ there can be none or many readers deployed all connected in linear fashion.
 
 \end{frame}
 
@@ -322,7 +322,7 @@ A sub-case of previous case. Both paths satisfies the spatio-temporal constraint
   \begin{sitemize}
     \item line 3: find out all the outgoing neighbors of the first tracking device ($tr.deviceID$).
     \item line 4: check if the current device $tr.deviceID$ is not the last device
-    \item lines 5--9: get $tr$'s next tracking record $tr'$ from $ATT$ that involves the same object as $tr$, if next tracking record is null, simply contunue with another object. If there is and $tr'.deviceID$ is equal to one of the neighbors, simply continue the process.
+    \item lines 5--9: get $tr$'s next tracking record $tr'$ from $ATT$ that involves the same object as $tr$, if next tracking record is null, simply continue with another object. If there is and $tr'.deviceID$ is equal to one of the neighbors, simply continue the process.
     \item lines 10-13: otherwise there is false negatives, call the function \emph{FalseNegativeRecovery}.
   \end{sitemize}
 
@@ -440,7 +440,7 @@ A sub-case of previous case. Both paths satisfies the spatio-temporal constraint
   \item case b) is the case when more than one readers fail to detect a moving object, start from $R_s$ by using the information captured by a graph $G_{pdm}$;
   \item case c) is a case that $R_{miss}$ somehow fails to detect the object, it is hard to determine the final destination, filling any new data may give rise to false positives.
   \end{fitemize}
-  
+
 \end{columns}
 
 \end{frame}

@@ -7,7 +7,7 @@ H.~Chen, W-S.~Ku, H.~W and M-T.~S.\\~\\
 \begin{itemize}
   \item Published at \emph{SIGMOD' 2010}.
   \item Proposed a Bayesian inference based approach for cleaning RFID raw data.
-  \item Desined an $n$-state detection model to capture the likelihood.
+  \item Designed an $n$-state detection model to capture the likelihood.
   \item Devised a Metropolis-Hastings sampler with Constraints (MH-C) to sample from the posterior.
 \end{itemize}
 
@@ -85,7 +85,7 @@ Because the exact location of the mobile reader is always changing, the detectio
 \begin{frame}
 \frametitle{Prior Knowledge}
 
-As false negatives and false positives abound in raw RFID readings, in order to revoer the true information, the data cleasing system should take prior knowledge into account.\\~\\
+As false negatives and false positives abound in raw RFID readings, in order to recover the true information, the data cleansing system should take prior knowledge into account.\\~\\
 
 For example, the detection areas of readers in Zone 2 and 3 have significant overlapping, the positioning of the reader in Zone 4 makes it more likely to detect objects in Zone 3 than objects in Zone 5, or the reader in Zone 3 has high false negative rate.
 
@@ -100,7 +100,7 @@ For example, the detection areas of readers in Zone 2 and 3 have significant ove
 
 For example, the maximal capacity of each zone (the number of objects that can reside the same zone) is a constraint.\\~\\
 
-In addition to these pysical constraints, information obtained from other channels can be translated into constraints. E.g., if an extra source indicates that two certain objects are in the same zone, it may help cleanse the data of there two.
+In addition to these physical constraints, information obtained from other channels can be translated into constraints. E.g., if an extra source indicates that two certain objects are in the same zone, it may help cleanse the data of there two.
 
 \end{frame}
 
@@ -133,7 +133,7 @@ In addition to these pysical constraints, information obtained from other channe
 \begin{frame}
 \frametitle{A Bayesian Interface Base Approach}
 
-\conceptbf{Bayesian Interface} estimates the probalility of a hypothesis $(x)$ based on observations $(y)$, showing that posterior is proportional to the multiplication of likelihood and prior, i.e., $p(x|y) \propto p(y|x)p(x)$.\\~\\\pause
+\conceptbf{Bayesian Interface} estimates the probability of a hypothesis $(x)$ based on observations $(y)$, showing that posterior is proportional to the multiplication of likelihood and prior, i.e., $p(x|y) \propto p(y|x)p(x)$.\\~\\\pause
 
 Suppose there're $m$ zones (each with a reader mounted in the center) and $n$ objects. For each object $o_i$, its location is represented by a random variable $h_i$. A possible distribution of $n$ objects in $m$ zones can be denoted as an instance of the random vector:\pause
 \begin{equation}
@@ -275,7 +275,7 @@ A \conceptbf{simplified 2-state detection model} assumes readers' detection regi
 \begin{frame}
 \frametitle{RFID Reader Detection Model: The $n$-State}
 
-The overall detection region of an RFID reader is devided into several sub-regions, each of which corresponds to a zone associated with a unique read rate.
+The overall detection region of an RFID reader is divided into several sub-regions, each of which corresponds to a zone associated with a unique read rate.
 
 \begin{figure}[tb]
   \includegraphics[width=0.8\columnwidth]{figures/3-1/3-1-5.pdf}
@@ -520,7 +520,7 @@ Symbol notations used in MH-C algorithm:
 
 With a large mount of qualified samples, the approach enables two important types of queries against RFID raw data: \\~\\
 
-Given an object and a zone, a \conceptbf{Location Query} returns the porbability that the object is in that zone.\\~\\
+Given an object and a zone, a \conceptbf{Location Query} returns the probability that the object is in that zone.\\~\\
 
 Given a zone, a \conceptbf{Remaining Capacity Query} returns the leftover volume of a certain resource available in that zone.\\~\\
 
