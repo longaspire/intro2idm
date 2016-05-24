@@ -832,3 +832,71 @@ The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a
 \end{example}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Backward Phase}
+
+\begin{columns}
+
+  \column{0.42\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-8.pdf}
+  \end{figure}
+
+  \column{0.58\textwidth}
+  \begin{sitemize}
+    \item line 16: a node $n$ among those having the highest timestamp is extracted from $Q$;
+    \item line 19: if $n.loss$ is lower than 1 (meaning that $n$ has at least one outgoing edge), the probability of each of the outgoing edges of $n$ is conditioned, i.e., its current value is divided by the sum of the probabilities of the outgoing edges of $n$;
+    \item line 22: the probability of each ingoing edge $\langle n',n \rangle$ of $n$ is decremented by the value of $n.loss$ multiplied by the old probability value of the edge $\langle n',n \rangle$;
+    \item line 23: the value of $n'.loss$ of each node $n'$ of which $n$ is successor is incremented of the value of $n.loss$ multiplied by the old probability value of the edge $\langle n',n \rangle$;
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Backward Phase}
+
+\begin{columns}
+
+  \column{0.42\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-8.pdf}
+  \end{figure}
+
+  \column{0.58\textwidth}
+  \begin{sitemize}
+    \item line 25: since $n'.loss$ has been incremented and thus it is greater than 0, node $n'$ is added to $Q$ if it's not already present in it;
+    \item line 27: furthermore, in the case $n.loss = 1$, the edge $\langle n',n \rangle$ is removed from $E$;
+    \item line 29: at the end of the loop scanning the ingoing edges of $n$, if $n.loss = 1$, $n$ is removed from $N$;
+    \item line 31: the probability $p_N(n)$ of each source node $n$ in $N$ is conditioned, i.e., $p_N(n)$ is divided by the sum of the probabilities of the source nodes belonging to $N$.
+  \end{sitemize}
+
+\end{columns}
+
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Backward Phase}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.5\columnwidth]{figures/3-4/3-4-9.pdf}
+\end{figure}
+
+\vspace{-15pt}
+
+\begin{example}
+  \ssize{
+  At the first iteration of the while loop, node $n_4$ is removed from $Q$ since $n_4.loss$ is equal to 1. Thus, the algorithm processes the ingoing edges of $n_4$. Specifically, as $n_4$ has only the incoming edge $\langle n_1,n_4 \rangle$, the probability value of $\langle n_1,n_4 \rangle$ is set to $2/3 -2/3 = 0$, and, correspondingly variable $n_1.loss$ is set to $1/3 + 2/3 = 1$. Then the edge $\langle n_1,n_4 \rangle$ is removed from $N$.
+  }
+\end{example}
+
+\end{frame}

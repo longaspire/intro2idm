@@ -108,26 +108,32 @@
 \headcommand {\beamer@framepages {48}{48}}
 \headcommand {\slideentry {3}{4}{40}{49/49}{3.4 Offline Cleaning of RFID Trajectory Data}{0}}
 \headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {3}{4}{41}{50/50}{3.4 Offline Cleaning of RFID Trajectory Data}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {3}{4}{42}{51/51}{3.4 Offline Cleaning of RFID Trajectory Data}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {3}{4}{43}{52/52}{3.4 Offline Cleaning of RFID Trajectory Data}{0}}
+\headcommand {\beamer@framepages {52}{52}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{2}{6}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {6}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{3}{6}{3.3 Handling False Negatives in Indoor RFID Data}}\headcommand {\beamer@subsectionpages {6}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{4}{6}{3.4 Offline Cleaning of RFID Trajectory Data}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\slideentry {3}{4}{41}{50/50}{3.4 Offline Cleaning of RFID Trajectory Data}{0}}
-\headcommand {\beamer@framepages {50}{50}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{51}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {5}{50}}
-\headcommand {\beamer@subsectionpages {6}{50}}
-\headcommand {\slideentry {4}{0}{42}{51/51}{}{0}}
-\headcommand {\beamer@framepages {51}{51}}
-\headcommand {\sectionentry {5}{5. Appendix}{52}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {51}{51}}
-\headcommand {\beamer@subsectionpages {51}{51}}
-\headcommand {\slideentry {5}{0}{43}{52/52}{}{0}}
-\headcommand {\beamer@framepages {52}{52}}
-\headcommand {\slideentry {5}{0}{44}{53/53}{}{0}}
+\headcommand {\slideentry {3}{4}{44}{53/53}{3.4 Offline Cleaning of RFID Trajectory Data}{0}}
 \headcommand {\beamer@framepages {53}{53}}
-\headcommand {\beamer@partpages {1}{53}}
-\headcommand {\beamer@subsectionpages {52}{53}}
-\headcommand {\beamer@sectionpages {52}{53}}
-\headcommand {\beamer@documentpages {53}}
-\headcommand {\def \inserttotalframenumber {50}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{54}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {5}{53}}
+\headcommand {\beamer@subsectionpages {6}{53}}
+\headcommand {\slideentry {4}{0}{45}{54/54}{}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\sectionentry {5}{5. Appendix}{55}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {54}{54}}
+\headcommand {\beamer@subsectionpages {54}{54}}
+\headcommand {\slideentry {5}{0}{46}{55/55}{}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {5}{0}{47}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {55}{56}}
+\headcommand {\beamer@sectionpages {55}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\def \inserttotalframenumber {53}}
