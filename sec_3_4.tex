@@ -669,9 +669,54 @@ $n_2$ is a successor of $n_1$ iff:
         \item a pair $\langle n_1, n_2 \rangle$ belongs to $E$ iff $n_1, n_2 \in N$ and $n_2$ is a successor of $n_1$;
         \item for every $n \in N$, there is at least one path from a source node to a target node in $N$ which contains $n$.
       \end{sitemize}
-    \item $p_N: SN \rightarrow (0, 1] is a PDF over the set of source nodes$;
+    \item $p_N: SN \rightarrow (0, 1]$ is a PDF over the set of source nodes;
     \item $\vec{p}_E$ is a set containing, for each non-target node $n$ of $G$, a PDF $p^n_E$ over its outgoing edges, i.e., $\vec{p}_E = \{ p^n_E | n \in N \setminus TN \}$ where $p^n_E: E_n \rightarrow (0,1]$ and $E_n = \{ \langle n, n' \rangle | \langle n, n' \rangle \in E \}$
   \end{fitemize}
 \end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{CT-Graph}
+
+A (valid) path $\pi$ over a ct-graph $G = \langle N,E,p_N,\vec{p}_E \rangle$ is a path from a source to a target node over the graph $\langle N,E \rangle$.\\~\\
+
+A path $\pi = n_0, ..., n_{\tau_f}$ over $G$ corresponds to the valid trajectory $t = n_0[\lambda],...,n_{\tau_f}[\lambda]$, where $n_i[\lambda]$ denotes the $\langle timestamp, location \rangle$ pair which $n_i$ refers to.\\~\\
+
+The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a(t | \mathcal{IC})$ of the corresponding trajectory $t$, where
+\begin{equation}
+  p(\pi) = p_N(n_0) \times \prod_{i=0}^{\tau_f-1}p_E^{n_i}(\langle n_i, n_{i+1} \rangle)
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Location Nodes}
+
+\begin{columns}
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-2.pdf}
+  \end{figure}
+
+  \column{0.6\textwidth}
+
+  \begin{example}
+    \ssize{
+      Consider the set $\mathcal{N}$ over $\Gamma$ and $\mathcal{IC}$ consists of the following location nodes:\\
+      $n_0 = \langle 0, L_1, \perp, \varnothing \rangle$, $n_1 = \langle 0, L_2, \perp, \varnothing \rangle$ \\
+      $n_2 = \langle 1, L_3, \perp, \varnothing \rangle$, $n_3 = \langle 1, L_3, \perp, \{ \langle 0, L_1 \rangle \} \rangle$ \\
+      $n_4 = \langle 1, L_4, 0, \varnothing \rangle$, $n_5 = \langle 1, L_4, 0, \{ \langle 0, L_1 \rangle \} \rangle$ \\
+      $n_6 = \langle 2, L_3, \perp, \varnothing \rangle$, $n_7 = \langle 2, L_3, \perp, \{ \langle 0, L_1 \rangle \} \rangle$ \\
+      $n_8 = \langle 2, L_5, \perp, \varnothing \rangle$, $n_9 = \langle 2, L_5, \perp, \{ \langle 0, L_1 \rangle \} \rangle$
+    }
+  \end{example}
+
+\end{columns}
 
 \end{frame}
