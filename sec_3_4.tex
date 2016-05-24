@@ -669,9 +669,166 @@ $n_2$ is a successor of $n_1$ iff:
         \item a pair $\langle n_1, n_2 \rangle$ belongs to $E$ iff $n_1, n_2 \in N$ and $n_2$ is a successor of $n_1$;
         \item for every $n \in N$, there is at least one path from a source node to a target node in $N$ which contains $n$.
       \end{sitemize}
-    \item $p_N: SN \rightarrow (0, 1] is a PDF over the set of source nodes$;
+    \item $p_N: SN \rightarrow (0, 1]$ is a PDF over the set of source nodes;
     \item $\vec{p}_E$ is a set containing, for each non-target node $n$ of $G$, a PDF $p^n_E$ over its outgoing edges, i.e., $\vec{p}_E = \{ p^n_E | n \in N \setminus TN \}$ where $p^n_E: E_n \rightarrow (0,1]$ and $E_n = \{ \langle n, n' \rangle | \langle n, n' \rangle \in E \}$
   \end{fitemize}
 \end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{CT-Graph}
+
+A (valid) path $\pi$ over a ct-graph $G = \langle N,E,p_N,\vec{p}_E \rangle$ is a path from a source to a target node over the graph $\langle N,E \rangle$.\\~\\
+
+A path $\pi = n_0, ..., n_{\tau_f}$ over $G$ corresponds to the valid trajectory $t = n_0[\lambda],...,n_{\tau_f}[\lambda]$, where $n_i[\lambda]$ denotes the $\langle timestamp, location \rangle$ pair which $n_i$ refers to.\\~\\
+
+The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a(t | \mathcal{IC})$ of the corresponding trajectory $t$, where
+\begin{equation}
+  p(\pi) = p_N(n_0) \times \prod_{i=0}^{\tau_f-1}p_E^{n_i}(\langle n_i, n_{i+1} \rangle)
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Location Nodes}
+
+\begin{columns}
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-2.pdf}
+  \end{figure}
+
+  \column{0.6\textwidth}
+
+  \begin{example}
+    \ssize{
+      It is easy to check $G = \langle N,E,p_N,\vec{p}_E \rangle$, where $N = \{ n_0, n_3, n_7 \}$, $E= \{ \langle n_0,n_3 \rangle, \langle n_3,n_7 \rangle \}$, $p_N(n_0) = 1$, and $p_E^{n_3}(\langle n_3, n_7 \rangle) = 1$. $G$ is the ct-graph over the l-sequence and the constraints. In fact, the unique path $\pi = n_0, n_3, n_7$ over $G$ corresponds to the unique valid trajectory $\{ \lambda_1, \lambda_3, \lambda_5 \}$, and its probability is $p(\pi) = 1$.
+    }
+  \end{example}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Overview}
+
+\begin{columns}
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-3.pdf}
+  \end{figure}
+
+  \column{0.6\textwidth}
+  \begin{sitemize}
+    \item consists of \emph{forward} and \emph{backward} phase;
+    \item the forward phase consists of one iteration for each timestamp $\tau \in \mathcal{T}$, at the first iteration, the set $N$ of the location nodes belonging to the ct-graph $G$ being constructed is initialized with the set to those implied by the a-priori probabilities.
+    \item at $\tau$-th iteration, $N$ is progressively augmented with location nodes referring to the timestamp $\tau+1$, the edges between location nodes reffering to timestamp $\tau$ and their successors are added to $E$, and their probabilities are set to those implied by the a-priori probability function.
+    \item the backward phase deals with removing the nodes in the invalid paths, the probabilities of edges and those of source nodes are conditioned, i.e., they are revised to take into account the probabilities of the trajectories that are invalid.
+  \end{sitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Initialization}
+
+\begin{columns}
+
+  \column{0.42\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-4.pdf}
+  \end{figure}
+
+  \column{0.58\textwidth}
+  \begin{enumerate}
+    \ssize{
+    \item lines 1--2: the set $N$ if the nodes of graph is initialized with the set of the source nodes yielded by funtion \emph{sourceNodes} that builds them from the l-sequence $\Gamma$.
+    \item lines 3--4: the probability $p_N(n)$ of each source node $n$ is set to the probability of the pair $\langle 0,l\rangle$ of $\Gamma$, and the queue $Q$ is set to be empty.
+    }
+  \end{enumerate}
+
+\end{columns}
+
+\begin{example}
+  according to the previous example, function \emph{sourceNodes} builds the source location nodes $n_0$ and $n_1$, and puts them into $N$. Next, $p_N(n_0)$ and $p_N(n_1)$ are assigned probabilities $p(\lambda_1) = \frac{6}{10}$ and $p(\lambda_2) = \frac{4}{10}$, respectively.
+\end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Forward Phase}
+
+\begin{columns}
+
+  \column{0.5\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-4/3-4-5.pdf}
+  \end{figure}
+
+  \column{0.5\textwidth}
+  \begin{enumerate}
+    \ssize{
+    \item line 7: for each location node $n$ referring to $\tau$, \emph{buildSuccessors} returns the its successor $n'$;
+    \item line 10: each node $n'$ is added to $N$ and consequently the edges of the form $\langle n, n' \rangle$ are added to the set $E$ of $G$;
+    \item line 12: once all successors have been added to $G$, $n.loss$ is set to the one's complement of the sum of the probabilities of the outgoing edge of $n$.
+    }
+  \end{enumerate}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Forward Phase}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.5\columnwidth]{figures/3-4/3-4-6.pdf}
+\end{figure}
+
+\vspace{-15pt}
+
+\begin{example}
+  \ssize{
+  At iteration $\tau = 0$, both $n_0$ and $n_1$ are processed. In the case $n=n_0$, the inner loop processes the location nodes $n_3$ and $n_5$, both nodes $n_3$ and $n_5$ are sucessors of $n_0$, and both $\langle n_0,n_3 \rangle$ and $\langle n_0,n_5 \rangle$ are added to $E$, with probabilities $p(\langle n_0,n_3 \rangle) = p(\langle 1,L_3 \rangle) = 1/3$ and $p(\langle n_0,n_5 \rangle) = p(\langle 1,L_4 \rangle) = 2/3$. At the end of the loop, $n_0.loss$ is 0 and thus $n_0$ is not added to $Q$. \\
+  Another example, $n_2$ is not a successor of $n_0$ or $n_1$, in the case $n=n_1$, the loop only processes the location node $n_4$, the probability $p(\langle n_1,n_4 \rangle) = p(\langle 1, L_4\rangle) = 1/3$, and $n_1.loss = 1 - 1/3 = 2/3$, thus $n_1$ is added to $Q$.
+  }
+\end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Forward Phase}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.5\columnwidth]{figures/3-4/3-4-7.pdf}
+\end{figure}
+
+\vspace{-15pt}
+
+\begin{example}
+  \ssize{
+  At iteration $\tau = 1$, $n_3$, $n_5$ and $n_4$ are processed. In the case $n = n_3$, the inner loop only processes the location node $n_7$ where is the only successor of $n_3$. Thus, $n_7$ is added to $N$, the edge $\langle n_3,n_7 \rangle$ is added to $E$, and the probability $p(\langle n_3, n_7 \rangle) = p(\langle 2, L_3 \rangle) = 2/3$. Next, $n_3.loss$ is assigned with $1 - 2/3 = 1/3$ and $n_3$ is added to $Q$.\\
+  In both the cases $n = n_5$ and $n = n_4$, since there is no location node which is a successor of $n_5$ or $n_4$, $n_5.loss$ and $n_4.loss$ are both assigned with 1 and both $n_5$ and $n_4$ are added to $Q$.
+  }
+\end{example}
 
 \end{frame}
