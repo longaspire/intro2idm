@@ -23,13 +23,13 @@ B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.\\~\\
 \begin{itemize}
   \item Pervasive use of RFID devices as a support for object tracking
   \begin{fitemize}
-    \item monitoring of people, animals and objects inside museums, shools, hospital etc.
+    \item monitoring of people, animals and objects inside museums, schools, hospital etc.
     \item context-aware information.
   \end{fitemize}
   \item There exists ambiguity in the raw RFID data.
   \begin{fitemize}
     \item no one-to-one correspondence between locations and readers, no way to deterministically decide the location given that a set of readers detected an object.
-    \item the same location may constain different reader's detection zones, the same reader may detect different objects at different locations, also false negatives.
+    \item the same location may constrain different reader's detection zones, the same reader may detect different objects at different locations, also false negatives.
   \end{fitemize}
 \end{itemize}
 
@@ -79,7 +79,7 @@ B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.\\~\\
 
   \begin{example}
     \ssize{
-    assume that at instants(timestamps) 0 and 1, $o$ is detected by both $r_1$ and $r_5$, while at instant 2 it's detected by $r_0$. Assume that $p^a(l|R)$ is used, i.e., objects detected by $r_1$ and $r_5$ are at location $L_1$ with probability 0.5 and at $L_4$ with probability 0.5, detected by $r_0$ are at $L_0$ with probability 1. Reasoning only on the basis of these probabilities and exploiting no further knowledge, the trajectories followed by $o$ can be: $t_1: L_1L_1L_0$, $t_2: L_1L_4L_0$, $t_3: L_4L_1L_0$, $t_4: L_4L_4L_0$, each with pribability 0.25.
+    assume that at instants(timestamps) 0 and 1, $o$ is detected by both $r_1$ and $r_5$, while at instant 2 it's detected by $r_0$. Assume that $p^a(l|R)$ is used, i.e., objects detected by $r_1$ and $r_5$ are at location $L_1$ with probability 0.5 and at $L_4$ with probability 0.5, detected by $r_0$ are at $L_0$ with probability 1. Reasoning only on the basis of these probabilities and exploiting no further knowledge, the trajectories followed by $o$ can be: $t_1: L_1L_1L_0$, $t_2: L_1L_4L_0$, $t_3: L_4L_1L_0$, $t_4: L_4L_4L_0$, each with probability 0.25.
     }
   \end{example}
 
@@ -92,7 +92,7 @@ B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.\\~\\
 \begin{frame}
 \frametitle{Ambiguity of RFID Data}
 
-The independence assumption allows for reasoning about tracjectory probabilities as follows.\\~\\
+The independence assumption allows for reasoning about trajectory probabilities as follows.\\~\\
 \pause
 
 Consider an object $o$ moving over time interval $\mathcal{T} = [\tau_1,...,\tau_n]$, and the sequence of readings $\Theta = \langle \tau_1, R_1 \rangle, ..., \langle \tau_n, R_n \rangle$, meaning that at each $\tau_i \in \mathcal{T}$, $o$ was detected by the set $R_i$ of readers.\\~\\
@@ -174,7 +174,7 @@ Exploiting the knowledge on the map and on the motility characteristics:\\~\\
   \begin{example}
     \ssize{
       the map easily implies a set of direct-unreachability constraints, one for each pair of rooms which are not directly connected through a door, such as $L_0,L_4$ and $L_1,L_4$.\\
-      The map implies further constraints, other than direct unreachability. E.g., it says that $L_0$ and $L_5$, althrough close to one another, are connected only by a pretty long path. Reasonably, it can be imposed that $15 sec$ are required to go through this path. (called ``traveling-time constraint'').
+      The map implies further constraints, other than direct unreachability. E.g., it says that $L_0$ and $L_5$, although close to one another, are connected only by a pretty long path. Reasonably, it can be imposed that $15 sec$ are required to go through this path. (called ``traveling-time constraint'').
     }
   \end{example}
   \ssize{\textrm{the above example explains how considering integrity constraints can reduce uncertainty, as it allows trajectories to be removed from the valid interpretations of data.}}
@@ -355,7 +355,7 @@ The set of the trajectories over an l-sequence $\Gamma$ is denoted as $T(\Gamma)
 
     \item for each $unreachable(l_1, l_2) \in \mathcal{IC}$, there are no pairs $\langle \tau,l_1 \rangle$ and $\langle \tau+1,l_2 \rangle$ in $t$;
 
-    \item for each $travelingTime(l_1, l_2, \nu) in \mathcal{IC}$, there are no $\langle \tau_1, l_1 \rangle$ and $\langle \tau_2, l_2 \rangle$ in $t$, with $\tau_1 < \tau_2$, such that $\tau_2 - \tau_1 < \nu$.
+    \item for each $travelingTime(l_1, l_2, \nu)$ in $\mathcal{IC}$, there are no $\langle \tau_1, l_1 \rangle$ and $\langle \tau_2, l_2 \rangle$ in $t$, with $\tau_1 < \tau_2$, such that $\tau_2 - \tau_1 < \nu$.
 
   \end{itemize}
 \end{definition}
@@ -410,7 +410,7 @@ The set of the trajectories over an l-sequence $\Gamma$ is denoted as $T(\Gamma)
 
 \conceptbf{Conditioning}: starting from the a-priori probabilities, the probabilities of the trajectories are evaluated as conditioned to the event that the constraints are satisfied.\\~\\
 
-\textrm{The probability of invalid trajectories becomes 0, while that of each balid trajectory becomes the ratio of its a-priori probability to the overall a-priori probability of the valid trajecories.}
+\textrm{The probability of invalid trajectories becomes 0, while that of each valid trajectory becomes the ratio of its a-priori probability to the overall a-priori probability of the valid trajecories.}
 
 \begin{block}{}
   Given a trajectory $t \in T(\Gamma)$, its probability $p^a(t)$ conditioned to the fact that the constraints in $\mathcal{IC}$ are satisfied is given by $p^a(t|\mathcal{IC})$, where:
@@ -431,7 +431,7 @@ The set of the trajectories over an l-sequence $\Gamma$ is denoted as $T(\Gamma)
 
 The \conceptbf{conditioned trajectory graph} (ct-graph) over an l-sequence $\Gamma = \langle \Lambda,p \rangle$ will be exploited to concisely represent trajectories over $\Gamma$ in the presence of integrity constraints.\\~\\
 
-The nodes of a ct-graph are said to be \emph{location nodes}, each location node $n$ corresponds to a pair $\langle \tau,l \rangle \in \Lambda$ and is connected through directed edges to location nodes (chosen among the set of \emph{successors} of $n$) corresponding to sbusequent timestamps.
+The nodes of a ct-graph are said to be \emph{location nodes}, each location node $n$ corresponds to a pair $\langle \tau,l \rangle \in \Lambda$ and is connected through directed edges to location nodes (chosen among the set of \emph{successors} of $n$) corresponding to subsequent timestamps.
 
 \end{frame}
 
@@ -441,7 +441,7 @@ The nodes of a ct-graph are said to be \emph{location nodes}, each location node
 \frametitle{Location Nodes}
 
 \begin{definition}[Location Nodes]
-  Given an l-sequence $\Gamma = \langle \Lambda,p \rangle$ for an object $o$ and a set $\mathcal{IC}$ of intergrity constraints, a location node $n$ is a tuple of the form $\langle \tau, l, \delta, TL \rangle$, where $\langle \tau, l \rangle \in \Lambda$, $\delta \in \mathcal{T} \cup \{ \perp \}$ (where $\perp$ means ``non-specified''), and $TL$ is a (possible empty) set of pairs $\langle \tau_1, l_1 \rangle \in \Lambda$ (with $l_1 \neq l$) containing no two pairs conciding in either the timestamp or the location. It represents the following facts:
+  Given an l-sequence $\Gamma = \langle \Lambda,p \rangle$ for an object $o$ and a set $\mathcal{IC}$ of integrity constraints, a location node $n$ is a tuple of the form $\langle \tau, l, \delta, TL \rangle$, where $\langle \tau, l \rangle \in \Lambda$, $\delta \in \mathcal{T} \cup \{ \perp \}$ (where $\perp$ means ``non-specified''), and $TL$ is a (possible empty) set of pairs $\langle \tau_1, l_1 \rangle \in \Lambda$ (with $l_1 \neq l$) containing no two pairs conceding in either the timestamp or the location. It represents the following facts:
   \begin{enumerate}
     \item A. $o$ was in location $l$ at time $\tau$;
     \item B. the stay of $o$ at $l$ started $\delta$ time points before $\tau$;
@@ -498,6 +498,7 @@ Point i) means that an entry $\langle \tau',l' \rangle$ in $n.TL$ can be used on
 $\mathcal{N}$ is denoted as the set of the location nodes that can be defined over $\Gamma$ and $\mathcal{IC}$. $SN$ AND $TN$ is the subsets of $\mathcal{N}$ as the \emph{source} and \emph{target} nodes (location nodes whose timestamps are the first and the last time points of $\mathcal{T}$), respectively.
 }
 
+
 \end{frame}
 
 %------------------------------------------------
@@ -548,7 +549,7 @@ Location node $n_2$ means that:
 
   \item since $n_2.\delta = \perp$, either there is no $LT$ constraint over $L_3$, or its stay at $L_3$ started more than $\delta^*$ time points before 1, where $latency(L_3, \delta^*)$ is the $LT$ constraint over $L_3$;
 
-  \item since $n_2.TL = \varnothing$, for every location $l$ visited by the object in the past, either there is no $TT$ constraints having $l$ as the firt argument, or the object left $l$ more than $\nu^*$ time points ago, where all the $TT$ constraints $travelingTime(l,l',\nu) \in \mathcal{IC}$ having $l$ as first argument are such that $\nu < \nu^*$.
+  \item since $n_2.TL = \varnothing$, for every location $l$ visited by the object in the past, either there is no $TT$ constraints having $l$ as the first argument, or the object left $l$ more than $\nu^*$ time points ago, where all the $TT$ constraints $travelingTime(l,l',\nu) \in \mathcal{IC}$ having $l$ as first argument are such that $\nu < \nu^*$.
 
 \end{fitemize}
 
@@ -616,7 +617,7 @@ $n_2$ is a successor of $n_1$ iff:
   \item if at time $\tau_2$ the object is still in $l_2 = l_1$, then this is consistently reflected by an increment of $\delta_2$;
   \item no stay constraint in $\mathcal{IC}$ involving $l_1$ is violated if the object moves from $l_1$ to another location $l_2$ at time $\tau_2$;
   \item no traveling time constraint in $\mathcal{IC}$ imposing that the time needed to move from a location belonging to $TL_1$ to $l_2$ is violated if the object moves from $l_1$ to another location $l_2$ at time $\tau_2$;
-  \item $TL_2$ can be obtained by first angumenting $TL_1$ with the pair $\langle \tau_1, l_1 \rangle$ (this happens if there is a traveling time constraint involving $l_1$ as the first argument), and discarding those pairs of $TL_1$ which have become useless for checking $TT$ constraint and those referring to a previous stay at $l_2$.
+  \item $TL_2$ can be obtained by first augmenting $TL_1$ with the pair $\langle \tau_1, l_1 \rangle$ (this happens if there is a traveling time constraint involving $l_1$ as the first argument), and discarding those pairs of $TL_1$ which have become useless for checking $TT$ constraint and those referring to a previous stay at $l_2$.
 \end{fitemize}
 
 \end{frame}
@@ -661,7 +662,7 @@ $n_2$ is a successor of $n_1$ iff:
 \frametitle{CT-Graph}
 
 \begin{definition}[CT-Graph]
-  Let $\mathcal{N}$ be the set of location nodes over the l-sequence $\Gamma$, and $\mathcal{IC}$ a set of integrity constraints. A conditioned trajectory graph (ct-graph) is a tuple $G = \langle N, E, p_N, \vec{p}_E \rangle$：
+  Let $\mathcal{N}$ be the set of location nodes over the l-sequence $\Gamma$, and $\mathcal{IC}$ a set of integrity constraints. A conditioned trajectory graph (ct-graph) is a tuple $G = \langle N, E, p_N, \vec{p}_E \rangle$��
   \begin{fitemize}
     \item $N \subseteq \mathcal{N}$;
     \item $\langle N,E \rangle$ is a graph (where $N$ and $E$ are the sets of nodes and edges, respectively) satisfying the following properties
@@ -732,7 +733,7 @@ The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a
   \begin{sitemize}
     \item consists of \emph{forward} and \emph{backward} phase;
     \item the forward phase consists of one iteration for each timestamp $\tau \in \mathcal{T}$, at the first iteration, the set $N$ of the location nodes belonging to the ct-graph $G$ being constructed is initialized with the set to those implied by the a-priori probabilities.
-    \item at $\tau$-th iteration, $N$ is progressively augmented with location nodes referring to the timestamp $\tau+1$, the edges between location nodes reffering to timestamp $\tau$ and their successors are added to $E$, and their probabilities are set to those implied by the a-priori probability function.
+    \item at $\tau$-th iteration, $N$ is progressively augmented with location nodes referring to the timestamp $\tau+1$, the edges between location nodes referring to timestamp $\tau$ and their successors are added to $E$, and their probabilities are set to those implied by the a-priori probability function.
     \item the backward phase deals with removing the nodes in the invalid paths, the probabilities of edges and those of source nodes are conditioned, i.e., they are revised to take into account the probabilities of the trajectories that are invalid.
   \end{sitemize}
 
@@ -755,7 +756,7 @@ The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a
   \column{0.58\textwidth}
   \begin{enumerate}
     \ssize{
-    \item lines 1--2: the set $N$ if the nodes of graph is initialized with the set of the source nodes yielded by funtion \emph{sourceNodes} that builds them from the l-sequence $\Gamma$.
+    \item lines 1--2: the set $N$ if the nodes of graph is initialized with the set of the source nodes yielded by function \emph{sourceNodes} that builds them from the l-sequence $\Gamma$.
     \item lines 3--4: the probability $p_N(n)$ of each source node $n$ is set to the probability of the pair $\langle 0,l\rangle$ of $\Gamma$, and the queue $Q$ is set to be empty.
     }
   \end{enumerate}
@@ -775,12 +776,12 @@ The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a
 
 \begin{columns}
 
-  \column{0.5\textwidth}
+  \column{0.55\textwidth}
   \begin{figure}[tb]
     \includegraphics[width=\columnwidth]{figures/3-4/3-4-5.pdf}
   \end{figure}
 
-  \column{0.5\textwidth}
+  \column{0.45\textwidth}
   \begin{enumerate}
     \ssize{
     \item line 7: for each location node $n$ referring to $\tau$, \emph{buildSuccessors} returns the its successor $n'$;
@@ -888,7 +889,7 @@ The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a
 \frametitle{The Cleansing Algorithm: Backward Phase}
 
 \begin{figure}[tb]
-  \includegraphics[width=0.5\columnwidth]{figures/3-4/3-4-9.pdf}
+  \includegraphics[width=0.65\columnwidth]{figures/3-4/3-4-9.pdf}
 \end{figure}
 
 \vspace{-15pt}
@@ -898,5 +899,73 @@ The functions $p_N$ and $\vec{p}_E$ is equal to the conditioned probability $p^a
   At the first iteration of the while loop, node $n_4$ is removed from $Q$ since $n_4.loss$ is equal to 1. Thus, the algorithm processes the ingoing edges of $n_4$. Specifically, as $n_4$ has only the incoming edge $\langle n_1,n_4 \rangle$, the probability value of $\langle n_1,n_4 \rangle$ is set to $2/3 -2/3 = 0$, and, correspondingly variable $n_1.loss$ is set to $1/3 + 2/3 = 1$. Then the edge $\langle n_1,n_4 \rangle$ is removed from $N$.
   }
 \end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Backward Phase}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.65\columnwidth]{figures/3-4/3-4-10.pdf}
+\end{figure}
+
+\vspace{-15pt}
+
+\begin{example}
+  \ssize{
+  The second iteration of the while loop processes the node $n_5$. Since $n_5.loss$ is equal to 1, no conditioning of outgoing edges is performed. Then algorithm processes the ingoing edges of $n_5$, and, reasoning as in the case in the last slide, the probability value $\langle n_0,n_5 \rangle$ is set to 0, and variable $n_0.loss$ is set to $2/3$. Next $n_0$ is inserted into $Q$, the edge $\langle n_0,n_5 \rangle$ is removed from $N$.
+  }
+\end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Backward Phase}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.65\columnwidth]{figures/3-4/3-4-11.pdf}
+\end{figure}
+
+\vspace{-15pt}
+
+\begin{example}
+  \ssize{
+  At the third iteration of the while, node $n_3$ is removed from $Q$. Since $n_3.loss$ is lower than 1, the algorithm performs the conditioning of the outgoing edges of $n_3$ so that the probability of the unique outgoing edge $\langle n_3,n_7 \rangle$ of $n_3$ is set to 1. Next, the unique ingoing edge $\langle n_0,n_3 \rangle$ is scanned, the probability of $\langle n_0,n_3 \rangle$ is set to $1/3 - 1/3 \cdot 1/3 = 2/9$, and variable $n_0.loss$ is set to $2/3 + 1/3 \cdot 1/3 = 7/9$. Since $n_0$ is already in $Q$, the iteration processing $n_3$ ends without doing anything else.
+  }
+\end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Cleansing Algorithm: Backward Phase}
+
+\begin{figure}[tb]
+  \includegraphics[width=0.8\columnwidth]{figures/3-4/3-4-12.pdf}
+\end{figure}
+
+\vspace{-15pt}
+
+\begin{example}
+  \ssize{
+  At the fourth iteration of the while loop the node $n_1$ is removed from $Q$ and processed. Since $n_1.loss$ is equal to 1 and it has no ingoing edges $n_0.loss < 1$, the revising is skipped. At this stage, the probability of the source node $n_0$ (the unique that is still in $N$) is conditioned, obtaining $p_N(n_0) = 1$.
+  }
+\end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Conclusions and Future Work}
+
+A probabilistic cleansing framework for RFID data has been introduced, which cleans trajectories by conditioning them to the event that integrity constraints encoding some knowledge about the map and the motility characteristics of the moving objects.\\~\\
+
+Future work will be focused on extending the framework to take into account other forms of correlations, such as those holding in groups of objects moving together, which typically characterize supply-chain scenarios.
 
 \end{frame}
