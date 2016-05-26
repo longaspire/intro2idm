@@ -14,6 +14,6 @@
 \beamer@subsectionintoc {3}{2}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}{6}{0}{3}
 \beamer@subsectionintoc {3}{3}{3.3 Handling False Negatives in Indoor RFID Data}{6}{0}{3}
 \beamer@subsectionintoc {3}{4}{3.4 Offline Cleaning of RFID Trajectory Data (PART I)}{6}{0}{3}
-\beamer@subsectionintoc {3}{5}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{6}{0}{3}
-\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{21}{0}{4}
-\beamer@sectionintoc {5}{5. Appendix}{22}{0}{5}
+\beamer@subsectionintoc {3}{5}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{58}{0}{3}
+\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{58}{0}{4}
+\beamer@sectionintoc {5}{5. Appendix}{59}{0}{5}
