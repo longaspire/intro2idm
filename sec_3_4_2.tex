@@ -203,6 +203,21 @@ At the end of each forward step involving a missing detection, the cells that su
 \begin{frame}
 \frametitle{The Preliminaries}
 
+Assume the set $\mathcal{R} = \{ r_1,...,r_n \}$ of readers, and the set $\mathcal{L} = \{ L_1,...,L_n \}$ of locations on map $M$.\\~\\ \pause
 
+The map of locations is partitioned according to a regular grid, whose generic cell will be denoted as $c$. The set of cells intersecting the area covered by a set $R \in \mathcal{R}$ of readers will be denoted as $Cells(R)$. \\~\\ \pause
+
+A \emph{detection-sequence} (d-sequence for short) $D$ over time interval $I$ is a sequence $R_1,...,R_T$, where $R_t \subset \mathcal{R}$ (with $t \in [1...T]$) is the (possibly empty) set of readers that detected $o$ at time point $t$.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Preliminaries}
+
+\begin{problem}[The Cleaning Problem]
+  Given a d-sequence $D = R_1,...R_T$, representing the sets of readers that consecutively detected object $o$ while it was moving over the time interval $I = [1...T]$ and over the map $M$, the \emph{cleaning problem} addressed in this work is that of estimating the actual position (at the granularity level of location) of $o$ at each $t \in I$. This will be accomplished by modeling the position of $o$ at $t$ as a random variable over $\mathcal{L}$, and providing a posterior PDF $p_t$ which is conditional to the relevant evidence encoded by the d-sequence $D$. The output of this cleaning task is the sequence $p_1,...p_T$ of these posterior PDFs, and will be called \emph{probabilistic trajectory} (p-trajectory) over time interval $I$.
+\end{problem}
 
 \end{frame}

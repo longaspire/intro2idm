@@ -44,29 +44,33 @@
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\slideentry {3}{5}{9}{14/14}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
 \headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {3}{5}{10}{15/17}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
+\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\slideentry {3}{5}{11}{18/18}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
+\headcommand {\beamer@framepages {18}{18}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{6}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {5}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{2}{6}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {6}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{3}{6}{3.3 Handling False Negatives in Indoor RFID Data}}\headcommand {\beamer@subsectionpages {6}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{4}{6}{3.4 Offline Cleaning of RFID Trajectory Data (PART I)}}\headcommand {\beamer@subsectionpages {6}{5}}
 \headcommand {\beamer@subsectionentry {0}{3}{5}{6}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\slideentry {3}{5}{10}{15/15}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {3}{5}{10}{15/16}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
-\headcommand {\beamer@framepages {15}{16}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{17}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {5}{16}}
-\headcommand {\beamer@subsectionpages {6}{16}}
-\headcommand {\slideentry {4}{0}{11}{17/17}{}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {5}{5. Appendix}{18}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {17}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {5}{0}{12}{18/18}{}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {5}{0}{13}{19/19}{}{0}}
+\headcommand {\slideentry {3}{5}{12}{19/19}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {18}{19}}
-\headcommand {\beamer@sectionpages {18}{19}}
-\headcommand {\beamer@documentpages {19}}
-\headcommand {\def \inserttotalframenumber {19}}
+\headcommand {\slideentry {3}{5}{12}{19/20}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{0}}
+\headcommand {\beamer@framepages {19}{20}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{21}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {5}{20}}
+\headcommand {\beamer@subsectionpages {6}{20}}
+\headcommand {\slideentry {4}{0}{13}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\sectionentry {5}{5. Appendix}{22}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {21}{21}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\slideentry {5}{0}{14}{22/22}{}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {5}{0}{15}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@partpages {1}{23}}
+\headcommand {\beamer@subsectionpages {22}{23}}
+\headcommand {\beamer@sectionpages {22}{23}}
+\headcommand {\beamer@documentpages {23}}
+\headcommand {\def \inserttotalframenumber {21}}
