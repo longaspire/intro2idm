@@ -530,9 +530,66 @@ Even if $C(t-1)$ and $v_{max}$ are such that the size of $C(t)$ is smaller than 
 
 %------------------------------------------------
 
-% \begin{frame}
-% \frametitle{Sampling-based Approach}
-%
-%
-%
-% \end{frame}
+\begin{frame}
+\frametitle{Sampling-based Approach}
+
+\textbf{Embedding a sampling strategy} aims at preventing the explosion of the cardinality of the set of cells considered as possible position at each time point.\\~\\
+
+In case of a missing detection at time $t$, after evaluating $C(t)$ and the forward probabilities of its cells as in the standard forward phase, filter $C(t)$ according to a \emph{sampling technique}.\\~\\
+
+A \textbf{naive approach} for choosing $k$ good representives for the cells in $C(t)$ is that of sampling $k$ cells on the basis of their computed forward probabilities. (\textit{however, those ``high'' forward probabilities cells may turn out to be impossible or unlikely position due to the future positions.})\\~\\
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Sampling-based Approach}
+
+A \textbf{reasonable way} to select $k$ representatives is that of sampling them according to their posterior probability (i.e., $p_t$), as it takes into account the past, present and future states. (\textit{however, $p_t(c)$ is unknown at this stage of algorithm.})\\~\\
+
+\emph{Using a Good Estimation $\widetilde{p}_t(c)$ of $p_t(c)$} \quad $p_t(c)$ is given by the product of three terms: $p_t^{fw}(c)$, $p_t^{bw}(c)$ and the likelihood $h(\varnothing|c)$ that $o$ was detected by no reader when it's at cell $c$.\\~\\
+
+$p_t^{fw}(c)$ and $h(\varnothing|c)$ can be computed at this stage, thus, in order to estimate $\widetilde{p}_t(c)$, it suffices to devise a mechanism to estimate the backward probability $p_t^{bw}(c)$.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Estimating $p_t^{bw}(c)$ In Forward Phase}
+
+Denoting as $t'$ the first time point after $t$ when $o$ was detected by at least one reader ($R_{t'} \neq \varnothing$), to estimate $p_t^{bw}(c)$,  consider the cell $c'$ closest to $c$ among those covered by $R_{t'}$. Then, take as estimate $\widetilde{p}_t^{bw}(c)$ of $p_t^{bw}(c)$ the probability:\\~\\
+
+\pause
+
+\begin{equation}
+  p^{mov}(v \geq \frac{d_{min}(c,c')}{(t'-t)\cdot\Delta})
+\end{equation}
+
+\pause
+
+i.e., the probability that $o$ has least the minimum speed for moving from $c$ to $c'$ between the time $t \sim t'$.\\~\\
+
+\textit{the reason for using thie value is that the higher the probablity, the larger the number $x$ of cells in $Cells(R_{t'})$ that are likely to be reachable in the time elaspsed between $t$ and $t'$.}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Sampling-based Approach}
+
+Hence, for each cell $c \in C(t)$, $p_t(c)$ is estimated with:\\~\\
+
+\pause
+
+\begin{equation}
+  \widetilde{p}_t(c) = p_t^{fw}(c) \times h(\varnothing|c) \times \widetilde{p}_t^{bw}(c)
+\end{equation}\\~\\
+
+\pause
+
+and this value is used to rank the cells in $C(t)$, so that the $k$ cells having the greatest estimated probablities are selected as representives of $C(t)$.
+
+\end{frame}

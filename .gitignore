@@ -1,4 +1,11 @@
 /*.pdf
 *.log
+*.aux
+*.snm
+*.toc
+*.bbl
+*.blg
+*.out
+*.out.bak
 *.synctex.gz
 !/figures/*
