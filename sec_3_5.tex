@@ -1,0 +1,85 @@
+\begin{frame}
+\frametitle{About This Work...}
+
+\emph{Learning-Based Cleansing for Indoor RFID Data}~\cite{baba2016learning}\\
+A.I.~Baba, M.~Jaeger, H.~Lu, T.B.~Pedersen, W.-S.~Ku, X.~Xie.\\~\\
+
+\begin{itemize}
+  \item Published at \emph{SIGMOD' 2016}.
+  \item Proposed a learning-based data cleansing approach that, requires no detailed prior knowledge about the spatio-temporal properties of the indoor space and the RFID reader deployment.
+  \item Proposed the Indoor RFID Multi-variate Hidden Markov Model (IR-MHMM) to capture the uncertainties of indoor RFID data as well as the correlation of moving object locations and object readings.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Motivation}
+
+\begin{itemize}
+  \item Recently there has been a remarkable proliferation of RFID in indoor tracking and monitoring systems
+  \begin{fitemize}
+    \item airport baggage monitoring. ~\cite{baba2013spatiotemporal,baba2013graph}
+  \end{fitemize}
+  \item The dirtiness of RFID data poses challenges to high-level RFID data querying and analysis.~\cite{chen2010leveraging}
+  \begin{fitemize}
+    \item \conceptbf{false negatives} (missing readings) occur when a reader fails to read a tag in its detection range.
+    \item \conceptbf{false positives} (cross readings) occur when a tagged object is unexpectedly read by multiple readers simultaneously.
+  \end{fitemize}
+  \item This work focuses on cleansing \emph{false negatives} and \emph{false positives}.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{False Negatives \& False Positives}
+
+\begin{columns}
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-5/3-5-1.pdf}
+  \end{figure}
+  \ssize{\textit{an object with tag $tag_1$ moved into the building and was first detected by reader $R_1$ from time point $t_0$ to time point $t_3$, yielding four observations by reader $R_1$.}}
+
+  \column{0.6\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/3-5/3-5-2.pdf}
+  \end{figure}
+  \ssize{
+    1. at $t_{12}$ and $t_{13}$, $tag_1$ was detected by readers $R_4$ and $R_9$, it seems to be present in both locations, thus giving rise to a \emph{false positives}.\\
+    2. after $t_{16}$, $tag_1$ was detected by reader $R_{17}$ that kept detecting $tag_1$ until $t_{29}$. However $tag_1$ is not supposed to be detected by $R_{17}$ before it's detected by $R_{10}$. $tag_1$ passed through $R_{10}$ but failed to generate any information, giving rise to \emph{false negatives}.
+  }
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Motivation}
+
+To support high-level RFID business logic processing, it is necessary to perform data cleansing to remove false negatives and false positives.\\~\\
+
+Existing RFID data cleansing techniques require considerable specific prior knowledge for cleansing operations.
+
+\begin{sitemize}
+  \item to cleanse historical indoor RFID data, the graph model based cleansing approaches~\cite{baba2013spatiotemporal,baba2013graph,DBLP:conf/edbt/FazzingaFFP14} rely on graphs that capture the indoor topology, the deployment of readers, and multiple pertinet spatial-temporal properties.
+  \item in the context of streaming RFID data, a probabilistic approach~\cite{tran2009probabilistic} demands to build four domain-specific probabilistic models before any data cleansing.
+  \item also streaming RFID data, ~\cite{nie2009probabilistic} assumes that locations of neighboring objects are correlated to each other, lifting such assumptions and needs only minimal prior knowledge about indoor settings.
+\end{sitemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Preliminaries}
+
+
+
+\end{frame}
