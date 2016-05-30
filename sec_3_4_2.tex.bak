@@ -111,7 +111,7 @@ B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.\\~\\
   \column{0.7\textwidth}
   \ssize{
   A.  As regards $t = 2s$, $o$ must be at $L_1$, as it cannot be at $L_4$. In fact, $o$ was at $L_0$ at $t = 1s$, and the minimum (indoor) distance between $L_0$ and $L_4$ (about 7m) cannot be covered in $1sec$ without exceeding $v_{max}$. \\~\\
-  B.  As regards $t = 3s$, now that it has been established that $o$ was at $L_1$ at $t = 2s$, we can restrict the set of possible locations from $\{ L_1,...,L_{10} \}$ to $\{ L_0, L_1, L_2 \}$ (due to the size of the floor, reaching a room not in this set from any position inside $L_1$ in one second would require a speed greater than $v_{max}$). \\~\\
+  B.  As regards $t = 3s$, now that it has been established that $o$ was at $L_1$ at $t = 2s$, we can restrict the set of possbile locations from $\{ L_1,...,L_{10} \}$ to $\{ L_0, L_1, L_2 \}$ (due to the size of the floor, reaching a room not in this set from any position inside $L_1$ in one second would require a speed greater than $v_{max}$). \\~\\
   C.  As regards $t = 4s$, the only location in $\{ L_3, L_4, L_8, L_9 \}$ (the set of location covered by $r_6$) that can be reached from at least one location in $\{ L_0, L_1, L_2 \}$ (the possible locations at time $t = 3s$, as established at point B) is $L_4$.
   }
 
@@ -275,7 +275,7 @@ A \emph{detection-sequence} (d-sequence for short) $D$ over time interval $I$ is
   \begin{sitemize}
     \item the backward phase is analogous to the forward one but processes in inverse order on the result by forward phase.
     \item for each cell in $C(t)$, the \emph{backward probability} $p^{bw}_t(c)$ is computed: it represents the probability that $c$ is the position at $t$, when only the possible positions at time points in $[t+1,T]$ are taken into account.
-    \item cells with backward probability equal to $0$ are removed from $C(t)$, since they are turn out to be inconsistent with the possible positions in $[t+1,T]$.
+    \item cells with backward porbability equal to $0$ are removed from $C(t)$, since they are turne out to be inconsistent with the possible positions in $[t+1,T]$.
   \end{sitemize}
 
 \end{columns}
@@ -296,7 +296,7 @@ A \emph{detection-sequence} (d-sequence for short) $D$ over time interval $I$ is
 
   \column{0.5\textwidth}
   \begin{sitemize}
-    \item at the end of backward phase, for each $t \in [1...T]$ and cell $c \in C(t)$, the posterior probability $p_t(c)$ is finally computed as the product among the following 3 contributions: $p^{fw}_t(c)$, $p^{bw}_t(c)$ and likelihood $h(R_t|c)$ (the probability that $o$ is detected by the readers in $R_t$ given that $o$ is at cell $c$).
+    \item at the end of backward phase, for each $t \in [1...T]$ and cell $c \in C(t)$, the posterior probability $p_t(c)$ is finally computed as the product among the following 3 constributions: $p^{fw}_t(c)$, $p^{bw}_t(c)$ and likelihood $h(R_t|c)$ (the probability that $o$ is detected by the reaaders in $R_t$ given that $o$ is at cell $c$).
     \item The so obtained functions $p_1, ..., p_T$ are then projected over the locations and normalized. A probabilistic trajectory where the PDF at each time point is computed by considering the past, the present and the future readings.
   \end{sitemize}
 
@@ -467,8 +467,8 @@ Two variant of cleaning algorithms are proposed, namely the \emph{Exhaustive App
 \begin{enumerate}
   \item line 11: scan the time points in $[1...T]$ in inverse order, and assigns uniform probability $p^{bw}_T$ to the cells in $C(T)$.
   \item line 15: if a cell has backward probability equal to 0, it's removed from $C(t)$, since it is incompatible with the future positions.
-  \item line 17: the algorithm computes the probability $p_t(c)$ by multiplying the backward probability with the forward probability resulting from the forward phase and the likelihood $h(R_t|c)$.
-  \item line 18: the so obtained probabilities are projected on $\mathcal{L}$, finally, these probabilities are normalized, and the p-trajectories are returned.
+  \item line 17: the algorithm computes the probability $p_t(c)$ by multiplying the backward probability with the forward probablity resulting from the forward phase and the likelihood $h(R_t|c)$.
+  \item line 18: the so obtained probabilities are projected on $\mathcal{L}$, fianlly, these probabilities are normalized, and the p-trajectories are returned.
 \end{enumerate}
 }
 
@@ -537,7 +537,7 @@ Even if $C(t-1)$ and $v_{max}$ are such that the size of $C(t)$ is smaller than 
 
 In case of a missing detection at time $t$, after evaluating $C(t)$ and the forward probabilities of its cells as in the standard forward phase, filter $C(t)$ according to a \emph{sampling technique}.\\~\\
 
-A \textbf{naive approach} for choosing $k$ good representatives for the cells in $C(t)$ is that of sampling $k$ cells on the basis of their computed forward probabilities. (\textit{however, those ``high'' forward probabilities cells may turn out to be impossible or unlikely position due to the future positions.})\\~\\
+A \textbf{naive approach} for choosing $k$ good representives for the cells in $C(t)$ is that of sampling $k$ cells on the basis of their computed forward probabilities. (\textit{however, those ``high'' forward probabilities cells may turn out to be impossible or unlikely position due to the future positions.})\\~\\
 
 \end{frame}
 
@@ -571,7 +571,7 @@ Denoting as $t'$ the first time point after $t$ when $o$ was detected by at leas
 
 i.e., the probability that $o$ has least the minimum speed for moving from $c$ to $c'$ between the time $t \sim t'$.\\~\\
 
-\textit{the reason for using this value is that the higher the probability, the larger the number $x$ of cells in $Cells(R_{t'})$ that are likely to be reachable in the time elapsed between $t$ and $t'$.}
+\textit{the reason for using thie value is that the higher the probablity, the larger the number $x$ of cells in $Cells(R_{t'})$ that are likely to be reachable in the time elaspsed between $t$ and $t'$.}
 
 \end{frame}
 
@@ -590,7 +590,7 @@ Hence, for each cell $c \in C(t)$, $p_t(c)$ is estimated with:\\~\\
 
 \pause
 
-and this value is used to rank the cells in $C(t)$, so that the $k$ cells having the greatest estimated probabilities are selected as representatives of $C(t)$.
+and this value is used to rank the cells in $C(t)$, so that the $k$ cells having the greatest estimated probablities are selected as representives of $C(t)$.
 
 \end{frame}
 
@@ -610,9 +610,9 @@ and this value is used to rank the cells in $C(t)$, so that the $k$ cells having
 \ssize{
 \begin{enumerate}
   \item line 8: it checks if it is in presence of a missing detection and, in this case, if the size of $C(t)$ built at line 5 is larger than parameter $k$.
-  \item lines 9--11: the first time point $t'$ after $t$ when $o$ was detected is computed, the cell $c'$ for each cell $c$ in $Cells(R_{t'})$ (closest to $c$) is computed.
+  \item lines 9--11: the first time point $t'$ afte $t$ when $o$ was detected is computed, the cell $c'$ for each cell $c$ in $Cells(R_{t'})$ (closest to $c$) is computed.
   \item lines 12--13: the estimate $\widetilde{p}^{bw}_t(c)$ is evaluated and therefore the $\widetilde{p}_t(c)$ is evaluated by assembling $p_t^{fw}(c)$, $p_t^{bw}(c)$ and $h(\varnothing|c)$.
-  \item line 14: it selects the top-$k$ cells of $C(t)$ by invoking function $top_k$.
+  \item line 14: it selects the top-$k$ cells of $C(t)$ by invoking funtion $top_k$.
 \end{enumerate}
 }
 
@@ -649,7 +649,7 @@ and this value is used to rank the cells in $C(t)$, so that the $k$ cells having
 \begin{frame}
 \frametitle{Conclusions}
 
-A two-way filtering approach is proposed for translating the readings collected for RFID-tracked moving objects into positions over a map.\\~\\
+A two-way filtering approach is proposed for translating the readings collected for RFID-traked moving objects into positions over a map.\\~\\
 
 The technique combines a grid-based filtering strategy with a sampling-based technique, tailored at limiting the number of positions considered as alternatives.
 
