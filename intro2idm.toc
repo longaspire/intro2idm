@@ -16,5 +16,5 @@
 \beamer@subsectionintoc {3}{4}{3.4 Offline Cleaning of RFID Trajectory Data (PART I)}{6}{0}{3}
 \beamer@subsectionintoc {3}{5}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}{6}{0}{3}
 \beamer@subsectionintoc {3}{6}{3.5 Learning-Based Cleansing for Indoor RFID Data}{6}{0}{3}
-\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{13}{0}{4}
-\beamer@sectionintoc {5}{5. Appendix}{14}{0}{5}
+\beamer@sectionintoc {4}{4. Indoor Movement Analysis}{19}{0}{4}
+\beamer@sectionintoc {5}{5. Appendix}{20}{0}{5}

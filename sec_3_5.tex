@@ -96,3 +96,48 @@ Existing RFID data cleansing techniques require considerable specific prior know
 \end{definition}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Preliminaries}
+
+An HMM defines a discrete time stochastic process over the combined state and observation space $\mathcal{S} \times \mathcal{O}$. \\~\\
+
+The state of the process at time $t$ is described by \emph{random variables} $S^{(t)}$ with values in $\mathcal{S}$, and $\mathcal{O}^{(t)}$ is defined by
+
+\pause
+\begin{equation}
+  P(S^{(0)} = s_i) = \pi_i
+\end{equation}
+
+\pause
+\begin{equation}
+  P(S^{(t+1)} = s_j | S^{(t)} = s_i) = a_{ij}
+\end{equation}
+
+\pause
+\begin{equation}
+  P(o^{(t)} = o_h | S^{(t)} = s_i) = b_{ih}
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Preliminaries}
+
+For modeling processes where at each point in time observations of multiple variables are made, the basic HMM model have been generalized to \conceptbf{Multi-variate Hidden Markov Models}(MH-MMs).~\cite{kirshner2005modeling}.\\~\\
+
+The simple observation space $\mathcal{O}$ is replaced by a multivariate observation space $\mathcal{O}_1 \times \hdots \times \mathcal{O}_M$, and at each time $t$ one observes variables $O^{(t)}_1,...,O^{(t)}_M$.\\~\\
+
+One can furthermore introduce the assumption that the different observations are \emph{independent} given the hidden state, i.e.,
+
+\pause
+
+\begin{equation}
+  P(O^{(t)}_1,...,O^{(t)}_M | S^{(t)}) = \prod_{i=1}^M P(O^{(t)}_i | S^{(t)})
+\end{equation}
+
+\end{frame}
