@@ -80,6 +80,19 @@ Existing RFID data cleansing techniques require considerable specific prior know
 \begin{frame}
 \frametitle{Preliminaries}
 
+\ssize{\conceptbf{Hidden Markov Models} (HMMs) models two connected (discrete time) stochastic processes: an un-observed state transition process, and an observation process consisting of observable signals generated at each state. The underlying (hidden) state transition process is assumed to be Markovian and stationary.}
 
+\begin{definition}[Hidden Markov Models]
+  \ssize{
+  An HMM is a tuple $\lambda = (\mathcal{S}, \mathcal{O}, A, B, \pi)$.
+  \begin{enumerate}
+    \item $\mathcal{S} = \{ s_1, ..., s_N \}$ is a set of (hidden) states.
+    \item $\mathcal{O} = \{ 0_1, ..., o_K \}$ is a set of possible observations.
+    \item $A$ is an $N \times N$ transition probability matrix：$A = (a_{ij})_{i,j=1,...,N}$, where $a_{ij}$ represents the transition probability form hidden state $s_i$ to hidden $s_j$.
+    \item $B$ is an $N \times K$ observation probability matrix: $B = (b_{ih})_{i=1,...,N;h=1,...K}$, where $b_{ih}$ is the probability of ovserving $o_h$ when the hidden process is in state $s_i$.
+    \item $\pi$ is a $N$-dimensional initial state probability vector: $\pi = (\pi_i)_{i=1,...,N}$, where $\pi_i$ is the probability that the hidden state process starts in state $s_i$.
+  \end{enumerate}
+  }
+\end{definition}
 
 \end{frame}
