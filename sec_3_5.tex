@@ -141,3 +141,65 @@ One can furthermore introduce the assumption that the different observations are
 \end{equation}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Data Transformation}
+
+\textbf{Discretize the contunuous timestamp data} \quad for the duration $(t_e - t_s)$, a time granularity $\alpha$ is chosen to spans the discrete time points $0,...,(T-1)$, where $T = \frac{t_e - t_s}{\alpha}$.\\~\\
+
+A continuous time record $\langle readerID, t \rangle$ is replaced by $\langle readerID, i \rangle$ where $i$ is such that $t \in [t_s + i * \alpha, t_s +(i+1) * \alpha]$.
+
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Data Transformation}
+
+\textbf{Choice of $\alpha$} \quad
+\begin{itemize}
+  \item it should be chosen small enough so that discretization does not introduce any spurious appearances of cross readings, this can be ensured when $\alpha < \Delta_{min} / 2$, where $\Delta_{min}$ is the minimum absolute difference between continuous time-stamps of records with different $readID$s
+  \item the time granularity must be small enough so that clean data of this granularity is sufficient for subsequent tracking and analysis purposes.
+  \item under the above constraints, it should be as large as possible, to minimize the computational complexity.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Data Transformation}
+
+\begin{columns}
+
+  \column{0.55\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=0.7\columnwidth]{figures/3-5/3-5-3.pdf}
+  \end{figure}
+  \fsize{this figure shows an alternative representation of discretized data, time points and possible reader IDs are on the $x$ and $y$-axis respectively.}
+
+  \column{0.45\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=0.7\columnwidth]{figures/3-5/3-5-4.pdf}
+  \end{figure}
+  \fsize{this figure equivalently encodes left figure's data as a sequence of $T$ binary vectors of length $M$, where $M$ is the number of readers.}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Data Transformation}
+
+After data transformation, the data consists of a sequence $\mathbf{V}_r^{(0)},...,\mathbf{V}_r^{(T-1)}$, where each $\mathbf{V}_r^{(t)} \in \{ 0,1 \}^{M}$. The subscript $r$ stands for \emph{raw}, the $k$th component of $\mathbf{V}_r^{(t)}$ is denoted as $\mathbf{V}_{r,k}^{(t)}$. \\~\\
+
+Consider the $\mathbf{V}_r^{(t)}$ as the observations in a MHMM process, the \conceptbf{task} is to use standard HMM learning and inference techniques to transform the $\mathbf{V}_r^{(t)}$ into cleaned version $\mathbf{V}_c^{(t)}$. \\~\\
+
+The cleaned data still takes values in  $\{ 0,1 \}^{M}$, but with the condition that each $\mathbf{V}_c^{(t)}$ contains at most one non-zero entry. \\~\\
+
+\end{frame}
