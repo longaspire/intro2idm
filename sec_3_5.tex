@@ -194,12 +194,59 @@ A continuous time record $\langle readerID, t \rangle$ is replaced by $\langle r
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Data Transformation}
+\frametitle{Probabilistic Inference for RFID Streams}
 
-After data transformation, the data consists of a sequence $\mathbf{V}_r^{(0)},...,\mathbf{V}_r^{(T-1)}$, where each $\mathbf{V}_r^{(t)} \in \{ 0,1 \}^{M}$. The subscript $r$ stands for \emph{raw}, the $k$th component of $\mathbf{V}_r^{(t)}$ is denoted as $\mathbf{V}_{r,k}^{(t)}$. \\~\\
+Given a sequence of raw readings $\mathbf{o}_r = o^{(0)}_r,...,o^{(T-1)}_r$, where each $o^{(t)}_r$ is an observation of a random variable $O^{(t)}_r$ that takes values in a raw observation space $\mathcal{O}_r$. \\~\\
 
-Consider the $\mathbf{V}_r^{(t)}$ as the observations in a MHMM process, the \conceptbf{task} is to use standard HMM learning and inference techniques to transform the $\mathbf{V}_r^{(t)}$ into cleaned version $\mathbf{V}_c^{(t)}$. \\~\\
+From $\mathbf{o}_r$ we want to infer a clean data sequence $\mathbf{o}_c = o^{(0)}_c,...,o^{(T-1)}_c$ of observations of random variables $O^{(t)}_c$ that takes values in a clean observation space $\mathcal{O}_c$. \\~\\
 
-The cleaned data still takes values in  $\{ 0,1 \}^{M}$, but with the condition that each $\mathbf{V}_c^{(t)}$ contains at most one non-zero entry. \\~\\
+Based on a probabilistic model for $\mathbf{O}_r$ and $\mathbf{O}_c$ one can infer the clean from the raw data $\mathbf{o}_r$ by selecting the $\mathbf{o}_c$ that maximizes the conditional probability $P(\mathbf{O}_c = \mathbf{o}_c | \mathbf{O}_r = \mathbf{o}_r)$. \\~\\
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Probabilistic Inference for RFID Streams}
+
+\textit{A straightforward approach to defining the joint distribution of $\mathbf{O}_r$, $\mathbf{O}_c$} is in the form of an HMM with $\mathbf{O}_r$ as the observable variables, and $\mathbf{O}_c$ as the hidden state variables $S^{(t)}$.
+
+\begin{itemize}
+
+  \item the first difficulty lies in the fact that the hidden state space must correspond to the clean observation space that is required for the RFID data stream processing.
+
+  \item the second difficulty arising from equating $S = \mathcal{O}_c$ lies in constructing or learning an adequate model.
+
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The First Difficulty}
+
+On the basis of the particular hidden state space, and under the limitation of the Markov assumption for the \emph{state transition model}, it may not be possible to obtain an accurate model for the joint distribution $P(\mathbf{O}_c, \mathbf{O}_r)$.\\~\\
+
+\begin{example}
+  \ssize{
+  Consider the concrete raw and clean data model $\mathbf{V}^{(t)}_r, \mathbf{V}^{(t)}_c \in \{ 0,1 \}^M$, the clean state $0^M$ (no reading) would be a hidden HMM state;\\
+
+  Under the Markov assumption, the model could not represent that given that currently there is no reading, the probability distribution over the next reading depends on what the most recent available reading has been.\\
+  }
+\end{example}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{The Second Difficulty}
+
+Since now inferred hidden state sequences are the target of inference, one has to ensure that inferred hidden state values actually correspond to the relevant properties of the underlying tracking process that we want to capture with the clean data $\mathbf{O}_c$.\\~\\
+
+\conceptbf{Semantic States} are the hidden HMM states that are endowed in the manner with an intended meaning.\\~\\
+
+Constuction of HMMs whose hidden states adhere to intended semantics usually requires either manual 
 
 \end{frame}
