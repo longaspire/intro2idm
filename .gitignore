@@ -8,4 +8,6 @@
 *.out
 *.out.bak
 *.synctex.gz
+*.fdb_latexmk
+*.fls
 !/figures/*

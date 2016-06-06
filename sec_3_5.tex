@@ -581,6 +581,29 @@ To use a sequence of reader IDs to represent an object's trajectory. If there is
 \begin{frame}
 \frametitle{Edit Distance Based Evaluation}
 
+\ssize{
 
+\conceptbf{Weighted Edit Distance Method} \quad allows the cost of a substitution to depend upon the symbols that are detected or inserted.\\~\\
+
+For a substitution of a symbol set $\{ i,j \}$ with $i$ or $j$ we assign a cost of \conceptbf{1}, whereas a substitution with $k \neq i,j$ incurs a cost of \conceptbf{2}. Any insertion or deletion has a cost of \conceptbf{2}. \\~\\
+
+\begin{figure}[tb]
+  \includegraphics[width=\columnwidth]{figures/3-5/3-5-10.pdf}
+\end{figure}
+
+For the running example, compare ``$\{ 9,4 \}$'' with ``$9$'' and do the edit operation with an edit cost of 1. This leads to a much fairer evaluation, considering that one correct observation along with one wrong observation is still better than having two completely wrong observations.
+
+}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Edit Distance Computation Method 1}
+
+To apply a weighted edit distance measurement to the original inferred observation sequence and the ground truth sequence.\\~\\
+
+Not only check if the correct observation symbol is inferred but also check if it is correctly inferred at each time point.
 
 \end{frame}
