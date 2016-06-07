@@ -51,7 +51,7 @@ A.I.~Baba, M.~Jaeger, H.~Lu, T.B.~Pedersen, W.-S.~Ku, X.~Xie.\\~\\
   \end{figure}
   \ssize{
     1. at $t_{12}$ and $t_{13}$, $tag_1$ was detected by readers $R_4$ and $R_9$, it seems to be present in both locations, thus giving rise to a \emph{false positives}.\\~\\
-    2. after $t_{16}$, $tag_1$ was detected by reader $R_{17}$ that keeps detecting $tag_1$ until $t_{29}$. However $tag_1$ is not supposed to be detected by $R_{17}$ before it's detected by $R_{10}$. $tag_1$ passed through $R_{10}$ but failed to generate any information, giving rise to \emph{false negatives}.
+    2. after $t_{16}$, $tag_1$ was detected by reader $R_{17}$ that kept detecting $tag_1$ until $t_{29}$. However $tag_1$ is not supposed to be detected by $R_{17}$ before it's detected by $R_{10}$. $tag_1$ passed through $R_{10}$ but failed to generate any information, giving rise to \emph{false negatives}.
   }
 
 \end{columns}
@@ -68,9 +68,9 @@ To support high-level RFID business logic processing, it is necessary to perform
 Existing RFID data cleansing techniques require considerable specific prior knowledge for cleansing operations.
 
 \begin{sitemize}
-  \item to cleanse historical indoor RFID data, the graph model based cleansing approaches~\cite{baba2013spatiotemporal,baba2013graph,DBLP:conf/edbt/FazzingaFFP14} rely on graphs that capture the indoor topology, the deployment of readers, and multiple pertinent spatial-temporal properties.
+  \item to cleanse historical indoor RFID data, the graph model based cleansing approaches~\cite{baba2013spatiotemporal,baba2013graph,DBLP:conf/edbt/FazzingaFFP14} rely on graphs that capture the indoor topology, the deployment of readers, and multiple pertinet spatial-temporal properties.
   \item in the context of streaming RFID data, a probabilistic approach~\cite{tran2009probabilistic} demands to build four domain-specific probabilistic models before any data cleansing.
-  \item also streaming RFID data, \cite{nie2009probabilistic} assumes that locations of neighboring objects are correlated to each other, lifting such assumptions and needs only minimal prior knowledge about indoor settings.
+  \item also streaming RFID data, ~\cite{nie2009probabilistic} assumes that locations of neighboring objects are correlated to each other, lifting such assumptions and needs only minimal prior knowledge about indoor settings.
 \end{sitemize}
 
 \end{frame}
@@ -89,7 +89,7 @@ Existing RFID data cleansing techniques require considerable specific prior know
     \item $\mathcal{S} = \{ s_1, ..., s_N \}$ is a set of (hidden) states.
     \item $\mathcal{O} = \{ o_1, ..., o_K \}$ is a set of possible observations.
     \item $A$ is an $N \times N$ transition probability matrix: $A = (a_{ij})_{i,j=1,...,N}$, where $a_{ij}$ represents the transition probability form hidden state $s_i$ to hidden $s_j$.
-    \item $B$ is an $N \times K$ observation probability matrix: $B = (b_{ih})_{i=1,...,N;h=1,...K}$, where $b_{ih}$ is the probability of observing $o_h$ when the hidden process is in state $s_i$.
+    \item $B$ is an $N \times K$ observation probability matrix: $B = (b_{ih})_{i=1,...,N;h=1,...K}$, where $b_{ih}$ is the probability of ovserving $o_h$ when the hidden process is in state $s_i$.
     \item $\pi$ is a $N$-dimensional initial state probability vector: $\pi = (\pi_i)_{i=1,...,N}$, where $\pi_i$ is the probability that the hidden state process starts in state $s_i$.
   \end{enumerate}
   }
@@ -104,7 +104,7 @@ Existing RFID data cleansing techniques require considerable specific prior know
 
 An HMM defines a discrete time stochastic process over the combined state and observation space $\mathcal{S} \times \mathcal{O}$. \\~\\
 
-The state of the process at time $t$ is described by \emph{random variables} $S^{(t)}$ with values in $\mathcal{S}$, and $O^{(t)}$ with values in $\mathcal{O}$, their joint distribution is defined by
+The state of the process at time $t$ is described by \emph{random variables} $S^{(t)}$ with values in $\mathcal{S}$, and $\mathcal{O}^{(t)}$ is defined by
 
 \pause
 \begin{equation}
@@ -118,7 +118,7 @@ The state of the process at time $t$ is described by \emph{random variables} $S^
 
 \pause
 \begin{equation}
-  P(O^{(t)} = o_h | S^{(t)} = s_i) = b_{ih}
+  P(o^{(t)} = o_h | S^{(t)} = s_i) = b_{ih}
 \end{equation}
 
 \end{frame}
@@ -147,7 +147,7 @@ One can furthermore introduce the assumption that the different observations are
 \begin{frame}
 \frametitle{Data Transformation}
 
-\textbf{Discretize the continuous timestamp data} \quad for the duration $(t_e - t_s)$, a time granularity $\alpha$ is chosen to spans the discrete time points $0,...,(T-1)$, where $T = \frac{t_e - t_s}{\alpha}$.\\~\\
+\textbf{Discretize the contunuous timestamp data} \quad for the duration $(t_e - t_s)$, a time granularity $\alpha$ is chosen to spans the discrete time points $0,...,(T-1)$, where $T = \frac{t_e - t_s}{\alpha}$.\\~\\
 
 A continuous time record $\langle readerID, t \rangle$ is replaced by $\langle readerID, i \rangle$ where $i$ is such that $t \in [t_s + i * \alpha, t_s +(i+1) * \alpha]$.
 
@@ -196,7 +196,7 @@ A continuous time record $\langle readerID, t \rangle$ is replaced by $\langle r
 \begin{frame}
 \frametitle{Data Transformation}
 
-At the end of the transformation process, the data consists of a sequence $\mathbf{V}_r^{(0)}$,...,$\mathbf{V}_r^{(T-1)}$, where each $\mathbf{V}_r^{(t)} \in \{ 0, 1 \}^M$. (\textit{subscript $r$ stands for ``raw''}) \\~\\
+At the end of the transformation process, the data consists of a sequence $\mathbf{V}_r^{(0)}$,...,$\mathbf{V}_r^{(T-1)}$, where each $\mathbf{V}_r^{(t)} \in \{ 0, 1 \}^M$. (\textit{subsript $r$ stands for ``raw''}) \\~\\
 
 The $k$th component of $\mathbf{V}_r^{(t)}$ is denoted as $\mathbf{V}_{r,k}^{(t)}$. \\~\\
 
@@ -224,7 +224,7 @@ Based on a probabilistic model for $\mathbf{O}_r$ and $\mathbf{O}_c$ one can inf
 \begin{frame}
 \frametitle{Probabilistic Inference for RFID Streams}
 
-\textbf{A straightforward approach} to defining the joint distribution of $\mathbf{O}_r$, $\mathbf{O}_c$ is \textit{in the form of an HMM with $O^{(t)}_r$ as the observable variables, and $O^{(t)}_c$ as the hidden state variables $S^{(t)}$}.
+\textit{A straightforward approach to defining the joint distribution of $\mathbf{O}_r$, $\mathbf{O}_c$} is in the form of an HMM with $O^{(t)}_r$ as the observable variables, and $O^{(t)}_c$ as the hidden state variables $S^{(t)}$.
 
 \begin{itemize}
 
@@ -262,7 +262,7 @@ Since now inferred hidden state sequences are the target of inference, one has t
 
 \conceptbf{Semantic States} are the hidden HMM states that are endowed in the manner with an intended meaning.\\~\\
 
-Construction of HMMs whose hidden states adhere to intended semantics usually requires either manual design, or learning from labeled training data in which besides the observation variables $\mathbf{O}$ also the hidden states $\mathbf{S}$ are given.
+Constuction of HMMs whose hidden states adhere to intended semantics usually requires either manual design, or learning from labeled training data in which besides the observation variables $\mathbf{O}$ also the hidden states $\mathbf{S}$ are given.
 
 \end{frame}
 
@@ -309,7 +309,7 @@ Here the sum is over all hidden state sequences $\mathbf{s}$ of the same length 
 \frametitle{The First Challenge}
 
 \begin{block}{Challenge 1}
-  it is to learn the model Equation.\ref{equation:joint_prob_model}, which includes the conditional distribution $P(\mathbf{O}_c | \mathbf{S})$ containing only variables for which there is no observations at all.
+  it is to learn the model Equation.\ref{equation:joint_prob_model}, which includes the conditional distribution $P(\mathbf{O}_r | \mathbf{S})$ containing only variables for which there is no observations at all.
 \end{block}
 
 \vspace{10pt}
@@ -326,7 +326,7 @@ The first assumption is that the clean data space is a subset of the raw data sp
 \begin{frame}
 \frametitle{The First Challenge}
 
-A crucial assumption is then made. Intuitively, assume that $\mathbf{O}_r$ and $\mathbf{O}_c$ are generated by the same random process given $\mathbf{S}$, only that $\mathbf{O}_c$ is conditioned on the subset $\mathcal{O}_c$. Formally, it can be expressed by the assumption that for sequences $\mathbf{o}_c$, $\mathbf{s}$ (of a common length $T$): \pause
+A crucial assumption is then made. Intuitively, assume that $\mathbf{O}_r$ and $\mathbf{O}_c$ are generated by the same random process given $\mathbf{S}$, only that $\mathbf{O}_c$ is conditioned on the subset $\mathcal{O}_c$: \pause
 
 \begin{equation}
   \begin{split}
@@ -397,9 +397,9 @@ The summation over all hidden states sequences $\mathbf{s}$ will be computationa
 \begin{frame}
 \frametitle{Construction: Overview}
 
-The construction (modeling parameters $N, A, B, \pi$) is a combination of design and learning.
+The construction (modeling paramters $N, A, B, \pi$) is a combination of design and learning.
 \begin{fitemize}
-  \item to minimize the amount of domain specific information required in the design component (such as spatial distance, travel time etc.)
+  \item to minimize the amout of domain specific information required in the design component (such as spatial distance, travel time etc.)
   \item to base the learning component entirely on learning from the raw data $\mathbf{V}_r$ without any further annotations.
 \end{fitemize}
 
@@ -421,14 +421,14 @@ The construction (modeling parameters $N, A, B, \pi$) is a combination of design
 \frametitle{Construction: State Space Design}
 
 \begin{itemize}
-  \item Three different state space designs for IR-MHMMs are proposed.
+  \item Four different state space designs for IR-MHMMs are proposed.
   \item All require as input at most some qualitative spatial information as expressed by a \emph{reader deployment graph}.
   \item Designs define a set of states with associated intended semantics such as:
     \begin{fitemize}
         \item states representing (approximate) spatial locations
         \item states representing some history of past transitions
     \end{fitemize}
-  \item The intended semantics of hidden states lead to constraints of the form $a_{ij} = 0$ (for some combinations $i,j$ of states direct transitions will not be possible).
+  \item The intended semantics of hidden states lead to constraints of the form $a_{ij} = 0$ (for some combinations $i,j$ of states direct ransitions will not be possible).
 \end{itemize}
 
 \end{frame}
@@ -454,7 +454,7 @@ The construction (modeling parameters $N, A, B, \pi$) is a combination of design
   \ssize{
   \textrm{This design contains a state for each deployed reader $R_i$, and a state for each hallway or any indoor partition that is connected with more than one reader.}\\~\\
   \begin{example}
-    For example, reader $R_4$ is represented as state $s_4$. Furthermore, hallway 3 is connected with four readers $R_3, R_6, R_7, R_8$, thus it's represented by a state $s_{19}$. The total number of states in example is $N = 25$. The transition model is constrained by setting $a_{ij} = 0$ if $s_i$ and $s_j$ correspond to locations that are not directly connected.
+    For example, reader $R_4$ is represented as state $s_4$. Furthermore, hallway 3 is connected with four readers $R_3, R_6, R_7, R_8$, thus it's represented by a state $s_{19}$. The total number of states in example is $N = 25$. The transition model is constrainted by setting $a_{ij} = 0$ if $s_i$ and $s_j$ correspond to locations that are not directly connected.
   \end{example}
   }
 \end{columns}
@@ -482,7 +482,7 @@ The construction (modeling parameters $N, A, B, \pi$) is a combination of design
   \ssize{
   \textrm{This design contains two state $s_i$ and $l_{si}$ for each deployed reader $R_i$. The intended meaning of $s_i$ is that the object is within reader $R_i$'s detection range, whereas state $l_{si}$ represents that $R_i$ was the last reader in whose range the object has been. The intention is to alleviate the limitations of the Markov assumption by encoding a history of previously visited states at the current state.}\\~\\
   \begin{example}
-    In this design, the non-zero transition probabilities are from states $s_i$ to the corresponding $l_{si}$, and from state $l_{si}$ to state $s_j$ when there is a direct path from reader $R_i$ to $R_j$. The state space size is $N = 2M$, i.e., $N = 34$ in the example.
+    In this design, the non-zero transition probabilities are from states $s_i$ to the correponding $l_{si}$, and from state $l_{si}$ to state $s_j$ when there is a direct path from reader $R_i$ to $R_j$. The state space size is $N = 2M$, i.e., $N = 34$ in the example.
   \end{example}
   }
 \end{columns}
@@ -508,7 +508,7 @@ The construction (modeling parameters $N, A, B, \pi$) is a combination of design
 
   \column{0.6\textwidth}
   \ssize{
-  \textrm{This design contains a state $s_i$ for each deployed reader $R_i$, and a state $s_{ij}$ for each pair of adjacent readers $R_i$ and $R_j$. The intended meaning of $S_{ij}$ is that the object is transiting between $R_i$ and $R_j$ (in either direction). The transition probabilities are non-zero only between states $s_i$ and $s_{kj}$, where $i \in \{ k,j \}$}\\~\\
+  \textrm{This design contains a state $s_i$ for each deployed reader $R_i$, and a state $s_{ij}$ for each pair of adjacent readers $R_i$ and $R_j$. The intended meaning of $S_{ij}$ is that the object is transitioning between $R_i$ and $R_j$ (in either direction). The transition probabilities are non-zero only between states $s_i$ and $s_{kj}$, where $i \in \{ k,j \}$}\\~\\
   \begin{example}
     In this design, the state space size is $N = 50$ in the example.
   \end{example}
@@ -528,11 +528,11 @@ The construction (modeling parameters $N, A, B, \pi$) is a combination of design
 
 Parameter constraints (form $a_{ij}$) are integrated into the learning procedure: one only needs to initialize these parameters with zero values. \\~\\
 
-In order to avoid ``division by zero'' error in practice, to initialize the constrained parameter with small values ($ > 0$, like 0.01).\\~\\
+In order to avoid ``division by zero'' error in practice, to initalize the constrained parameter with small values ($ > 0$, like 0.01).\\~\\
 
 For a fixed $i$, the initial values of the remaining transition probabilities $a_{ij}$ are set uniformly, $\sum_{j=1}^Na_{ij}=1$.\\~\\
 
-In all the state space designs, we have for each reader $R_i$ a designated state $s_i$ corresponding to locations within $R_i$'s range. That is $b_{ii} = 1$ and $b_{ik} = 0$ (a soft version is to set $b_{ik} = 0.01$ and $b_{ii} = 1 - 0.01$ due to the presence of cross readings).\\~\\
+In all the state space designs, we have for each reader $R_i$ a designated state $s_i$ correponding to locations within $R_i$'s range. That is $b_{ii} = 1$ and $b_{ik} = 0$ (a soft version is to set $b_{ik} = 0.01$ and $b_{ii} = 1 - 0.01$ due to the presence of cross readings).\\~\\
 
 }
 
@@ -555,7 +555,7 @@ In all the state space designs, we have for each reader $R_i$ a designated state
   \begin{sitemize}
     \item first the standard Viterbi algorithm~\cite{viterbi1967error} is used to compute the most probable hidden state sequence $\mathbf{\hat{s}} = (\hat{s}^{(t)})_{t = 0,...,T-1}$.
     \item then compute the most probable observation sequence $\mathbf{\hat{v}_c} = (\hat{v}^{(t)}_{c,1},...,\hat{v}^{(t)}_{c,M})_{t = 0,...,T-1}$ given $\mathbf{\hat{s}}$, under the constraint that at each $t$, $(\hat{v}^{(t)}_{c,1},...,\hat{v}^{(t)}_{c,M})$ contains at most one non-zero entry.
-    \item the most probable observation sequence given $\mathbf{\hat{s}}$ can be determined pointwise for each $t$ by maximizing $P(\mathbf{V}_r^{(t)} = \mathbf{v}_r^{(t)} | S^{(t)} = \hat{s}^{(t)})$.
+    \item the most probable observation sequence given $\mathbf{\hat{s}}$ can be determined pointwise for each $t$ by maximizing $P(\mathbf{V}_r^({t}) = \mathbf{v}_r^{(t)} | S^{(t)} = \hat{s}^{(t)})$.
     \item if $\hat{s}^{(t)} = s_i$, then this probability is maximized by setting $\hat{v}^{(t)}_{r,k} = 1$ if $b_{ik} > 0.5$ otherwise $\hat{v}^{(t)}_{r,k} = 0$.
   \end{sitemize}
 
@@ -612,7 +612,7 @@ The edit distance between $G_{traj1}$ and $R_{traj1}$ quantifies the amount of i
   \includegraphics[width=\columnwidth]{figures/3-5/3-5-11.pdf}
 \end{figure}
 
-\textit{$R_{traj1}$ contains false negatives at time points 20 to 23, whereas $I_{traj1}$ only recovers the missing reading at time point 23. Here the edit distance is 6, which indicates a discrepancy between truth and inferred sequences. If the application scenario only needs to reconstruct the qualitative trajectory, a block-based method is recommended.}
+\textit{$R_{traj1}$ contains false negatives at time points 20 to 23, whereas $I_{traj1}$ only recovers the missing reading at time point 23. Here the edit distance is 6, which indicates a discrepancy between truth and inferred sequences. If the application scenario only needs to reconstruct the qualitative trajectory, a block-based method is recommanded.}
 
 }
 \end{frame}
@@ -643,7 +643,7 @@ The block sequences are formed from the original sequences by merging together c
 \begin{frame}
 \frametitle{Conclusion}
 
-A learning-base approach to clean raw RFID data is presented, the \emph{Indoor RFID Multi-variate Hidden Markov Model} is proposed to model the uncertainties present in RFID data as well as the correlation of moving object locations and RFID tagged objects.\\~\\
+A leanring-base approach to clean raw RFID data is presented, the \emph{Indoor RFID Multi-variate Hidden Markov Model} is proposed to model the uncertainties present in RFID data as well as the correlation of moving object locations and RFID tagged objects.\\~\\
 
 Entirely Unsupervised: construct the IR-MHMM with basic information on spatial reader deployment; training the mole is performed with only raw RFID data; no special labeled data or ground truth trajectory data is required.\\~\\
 
@@ -658,7 +658,7 @@ Entirely Unsupervised: construct the IR-MHMM with basic information on spatial r
 
   \item to mitigate the limitations imposed by the Markov assumptions in the model by incorporating a probabilistic timing model to relate the travel time of objects between readers and the time objects spends at each reader;\\~\\
 
-  \item to incorporate domain-knowledge into the learning approach to help improve the effectiveness;
+  \item to incorporate domain-kownledge into the learning approach to help improve the effectiveness;
 
 \end{enumerate}
 
