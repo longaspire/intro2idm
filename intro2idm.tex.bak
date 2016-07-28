@@ -72,8 +72,24 @@
 
 %\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
 \setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette secondary}%
+    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+  }
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+      \hskip10pt \insertsubsection
+    % \insertsubsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+  }
+}
+\setbeamertemplate{mini frames}{}
 %\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+%\beamertemplatenavigationsymbolsempty
+
 }
 
 \usepackage{graphicx} % Allows including images
@@ -82,6 +98,7 @@
 \usepackage{amssymb,amsmath}
 \usepackage{soul}
 \usepackage{sansmathaccent}
+\usepackage{latexsym}
 \pdfmapfile{+sansmathaccent.map}
 \usepackage{hyperref}
 \usepackage[export]{adjustbox}
@@ -96,6 +113,7 @@ citecolor=blue,
 linkcolor=red
 }
 \setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{blocks}[rounded][shadow=false]
 
 \newcommand{\conceptbf}[1]{{\bf{\textrm{\textcolor[rgb]{0,0,0.9}{#1}}}}}
 \newcommand{\fsize}[1]{\footnotesize{#1}}
@@ -148,8 +166,8 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 \section{1. Outlines} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-%\include{sec_1}
-%\include{sec_1_ref}
+% \include{sec_1}
+% \include{sec_1_ref}
 
 %------------------------------------------------
 \section{2. Indoor Space Models \& Applications} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
@@ -177,16 +195,57 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 
 \subsection{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-\include{sec_2_5}
-\include{sec_2_5_ref}
+% \include{sec_2_5}
+% \include{sec_2_5_ref}
 
 \subsection{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-%\include{sec_2_6}
+% \include{sec_2_6}
+% \include{sec_2_6_ref}
+
+\subsection{2.7 Distance-Aware Join for Indoor Moving Objects} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_2_7}
+% \include{sec_2_7_ref}
+
+\subsection{2.8 Extracting Indoor Spatial Objects from CAD Models} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_2_8}
+% \include{sec_2_8_ref}
 
 %------------------------------------------------
 \section{3. Indoor Data Cleansing} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
+
+\subsection{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_3_1}
+% \include{sec_3_1_ref}
+
+\subsection{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_3_2}
+% \include{sec_3_2_ref}
+
+\subsection{3.3 Handling False Negatives in Indoor RFID Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_3_3}
+% \include{sec_3_3_ref}
+
+\subsection{3.4 Offline Cleaning of RFID Trajectory Data (PART I)} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_3_4_1}
+% \include{sec_3_4_1_ref}
+
+\subsection{3.4 Offline Cleaning of RFID Trajectory Data (PART II)} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_3_4_2}
+% \include{sec_3_4_2_ref}
+
+\subsection{3.5 Learning-Based Cleansing for Indoor RFID Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% \include{sec_3_5}
+% \include{sec_3_5_ref}
 
 %------------------------------------------------
 \section{4. Indoor Movement Analysis} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
@@ -196,8 +255,10 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 \section{5. Appendix} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-%\include{sec_5}
+\subsection{5.1 Managing Evolving Uncertainty in Trajectory Databases} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
+% \include{sec_5_1}
+% \include{sec_5_1_ref}
 
 %----------------------------------------------------------------------------------------
 

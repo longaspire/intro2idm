@@ -1,15 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: intro2idm.aux
-A level-1 auxiliary file: sec_3_5.aux
-A level-1 auxiliary file: sec_3_5_ref.aux
-The style file: abbrv.bst
+I found no \citation commands---while reading file intro2idm.aux
 I found no \bibdata command---while reading file intro2idm.aux
-Warning--I didn't find a database entry for "baba2016learning"
-Warning--I didn't find a database entry for "baba2013spatiotemporal"
-Warning--I didn't find a database entry for "baba2013graph"
-Warning--I didn't find a database entry for "chen2010leveraging"
-Warning--I didn't find a database entry for "DBLP:conf/edbt/FazzingaFFP14"
-Warning--I didn't find a database entry for "tran2009probabilistic"
-Warning--I didn't find a database entry for "nie2009probabilistic"
-Warning--I didn't find a database entry for "kirshner2005modeling"
-Warning--I didn't find a database entry for "viterbi1967error"
-(There was 1 error message)
+I found no \bibstyle command---while reading file intro2idm.aux
+(There were 3 error messages)

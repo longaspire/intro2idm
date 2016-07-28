@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage{graphicx}   % for EPS use the graphics package instead
+\usepackage{epstopdf}
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{longtable}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\usepackage{indentfirst}
+\usepackage[table]{xcolor}
+\usepackage{marvosym}
+\usepackage{subfigure}
+\usepackage{multirow}
+\linespread{1} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{20pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\vspace{15pt}
+\\\@date % Date
+
+\vspace{20pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+
+
+\title{Indoor Big Data \textit{Reading List}} % Subtitle
+\author{\textsc{Database Laboratory} % Author
+, {\textit{Zhejiang University}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section{Indoor Positioning \& Systems}
+
+\renewcommand{\refname}{}
+
+\vspace{-25pt} % Beamer does not support BibTeX so references must be inserted manually as below
+\begin{thebibliography}{99}
+
+\bibitem{liu2007survey}
+H.~Liu, H.~Darabi, P.~Banerjee, J.~Liu.
+\newblock Survey of wireless indoor positioning techniques and systems.
+\newblock In {\em IEEE Transactions on Systems, Man, and Cybernetics}, pp. 1067--1080, 2007.
+
+\bibitem{bessho2009location}
+M.~Bessho, N.~Koshizuka, S.~Kobayashi, K.~Sakamura.
+\newblock Location systems for ubiquitous computing.
+\newblock In {\em Journal of IEICE}, pp. 249--255, 2009.
+
+\bibitem{gu2009survey}
+Y.~Gu, A.~Lo, I.~Niemegeers.
+\newblock A survey of indoor positioning systems for wireless personal networks.
+\newblock In {\em IEEE Communications surveys \& tutorials}, pp. 13--32, 2009.
+
+\bibitem{hansen2010algorithmic}
+R.~Hansen, R.~Wind, C.S.~Jensen, B.~Thomsen.
+\newblock Algorithmic strategies for adapting to environmental changes in 802.11 location fingerprinting.
+\newblock In {\em IPIN}, pp. 1--10, 2010.
+
+\bibitem{ganu2004infrastructure}
+S.~Ganu, AS.~Krishnakumar, P.~Krishnan.
+\newblock Infrastructure-based location estimation in WLAN networks.
+\newblock In {\em WCNC}, pp. 465--470, 2004.
+
+\bibitem{hansen2013smartcampusaau}
+R.~Hansen, B.~Thomsen, L.~Thomsen, F.~Adamsen.
+\newblock SmartCampusAAU--An Open Platform Enabling Indoor Positioning and Navigation.
+\newblock In {\em MDM}, pp. 33--38, 2013.
+
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\section{Indoor Space Modeling \& Spatial Indices}
+
+\vspace{-25pt} % Beamer does not support BibTeX so references must be inserted manually as below
+\begin{thebibliography}{99}
+
+\bibitem{worboys2011modeling}
+M.~Worboys.
+\newblock Modeling indoor space.
+\newblock In {\em {SIGSPATIAL}}, pp. 1--6, 2011.
+
+\bibitem{DBLP:conf/mdm/JensenLY09}
+C.~S. Jensen, H.~Lu, and B.~Yang.
+\newblock Graph model based indoor tracking.
+\newblock In {\em {MDM}}, pp. 122--131, 2009.
+
+\bibitem{DBLP:conf/cikm/YangLJ09}
+B.~Yang, H.~Lu, and C.~S. Jensen.
+\newblock Scalable continuous range monitoring of moving objects in symbolic
+  indoor space.
+\newblock In {\em CIKM}, pp. 671--680, 2009.
+
+\bibitem{DBLP:conf/edbt/YangLJ10}
+B.~Yang, H.~Lu, and C.~S. Jensen.
+\newblock Probabilistic threshold k nearest neighbor queries over moving
+  objects in symbolic indoor space.
+\newblock In {\em EDBT}, pp. 335--346, 2010.
+
+\bibitem{DBLP:conf/icde/LuYCJ11}
+H.~Lu, B.~Yang, and C.~S. Jensen.
+\newblock Spatio-temporal Joins on Symbolic Indoor Tracking Data.
+\newblock In {\em {ICDE}}, pp. 816--827, 2011.
+
+\bibitem{DBLP:conf/icde/LuCJ12}
+H.~Lu, X.~Cao, and C.~S. Jensen.
+\newblock A foundation for efficient indoor distance-aware query processing.
+\newblock In {\em ICDE}, pp. 438--449, 2012.
+
+\bibitem{DBLP:conf/icde/XieLP13}
+X.~Xie, H.~Lu, and T.~B. Pedersen.
+\newblock Efficient distance-aware query evaluation on indoor moving objects.
+\newblock In {\em ICDE}, pp. 434--445, 2013.
+
+\bibitem{boysen2014constructing}
+M.~Boysen, C.~de Haas, H.~Lu, X.~Xie, A.~Pilvinyte.
+\newblock Constructing indoor navigation systems from digital building information.
+\newblock In {\em ICDE}, pp. 1194--1197, 2014.
+
+\bibitem{xie2015distance}
+X.~Xie, H.~Lu, and T.~B. Pedersen.
+\newblock Distance-aware join for indoor moving objects.
+\newblock In {\em TKDE}, pp. 428--442, 2015.
+
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\section{Indoor Data Cleansing}
+
+\vspace{-25pt} % Beamer does not support BibTeX so references must be inserted manually as below
+\begin{thebibliography}{99}
+
+\bibitem{chen2010leveraging}
+H.~Chen, W-S.~Ku, H.~W and M-T.~S.
+\newblock Leveraging spatio-temporal redundancy for RFID data cleansing.
+\newblock In {\em SIGMOD}, pp. 51--62, 2010.
+
+\bibitem{baba2013spatiotemporal}
+A.I.~Baba, H.~Lu, X.~Xie, T.B.~Pedersen.
+\newblock Spatiotemporal data cleansing for indoor RFID tracking data.
+\newblock In {\em MDM}, pp. 187--196, 2013.
+
+\bibitem{baba2013graph}
+A.I.~Baba, H.~Lu, T.B.~Pedersen, X.~Xie.
+\newblock A graph model for false negative handling in indoor RFID tracking data.
+\newblock In {\em SIGSPATIAL}, pp. 464--467, 2013.
+
+\bibitem{baba2014handling}
+A.I.~Baba, H.~Lu, T.B.~Pedersen, X.~Xie.
+\newblock Handling false negatives in indoor RFID data.
+\newblock In {\em MDM}, pp. 117--126, 2014.
+
+\bibitem{DBLP:conf/edbt/FazzingaFFP14}
+B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.
+\newblock Cleaning Trajectory Data of RFID-monitored Objects through Conditioning under Integrity Constraints.
+\newblock In {\em EDBT}, pp. 379--390, 2014.
+
+\bibitem{fazzinga2014offline}
+B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.
+\newblock Offline cleaning of RFID trajectory data.
+\newblock In {\em SSDBM}, pp. 5:1 -- 5:12, 2014.
+
+\bibitem{DBLP:conf/edbt/FazzingaFFP14}
+B.~Fazzinga, S.~Flesca, F.~Furfaro, F.~Parisi.
+\newblock Cleaning Trajectory Data of RFID-monitored Objects through Conditioning under Integrity Constraints.
+\newblock In {\em EDBT}, pp. 379--390, 2014.
+
+\bibitem{baba2016learning}
+A.I.~Baba, M.~Jaeger, H.~Lu, T.B.~Pedersen, W-S.~Ku, X.~Xie.
+\newblock Learning-Based Cleansing for Indoor RFID Data.
+\newblock In {\em SIGMOD}, 2016.
+
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\section{Indoor Movement \& Trajectory Management}
+
+\vspace{-25pt} % Beamer does not support BibTeX so references must be inserted manually as below
+\begin{thebibliography}{99}
+
+\bibitem{jensen2010indoor}
+C.S~Jensen H.~Lu and B.~Yang.
+\newblock Indoor-A New Data Management Frontier.
+\newblock In {\em IEEE Data Eng. Bull.}, pp. 12--17, 2010.
+
+\bibitem{jeung2014managing}
+H.~Jeung, H.~Lu, T.B.~Pedersen, S.~Sathe, M L.~Yiu.
+\newblock Managing evolving uncertainty in trajectory databases.
+\newblock In {\em TKDE}, pp. 1692--1705, 2014.
+
+\bibitem{hornsby2002modeling}
+K.~Hornsby, M.J.~Egenhofer.
+\newblock Modeling moving objects over multiple granularities.
+\newblock In {\em Annals of Mathematics and Artificial Intelligence}, pp. 177--194, 2002.
+
+\bibitem{trajcevski2004managing}
+G.~Trajcevski, O.~Wolfson, K.~Hinrichs, S.~Chamberlain.
+\newblock Managing uncertainty in moving objects databases.
+\newblock In {\em TODS}, pp. 463--507, 2004.
+
+\bibitem{lu2016finding}
+H.~Lu, C.~G, B.~Yang, C.S.~Jensen.
+\newblock Finding frequently visited indoor POIs using symbolic indoor tracking data
+\newblock In {\em EDBT}, 2016.
+
+
+
+\end{thebibliography}
+
+\end{document}
