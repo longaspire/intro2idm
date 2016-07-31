@@ -95,9 +95,9 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 
 \textrm{I.} \quad the uncertain trajectory models generally regard a location measured from positioning technology as a precise, actual location of an object, while modeling an uncertainty range based on the reported position as center.\\~\\
 
-\textrm{II.} \quad some of the uncertain trajectory models assume that the degree of uncertainty is constant regardless of the cange of location or time.\\~\\
+\textrm{II.} \quad some of the uncertain trajectory models assume that the degree of uncertainty is constant regardless of the range of location or time.\\~\\
 
-\textrm{III.} \quad the uncertain trajectory models bound the area of location uncertainty, typically using a circle with a user-specified radius. (\textit{it is inevitable to miss out some information when data processing is performed over any bounded uncertainty areas on unbounded distributions})
+\textrm{III.} \quad the uncertain trajectory models bound the area of location uncertainty, typically using a circle with a user-specified radius. (\emph{it is inevitable to miss out some information when data processing is performed over any bounded uncertainty areas on unbounded distributions})
 
 \end{frame}
 
@@ -106,7 +106,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 \begin{frame}
 \frametitle{Pitfalls of Existing Uncetain Trajectory Models}
 
-\textrm{IV.} \quad most of the models assume that the probability density function (PDF) of a location is given, it is however a non-trival problem to compute the parameters of a PDF. \\~\\
+\textrm{IV.} \quad most of the models assume that the probability density function (PDF) of a location is given, \emph{it is however a non-trival problem to compute the parameters of a PDF}. \\~\\
 
 \textrm{V.} \quad some models require additional data beyond location coordinates: the beads model uses maximum speed of object to determine the thickness of ellipse, while the network-constrained model needs map data encompassing the coverage of trajectories.
 
@@ -197,7 +197,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 \frametitle{Evolving-Density Trajectory: Key Principles}
 
 \begin{block}{Linear Evolution of Distribution}
-  In-between two consecutive uncertain positions, it assumes that the distributions of actual positions evolve linearly. Consider an object's movements between two positions are commonly modeled as linear in certain trajectories, moreover, it is
+  In-between two consecutive uncertain positions, it assumes that the distributions of actual positions evolve linearly. Consider an object's movements between two positions are commonly modeled as linear in certain trajectories, moreover, it is efficient to compute the probabilistic queries when evolving the linear evolution of probability distribution.
 \end{block}
 
 \end{frame}
@@ -226,7 +226,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 
   \column{0.5\textwidth}
   \ssize{
-  \conceptbf{Trajectory Database}\quad manages not only the raw positions, but also the correponding probablity distributions derived from an evolving density estimator.
+  \conceptbf{Trajectory Database}\quad manages not only the raw positions, but also the correponding probability distributions derived from an evolving density estimator.
   }
 
   \column{0.5\textwidth}
@@ -251,7 +251,7 @@ The implemented estimators have extended the GARCH model to handle multi-dimensi
 
 The estimators employ a sliding window that takes a $H$ number of consecutive positions for the estimation, and then repeat the same estimation process using the next $H$ positions.\\~\\
 
-Given a sliding window of positions $S^{H}_{t-1} \in \mathbb{R}^{H \times 2}$, the estimators infer two quantities: 1) the expected true position $\hat{p_t} = (\hat{x_t}, \hat{y_t})$ at time $t$; 2) a standard deviation $\hat{\sigma_t}$.
+Given a sliding window of positions $S^{H}_{t-1} \in \mathbb{R}^{H \times 2}$, the estimators infer two quantities: \textbf{1) the expected true position $\hat{p_t} = (\hat{x_t}, \hat{y_t})$ at time $t$; 2) a standard deviation $\hat{\sigma_t}$}.
 
 }
 
@@ -264,7 +264,7 @@ Given a sliding window of positions $S^{H}_{t-1} \in \mathbb{R}^{H \times 2}$, t
 
 \conceptbf{Conditional Correlation Estimator ($C^2$-Est)} uses a multivariate mean inference model for estimating the expected true position $\hat{p_t} = (\hat{x_t}, \hat{y_t})$, where $\hat{x_t}$ and $\hat{y_t}$ are the $x$- and $y$-coordinate, respectively.\\~\\
 
-VAR (\underline{V}ector \underline{A}uto\underline{R}egressive) Model can exploit the interdependencies of $\hat{x_t}$ and $\hat{y_t}$ for inferring the actual position $\hat{p_t}$.
+VAR (\underline{V}ector \underline{A}uto\underline{R}egressive) Model, $VAR(k)$\footnote{$k$ represents the model order} can exploit the interdependencies of $\hat{x_t}$ and $\hat{y_t}$ for inferring the actual position $\hat{p_t}$.
 
 \begin{equation}
   \hat{p_t} = \phi_0 + \sum_{j=1}^{k}\phi_j p_{t-j}
@@ -333,12 +333,212 @@ $a_i$ are the possible varations, such that positions $p_i$ are derived from the
 
 \conceptbf{AutoRegressive Radial Estimator (AR-Est)} is a variant of R-Est. For inferring the deviation $\hat{\sigma_t}$, this new estimator takes the same RGARCH model used in R-Est.\\~\\
 
-AR-Est takes a different approach for the inference of an actual position. It decomposes the multivariate inference into two separate one-dimensional inferences, it uses univariate AR models for inferring $\hat{x_t}$ and $\hat{y_t}$ separately.\\~\\
+AR-Est takes a different approach for the inference of an actual position. It decomposes the multivariate inference into two separate one-dimensional inferences, it uses univariate AutoRegressive models for inferring $\hat{x_t}$ and $\hat{y_t}$ separately.\\~\\
 
 Given a sliding window $S^{H}_{t-1}$, the AR($l$) model models $x_i = \hat{x_i} + a_{x,i}$, where $t-H \leq i \leq t-1$. Given an AR($l$) model, it infers the expected true position $\hat{x_t}$ as:~\cite{shumway2010time}
 
 \begin{equation}
   \hat{x_t} = \phi_{x0} + \sum_{j=1}^{l}\phi_{xj}p_{t-j}
 \end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Comparision of Estimators}
+
+\begin{block}{Comparison of $C^2$-Est, R-Est, AR-Est}
+\fsize{
+  A multivariate model $\rightarrow$ A univariate model : requires a considerably higher number of parameters; might perform very well while incurring more computation for setting appropriate parameters. \\
+
+  Accurate Inference for Actual Position: $C^2$-Est $>$ AR-Est $>$ R-Est. \\
+
+  Running Time: $C^2$-Est $>$ AR-Est $>$ R-Est.
+}
+\end{block}
+
+\begin{footnotesize}
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \textbf{\tabincell{c}{inferred point \\ $\hat{p_t} = (\hat{x_t}, \hat{y_t})$}} & \textbf{\tabincell{c}{deviation \\  $\hat{\sigma_t}$}} & \textbf{\tabincell{c}{time \\ complexity}} \\
+\hline
+$C^2$-Est & $VAR(2)$ & CCC GRAPH(1,1) & $O(14 \cdot H)$ \\
+\hline
+R-Est & $VAR(2)$ & radial GRAPH(1,1) & $O(9 \cdot H)$ \\
+\hline
+AR-Est & $AR(2)$ & radial GRAPH(1,1) & $O(3 \cdot H)$ \\
+\hline
+\end{tabular}
+\caption{\tiny Summary of Evolving Density Estimators}
+\end{table}
+\end{footnotesize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Comparision of Estimators}
+
+\begin{block}{Comparison with Alternatives}
+\fsize{
+  Kalman filters~\cite{lamarca2008location} / Particle filters~\cite{tran2009probabilistic} could also be used to implement the evolving density estimator. However, Kalman filters are capable of estimating an expected actual position only; Particle filters may have a high time complexity for the smoothing.
+}
+\end{block}
+
+\begin{tiny}
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Approaches} & \textbf{\tabincell{c}{Estimation \\ Accuracy}} & \textbf{\tabincell{c}{Estimation \\  Efficienty}} & \textbf{\tabincell{c}{Actual \\ Position}} & \textbf{\tabincell{c}{Uncetainty \\ Range}} & \textbf{\tabincell{c}{Multi \\ Dimensional}}\\
+\hline
+\tabincell{c}{$C^2$-Est  R-Est \\ AR-Est} & high & high & \checkmark & \checkmark & \checkmark \\
+\hline
+\tabincell{c}{dynamic density \\ metrics ~\cite{sathe2011creating}} & high & high & \checkmark & \checkmark & $\times$ \\
+\hline
+\tabincell{c}{kalman \\ filtering~\cite{lamarca2008location}} & high & medium & \checkmark & $\times$ & \checkmark\\
+\hline
+\tabincell{c}{particle \\ filtering~\cite{tran2009probabilistic}} & very high & low & \checkmark & \checkmark & \checkmark\\
+\hline
+\tabincell{c}{map \\ matching~\cite{brakatsoulas2005map}} & very high & medium & \checkmark & $\times$ & \checkmark \\
+\hline
+\end{tabular}
+\caption{\tiny Comparison of Alternatives for Evolving Density Estimators}
+\end{table}
+\end{tiny}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Comparision of Estimators}
+
+\begin{block}{Accuracy Measure of Estimation}
+\fsize{
+  Measuring the accuracy of a given estimator is very difficult since actual distribution are unobservable, meaning that there are no ground truths to compare.\\
+  \emph{density distance}~\cite{sathe2011creating} is suggested as a solid mathematical means for measuring the distance between the probability density obtained from an evolving density estimator and its corresponding real (ideal) density.
+}
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Probabilistic Range Query on Evolving-density Trajectories}
+
+\begin{itemize}
+  \setlength{\itemsep}{2em}
+  \item \conceptbf{Probabilistic range queries} are perhaps the most common query type on uncertain trajectories
+  \begin{fitemize}
+    \item effectively retrieve uncertain objects or trajectories using solid mathematical theory
+  \end{fitemize}
+  \item Extend the definition of probabilistic range queries on evolving-density trajectory database
+  \item Present access methods to index evolving-density trajectories
+  \begin{fitemize}
+    \item teh algorithm for evaluating the queries based on the indexes
+  \end{fitemize}
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Definitions}
+
+\begin{definition}[Presence Probability]
+  Given an uncertain object $u$, a circular query range $\odot(q, r_q)$ centered at $q$ with radius $r_q$, the presence probability of $u$ in the range $\odot(q, r_q)$ is defined as:
+  \begin{equation*}
+    Pr(u, \odot(q, r_q)) = \int_{u \cap \odot(q, r_q)} pdf(u, p) dp
+  \end{equation*}
+  where $pdf(u, p)$ denotes the probability density of object $u$ at point $p$.
+\end{definition}
+
+\begin{definition}[Snapshot Object]
+  Given an uncertain trajectory $o$ and a timestamp $t_q$, we define $o(t_q)$ as the uncertain object of $o$ at time $t_q$.
+\end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Definitions}
+
+\begin{definition}[Probabilistic Range Query]
+  Given a query range $\odot(q, r_q)$, a timestamp $t_q$, and a probability threshold $\rho$, a probabilistic range query $\mathcal{R}$ on an evolving-density trajectory database $\mathcal{D}$ returns all trajectories that have presence probabilities in $\odot(q, r_q)$ above $\rho$.
+  \begin{equation*}
+    \mathcal{R}_{\mathcal{D}}(\odot(q,r_q), t_q) = \{ o \in \mathcal{D}: Pr(o(t_q), \odot(q, r_q)) > \rho \}
+  \end{equation*}
+\end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Compute the Uncertain Object}
+
+\ssize{
+\begin{problem}[compute the uncertain object $o(t_q)$ for the trajectory $o$ at time $t_q$]
+  Let $o.t_1, o.t_2, \ldots, o.t_m$ be an increasing sequence of sampling timestamps for the trajectory $o$, i.e., we have $o.t_1 \leq o.t_2 \leq \ldots \leq o.t_m$, in addition, let $o.\mu_i$ and $o.\sigma_i$ be the mean and standard deviation of $o$ at time $o.t_i$.
+\end{problem}
+}
+
+\vspace{-10pt}
+
+\begin{columns}
+
+  \column{0.2\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/5-1/5-1-4.pdf}
+  \end{figure}
+
+  \column{0.8\textwidth}
+  \begin{block}{CASE 1 \quad $t_q = o.t_i$ for some $i \in [1, m]$}
+    In the case, $o.t_q$ is an uncertain object with the mean $o.\mu_i$ and deviation $o.\sigma_i$
+    \begin{equation*}
+      o(t_q).\mu = o.\mu_i, o(t_q).\sigma = o.\sigma_i
+    \end{equation*}
+  \end{block}
+
+\end{columns}
+
+\vspace{-5pt}
+
+\begin{columns}
+
+  \column{0.2\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/5-1/5-1-5.pdf}
+  \end{figure}
+
+  \column{0.8\textwidth}
+  \begin{block}{CASE 2 \quad $o.t_i < t_q < o.t_{i+1}$ for some $i \in [1, m)$}
+    In the case, $o.t_q$ is an uncertain object with the mean $o.\mu_i$ and deviation $o.\sigma_i$
+    \vspace{-10pt}
+    \begin{equation*}
+      \begin{split}
+      & o(t_q).\mu = o.\mu_i + (o.\mu_{i+1} - o.\mu_i) \cdot \frac{t.q-o.t_i}{o.t_{i+1}-o.t_i} \\
+      & o(t_q).\sigma = o.\sigma_i + (o.\sigma_{i+1} - o.\sigma_i) \cdot \frac{t.q-o.t_i}{o.t_{i+1}-o.t_i}
+      \end{split}
+    \end{equation*}
+  \end{block}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Indexing Evolving-Density Trajectories}
+
+Taking into account the temporal information, to index evolving-density trajectories with two complementary components:
+
 
 \end{frame}

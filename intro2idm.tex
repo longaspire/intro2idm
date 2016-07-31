@@ -119,11 +119,12 @@ linkcolor=red
 \newcommand{\conceptbf}[1]{{\bf{\textrm{\textcolor[rgb]{0,0,0.9}{#1}}}}}
 \newcommand{\fsize}[1]{\footnotesize{#1}}
 \newcommand{\ssize}[1]{\scriptsize{#1}}
-\renewcommand{\emph}[1]{\textit{\textrm{#1}}}
 \newenvironment{smitemize}{\begin{itemize}\small}{\end{itemize}}
 \newenvironment{fitemize}{\begin{itemize}\footnotesize}{\end{itemize}}
 \newenvironment{sitemize}{\begin{itemize}\scriptsize}{\end{itemize}}
 \newenvironment{titemize}{\begin{itemize}\tiny}{\end{itemize}}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\renewcommand{\emph}[1]{\textit{\textrm{#1}}}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -164,99 +165,99 @@ Database Laboratory, Zhejiang University \\ % Your institution for the title pag
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{1. Outlines} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{1. Outlines}
 %------------------------------------------------
 
 % \include{sec_1}
 % \include{sec_1_ref}
 
 %------------------------------------------------
-\section{2. Indoor Space Models \& Applications} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{2. Indoor Space Models \& Applications}
 %------------------------------------------------
 
-\subsection{2.1 Graph Model Based Indoor Tracking} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.1 Graph Model Based Indoor Tracking}
 
 % \include{sec_2_1}
 % \include{sec_2_1_ref}
 
-\subsection{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}
 
 % \include{sec_2_2}
 % \include{sec_2_2_ref}
 
-\subsection{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space}
 
 % \include{sec_2_3}
 % \include{sec_2_3_ref}
 
-\subsection{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.4 Spatio-temporal Joins on Symbolic Indoor Tracking Data}
 
 % \include{sec_2_4}
 % \include{sec_2_4_ref}
 
-\subsection{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}
 
 % \include{sec_2_5}
 % \include{sec_2_5_ref}
 
-\subsection{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}
 
 % \include{sec_2_6}
 % \include{sec_2_6_ref}
 
-\subsection{2.7 Distance-Aware Join for Indoor Moving Objects} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.7 Distance-Aware Join for Indoor Moving Objects}
 
 % \include{sec_2_7}
 % \include{sec_2_7_ref}
 
-\subsection{2.8 Extracting Indoor Spatial Objects from CAD Models} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{2.8 Extracting Indoor Spatial Objects from CAD Models}
 
 % \include{sec_2_8}
 % \include{sec_2_8_ref}
 
 %------------------------------------------------
-\section{3. Indoor Data Cleansing} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{3. Indoor Data Cleansing}
 %------------------------------------------------
 
-\subsection{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}
 
 % \include{sec_3_1}
 % \include{sec_3_1_ref}
 
-\subsection{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}
 
 % \include{sec_3_2}
 % \include{sec_3_2_ref}
 
-\subsection{3.3 Handling False Negatives in Indoor RFID Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{3.3 Handling False Negatives in Indoor RFID Data}
 
 % \include{sec_3_3}
 % \include{sec_3_3_ref}
 
-\subsection{3.4 Offline Cleaning of RFID Trajectory Data (PART I)} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{3.4 Offline Cleaning of RFID Trajectory Data (PART I)}
 
 % \include{sec_3_4_1}
 % \include{sec_3_4_1_ref}
 
-\subsection{3.4 Offline Cleaning of RFID Trajectory Data (PART II)} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}
 
 % \include{sec_3_4_2}
 % \include{sec_3_4_2_ref}
 
-\subsection{3.5 Learning-Based Cleansing for Indoor RFID Data} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{3.5 Learning-Based Cleansing for Indoor RFID Data}
 
 % \include{sec_3_5}
 % \include{sec_3_5_ref}
 
 %------------------------------------------------
-\section{4. Indoor Movement Analysis} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{4. Indoor Movement Analysis}
 %------------------------------------------------
 
 %------------------------------------------------
-\section{5. Appendix} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{5. Appendix}
 %------------------------------------------------
 
-\subsection{5.1 Managing Evolving Uncertainty in Trajectory Databases} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{5.1 Managing Evolving Uncertainty in Trajectory Databases}
 
 \include{sec_5_1}
 \include{sec_5_1_ref}
