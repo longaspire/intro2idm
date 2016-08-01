@@ -18,7 +18,6 @@ H.~Jeung, H.~Lu, T.B.~Pedersen, S.~Sathe, M L.~Yiu.\\~\\
 \frametitle{Motivation}
 
 \begin{itemize}
-  \setlength{\itemsep}{2em}
   \item \emph{Uncertainty management} is a central issue in trajectory databases
   \begin{fitemize}
     \item a common principle -- ``location uncertainty is captured by a certain range centered on the position recorded in the database''
@@ -53,7 +52,7 @@ H.~Jeung, H.~Lu, T.B.~Pedersen, S.~Sathe, M L.~Yiu.\\~\\
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Existing Uncertain Trajectory Models}
+\frametitle{Existing Uncetain Trajectory Models}
 
 There are two major reasons why uncertainty occurs in trajectory data:~\cite{pfoser1999capturing}
 \begin{fitemize}
@@ -70,7 +69,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Existing Uncertain Trajectory Models}
+\frametitle{Existing Uncetain Trajectory Models}
 
 \begin{figure}[tb]
   \includegraphics[width=\columnwidth]{figures/5-1/5-1-1.pdf}
@@ -92,7 +91,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Pitfalls of Existing Uncertain Trajectory Models}
+\frametitle{Pitfalls of Existing Uncetain Trajectory Models}
 
 \textrm{I.} \quad the uncertain trajectory models generally regard a location measured from positioning technology as a precise, actual location of an object, while modeling an uncertainty range based on the reported position as center.\\~\\
 
@@ -105,9 +104,9 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Pitfalls of Existing Uncertain Trajectory Models}
+\frametitle{Pitfalls of Existing Uncetain Trajectory Models}
 
-\textrm{IV.} \quad most of the models assume that the probability density function (PDF) of a location is given, \emph{it is however a non-trivial problem to compute the parameters of a PDF}. \\~\\
+\textrm{IV.} \quad most of the models assume that the probability density function (PDF) of a location is given, \emph{it is however a non-trival problem to compute the parameters of a PDF}. \\~\\
 
 \textrm{V.} \quad some models require additional data beyond location coordinates: the beads model uses maximum speed of object to determine the thickness of ellipse, while the network-constrained model needs map data encompassing the coverage of trajectories.
 
@@ -162,7 +161,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
   \column{0.5\textwidth}
   \begin{example}
     \fsize{
-      The uncertain position models the object's actual location as the mean $\mu$, corresponding to the raw position $p$. In addition, the standard deviation $\sigma$ reflects the degree of uncertainty with respect to $\mu$.
+      The uncertain position models the object's acutal location as the mean $\mu$, corresponding to the raw position $p$. In addition, the standard deviation $\sigma$ reflects the degree of uncertainty with respect to $\mu$.
     }
   \end{example}
 
@@ -217,7 +216,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 
   \column{0.5\textwidth}
   \ssize{
-  \conceptbf{Evolving Density Estimator}\quad computes the probability distribution of an object's position at each time. The component takes a certain number of recent positions in a trajectory, and infers a Gaussian distribution at a current time. Domain-specific knowledge is supported for user-given estimator.
+  \conceptbf{Evolving Density Estimator}\quad computes the probability distribution of an object's position at each time. The component takes a certain number of recent positions in a trajectory, and infers a Gaussian distribution at a current time. Domian-specific knowledge is supported for user-given estimator.
   }
 \end{columns}
 
@@ -227,7 +226,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 
   \column{0.5\textwidth}
   \ssize{
-  \conceptbf{Trajectory Database}\quad manages not only the raw positions, but also the corresponding probability distributions derived from an evolving density estimator.
+  \conceptbf{Trajectory Database}\quad manages not only the raw positions, but also the correponding probability distributions derived from an evolving density estimator.
   }
 
   \column{0.5\textwidth}
@@ -246,7 +245,7 @@ Each of the uncertainty areas captures the measurement and sampling errors.
 
 \fsize{
 
-Generalized AutoRegressive Conditional Heteroscedasticity - \conceptbf{GARCH} model~\cite{shumway2010time} is a well-established stochastic volatility model that is generally used to assess an investment risk in finance, since volatility represents the degree of deviation from what the data is supposed to be, reflecting a measure of risk for investing.\\~\\
+Generalized AutoRegressive Conditional Heteroskedasticity - \conceptbf{GARCH} model~\cite{shumway2010time} is a well-established stochastic volatility model that is generally used to assess an investment risk in finance, since volatility represents the degree of deviation from what the data is supposed to be, reflecting a measure of risk for investing.\\~\\
 
 The implemented estimators have extended the GARCH model to handle multi-dimensional location data since the model can assess the deviation of a raw position from where the corresponding actual position is supposed to reside on.\\~\\
 
@@ -323,7 +322,7 @@ Given $\rho_{nm}$ and the univariate GARCH(1,1) models for $\lambda_{nn,i}$ and 
 
 Specifically, the R-Est estimator starts by computing the Euclidean norms of the errors $a_i$ by the VAR($k$) model, denoted at $\gamma_i$.\\~\\
 
-$a_i$ are the possible variations, such that positions $p_i$ are derived from the expected true positions $\hat{p_i}$. This means that $\gamma_i$ for each $i$ gives the uncertainty. Thus, R-Est uses $\gamma_i$ for inferring the deviation $\hat{\sigma_t}$.
+$a_i$ are the possible varations, such that positions $p_i$ are derived from the expected true positions $\hat{p_i}$. This means that $\gamma_i$ for each $i$ gives the uncertainty. Thus, R-Est uses $\gamma_i$ for inferring the deviation $\hat{\sigma_t}$.
 
 \end{frame}
 
@@ -347,7 +346,7 @@ Given a sliding window $S^{H}_{t-1}$, the AR($l$) model models $x_i = \hat{x_i} 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Comparison of Estimators}
+\frametitle{Comparision of Estimators}
 
 \begin{block}{Comparison of $C^2$-Est, R-Est, AR-Est}
 \fsize{
@@ -381,7 +380,7 @@ AR-Est & $AR(2)$ & radial GRAPH(1,1) & $O(3 \cdot H)$ \\
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Comparison of Estimators}
+\frametitle{Comparision of Estimators}
 
 \begin{block}{Comparison with Alternatives}
 \fsize{
@@ -393,7 +392,7 @@ AR-Est & $AR(2)$ & radial GRAPH(1,1) & $O(3 \cdot H)$ \\
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\textbf{Approaches} & \textbf{\tabincell{c}{Estimation \\ Accuracy}} & \textbf{\tabincell{c}{Estimation \\  Efficiency}} & \textbf{\tabincell{c}{Actual \\ Position}} & \textbf{\tabincell{c}{Uncertainty \\ Range}} & \textbf{\tabincell{c}{Multi \\ Dimensional}}\\
+\textbf{Approaches} & \textbf{\tabincell{c}{Estimation \\ Accuracy}} & \textbf{\tabincell{c}{Estimation \\  Efficienty}} & \textbf{\tabincell{c}{Actual \\ Position}} & \textbf{\tabincell{c}{Uncetainty \\ Range}} & \textbf{\tabincell{c}{Multi \\ Dimensional}}\\
 \hline
 \tabincell{c}{$C^2$-Est  R-Est \\ AR-Est} & high & high & \checkmark & \checkmark & \checkmark \\
 \hline
@@ -415,7 +414,7 @@ AR-Est & $AR(2)$ & radial GRAPH(1,1) & $O(3 \cdot H)$ \\
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Comparison of Estimators}
+\frametitle{Comparision of Estimators}
 
 \begin{block}{Accuracy Measure of Estimation}
 \fsize{
@@ -578,7 +577,7 @@ Taking into account the temporal information, to index evolving-density trajecto
   \column{0.52\textwidth}
   \begin{lemma}[Spatial Pruning]
     \small
-    Let $\epsilon_\rho$ be a value such that the probability of Gaussian distribution within $\mu \pm \epsilon_\rho \cdot \sigma$ equals to $\rho$. Given an uncertain snapshot object $rec$ with mean $rec.\mu$ and deviation $rec.\sigma$, if $\left \| rec.\mu, q \right \| > r_q + \epsilon_\rho \cdot rec.\sigma$, then $rec$ does not qualify as a result of the query.
+    Let $\epsilon_\rho$ be a vaule such that the probability of Gaussian distribution within $\mu \pm \epsilon_\rho \cdot \sigma$ equals to $\rho$. Given an uncertain snapshot object $rec$ with mean $rec.\mu$ and deviation $rec.\sigma$, if $\left \| rec.\mu, q \right \| > r_q + \epsilon_\rho \cdot rec.\sigma$, then $rec$ does not qualify as a result of the query.
   \end{lemma}
 
   \column{0.48\textwidth}
@@ -669,7 +668,7 @@ Taking into account the temporal information, to index evolving-density trajecto
   \begin{sitemize}
     \item Line 1: first generates $N$ samples using $N = 2 ln(1/\delta) \phi^2 \rho$ which allows to compute a presence probability no less than $(1 - \phi)\rho$ in the query region $\odot(q, r_q)$ with confidence no less than $1 - \delta$.
     \item Line 4: generate a random sample point around $rec.\mu$ obeying the deviation $rec.\sigma$.
-    \item Line 5--6: the generated point is verified whether it falls into the query region.
+    \item Line 5--6: the generated point is verified whether it falls into the quert region.
   \end{sitemize}
 
 \end{columns}
