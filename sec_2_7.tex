@@ -445,3 +445,342 @@ The simplified versions of ULBounds are more efficient since they only take one 
 \textrm{Geometric and topological ULBounds bound the distance by the minimum/maximum distance between sample pairs. The \conceptbf{Object Layer ULBounds} make a difference by considering the probability distributions among sample points.}
 
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\begin{definition}[$\beta$-region~\cite{chen2007efficient,lian2011similarity}]
+  Given an indoor object $O$, the $\beta$-region is a closed region such that the probability of $O$ being located inside the region is greater than $\beta$.
+\end{definition}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\textbf{CASE I} \quad Object's uncertainty region is relatively big compared to its indoor distance.
+
+\vspace{30pt}
+
+\begin{columns}[c]
+
+  \column{0.3\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-7/2-7-4.pdf}
+  \end{figure}
+
+  \column{0.7\textwidth}
+  \begin{example}
+    \ssize{
+      Given a predefined $\beta$ balue, the $\beta$-region can be constructed b first sorting an object's samples according to their distances from the centroid. Count and summarize their probabilities until $\beta$ is reached. The distance between the last counted sample point and the centroid is $r^\beta$. Thus, $O$'s $\beta$-region $O^\beta$ is determined by a circle $\odot(c, r^\beta)$.
+    }
+  \end{example}
+
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\textbf{CASE II} \quad Object overlaps with multiple partitions that are not interconnected. (not star-connected regions)
+
+\vspace{30pt}
+
+\begin{columns}[c]
+
+  \column{0.3\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-7/2-7-5.pdf}
+  \end{figure}
+
+  \column{0.7\textwidth}
+  \begin{example}
+    \ssize{
+      Randomly select a subregion $O[i]$ as the $\beta$-region. Here the value of $\beta$ equals to the summation of probabilities for samples inside $O[i]$, i.e., $\beta = \sum_{s \in O[i]}s.\rho$. The shape of the $\beta$-region is a rectangle, which is the intersection of $O$'s MBR and the partition containing $O[i]$.
+    }
+  \end{example}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\begin{lemma}[\small Simplified Case for Deriving Object Layer ULBounds]
+  \tiny
+  Given a point $q$ and an object $O$, we have:
+  \begin{equation*}
+    \begin{split}
+    & (1 - \beta) \cdot |q, O|_{minI} + \beta \cdot |q, O^\beta|_{minI} \leq |q, O|_I  \\
+    & \leq (1 - \beta) \cdot |q, O|_{maxI} + \beta \cdot |q, O^\beta|_{maxI}
+    \end{split}
+  \end{equation*}
+\end{lemma}
+
+\begin{proof}{\small}
+  \tiny
+  We first prove $|q, O|_I \leq (1 - \beta) \cdot |q, O|_{maxI} + \beta \cdot |q, O^\beta|_{maxI}$:
+  \begin{equation*}
+    \begin{split}
+      & |q, O|_I = E(|q, O|_I) = E_{s \in O^\beta}(|q, s|_I) \cdot Pr\{s \in O^\beta \} + \\
+      & E_{s \in O \setminus O^\beta} (|q, s|_I) \cdot Pr\{s \in O \setminus O^\beta \} \\
+      & = E_{s \in O^\beta}(|q, s|_I) \cdot \beta + E_{s \in O \setminus O^\beta} (|q, s|_I) \cdot (1 - \beta) \} \\
+      & \leq q, O|_{maxI} + \beta \cdot |q, O^\beta|_{maxI} (\forall s \in O^\beta, |q,s|_I \leq |q, O^\beta|_{maxI})
+    \end{split}
+  \end{equation*}
+  Likewise, we can prove $(1 - \beta) \cdot |q, O|_{minI} + \beta \cdot |q, O^\beta|_{minI} \leq |q, O|_I$, thus the lemma is proved.
+\end{proof}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\begin{lemma}[\small Object Layer ULBounds]
+  Suppose two objects $Q$ and $O$, $Q$'s $\beta_Q$-region is $Q^\beta$, $o$'s $\beta_O$-region is $O^\beta$ we have:
+  \begin{equation*}
+    \begin{split}
+    & (1 - \beta_Q) \beta_O \cdot |Q, O^\beta|_{minI} + \beta_Q \beta_O \cdot |Q^\beta, O^\beta|_{minI} + \\
+    & (1 - \beta_Q) (1 - \beta_O) \cdot |Q, O|_{minI} + \beta_Q (1 - \beta_O) \cdot |Q^\beta, O|_{minI} \\
+    & \leq |Q, O|_I  \\
+    & (1 - \beta_Q) \beta_O \cdot |Q, O^\beta|_{maxI} + \beta_Q \beta_O \cdot |Q^\beta, O^\beta|_{maxI} + \\
+    & (1 - \beta_Q) (1 - \beta_O) \cdot |Q, O|_{maxI} + \beta_Q (1 - \beta_O) \cdot |Q^\beta, O|_{maxI}
+    \end{split}
+  \end{equation*}
+\end{lemma}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\begin{proof}{\small}
+  Assume $q$ is a point inside $Q$, we have:
+  \begin{equation*}
+    \begin{split}
+      & E(|Q, O|) = E(|Q,O|_I ~|~ q \in Q^\beta) \cdot Pr\{q \in Q^\beta\} + \\
+      & E(|q,O|_I ~|~ q \in Q \setminus Q^\beta) \cdot Pr\{q \notin Q^\beta\} = \\
+      & E(|Q,O|_I ~|~ q \in Q^\beta) \cdot \beta_Q + E(|q,O|_I ~|~ q \in Q \setminus Q^\beta) \cdot (1 - \beta_Q)
+    \end{split}
+  \end{equation*}
+  for Case $q \in Q^\beta$, $E(|q, O|_I ~|~ q \in Q^\beta) \cdot \beta_Q \leq \beta_Q \beta_O \cdot |Q^\beta, O^\beta|_{maxI} + \beta_Q (1-\beta_O) \cdot |Q^\beta, O|_{maxI}$.\\
+  for Case $q \in Q \setminus Q^\beta$, $E(|q, O|_I ~|~ q \in Q \setminus Q^\beta) \cdot (1 - \beta_Q) \leq (1 - \beta_Q) \beta_O \cdot |Q, O^\beta|_{maxI} + (1 - \beta_Q) (1-\beta_O) \cdot |Q, O|_{maxI}$.\\
+  Summarize the two cases, we can get the conclusion. The lower bound part can be proved in a similar way.
+\end{proof}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Bounds for Indoor Distances}
+
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Cases} & Bounds \\
+\hline
+\tabincell{c}{single-partitioned region \\ star-connected region} & \tabincell{c}{Geometric Layer ULBounds \\ Topological Layer ULBounds} \\
+\hline
+\tabincell{c}{multi-partitioned region \\ big uncertainty region} & Object Layer ULBounds \\
+\hline
+\end{tabular}
+
+\begin{itemize}
+  \item to use geometric and topological ULBounds for the case that an object overlaps a single partition.
+  \item to use probabilistic ULBounds for the case that an object overlaps with multiple partitions.
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index for Indoor Space}
+
+\begin{columns}[c]
+
+  \column{0.5\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-6/2-6-8.pdf}
+  \end{figure}
+
+  \column{0.5\textwidth}
+  \begin{fitemize}
+    \item \conceptbf{geometric layer} consists of a tree structure that adapts the R$^*$-tree to index all partitions, as well as a skeleton tier that maintains a small number of distances between staircases.
+    \item \conceptbf{topological layer} maintains the connectivity information between indoor partitions.
+    \item \conceptbf{object layer} stores all indoor moving objects and is associated with the tree through partitions at its leaf level.
+  \end{fitemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index: Overview}
+
+\begin{figure}[tb]
+  \includegraphics[width=\columnwidth]{figures/2-6/2-6-9.pdf}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index: Tree Tier}
+
+\begin{fitemize}
+  \item instead of 3D $Minimum Bounding Rectangle$, when creating the tree, set the vertical length for one partition to 1 centimeter. Two advantage: 1) reduce the distance calculation workload; 2) makes the distance reflected in the tree more accurate without the disturbance from the vertical dimension.
+  \item the imbalanced partition are decomposed to small but regular region, each is called an \emph{index unit}.
+  \item A hash table is used to map such an index unit to its original indoor partition.
+  \item in addition to the MBRs, a leaf node (index unit) also stores:
+    \begin{sitemize}
+      \item a linked bucket for all objects inside it (Object Layer)
+      \item links to its connected partitions (Topological Layer)
+    \end{sitemize}
+\end{fitemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index: Tree Tier - Augmented Tree Tier}
+
+\textbf{Basic Idea} of performing a spatial join is \emph{to use the property that the MBR of an index node covers the MBRs of its subtree}.
+
+\vspace{20pt}
+
+To maintain the partial order property taht eases join processing, it augments each tree node $t$ with two attributes, $\{ t.r_{max}, t.r_{count} \}$.
+\begin{fitemize}
+  \item measure an object's size by the length of its MBR's longest dimension
+  \item $t.r_{max}$ to represent the largest object size of $t$'s subtree
+  \item $t.r_{count}$ to represent the number of objects associated with $t$'s subtree
+\end{fitemize}
+
+\vspace{20pt}
+
+Consequently, the \emph{augmented area} of $t$ is the Minkovski sum of $t$'s sum of $t$'s MBR and its $r_{max}$, denoted by $t \oplus t.r_{max}$.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index: Object Tier}
+
+A hash table $o-table$
+
+\begin{equation*}
+  o-table : \{ O \} \rightarrow 2^{\{index~unit\}}
+\end{equation*}
+
+$o-table$ maps an object to all the index units it overlaps, and it is tightly tie up with the tree tier.\\~\\
+
+When an object update occurs, $o-table$ needs to be updated accordingly.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index: Topological Tier}
+
+This layer maintains the connectivity between partitions. Each leaf node stores a (sub)partition.\\~\\
+
+For accessibility, the doors belonging to the partitions are also stored, as well as the the links to accessible partitions through each door.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Composite Index: Skeleton Tier}
+
+Skeleton Tier is a graph, each staircase entrance is captured as a graph node, and an edge connects two nodes if their entrances are on the same floor or their entrances belong to the same staircase.\\~\\
+
+The weight of an edge is the indoor distance between the two staircase entrances.
+
+\vspace{-10pt}
+\begin{columns}[c]
+
+  \column{0.4\textwidth}
+  \begin{figure}[tb]
+    \includegraphics[width=\columnwidth]{figures/2-6/2-6-11.pdf}
+  \end{figure}
+
+  \column{0.6\textwidth}
+  \ssize{
+  \begin{definition}[staircase distance matrix $M_{s2s}$]
+    \begin{sitemize}
+      \item $M_{s2s}[s_i,s_i] = 0$;
+      \item $M_{s2s}[s_i,s_j] = |s_i, s_j|_E$ if $s_i$ and $s_j$ are on the same floor;
+      \item if $s_i$ and $s_j$ are of a same staircase, $M_{s2s}[s_i,s_j]$ is the shortest distance from $s_i$ to $s_j$ within that staircase;
+      \item $M_{s2s}[s_i,s_j]$ is calculated as the shortest path distance from $s_i$ to $s_j$ in the skeleton layer for other cases.
+    \end{sitemize}
+  \end{definition}
+  }
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Skeleton Distance}
+
+\textrm{Let $q$ be a fixed indoor point, $q.f$ the floor of $q$, and $S(q.f)$ all the staircases on floor $q.f$.}
+
+\vspace{10pt}
+\begin{definition}[Skeleton Distance]
+  Given two points $p$ and $q$, their skeleton distance $|q,p|_K = |q,p|_E$ if they are on the same floor; otherwise, $|q,p|_K = \min_{s_q \in S(q.f), s_p \in S(p.f)}(|q,s_q|_E + M_{s2s}[s_q,s_p] + |s_p, p|_E)$.
+\end{definition}
+
+\vspace{10pt}
+Define the skeleton distance as the alternative \emph{Geometric Distance}.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Indoor Distance Bounds in the Geometric Layer}
+
+\begin{lemma}[Geometric Lower Bound Property]
+  Given two points $p$ and $q$, their skeleton distance lower bounds their indoor distance, i.e., $|q,p|_K \leq |q,p|_I$.\\~\\
+  \textbf{Proof:}~If $q$ and $p$ are on the same floor, $|q,p|_K = |q,p|_E \leq |q,p|_I$. Otherwise, suppose $s_{q}^{*} \in S(q.f)$ and $s_{p}^{*} \in S(p.f)$ are on the shortest path from $q$ to $p$, denoted by $q \overset{*s_{q}^{*}*s_{p}^{*}}{\rightarrow} p$. Since $|q,p|_K = \min_{s_q \in S(q.f), s_p \in S(p.f)}(|q,s_q|_E + M_{s2s}[s_q,s_p] + |s_p, p|_E) \leq |q,s_{q}^{*}|_E + M_{s2s}[s_{q}^{*},s_{p}^{*}] + |s_{p}^{*}, p|_E = |q,p|_I$, the lemma is proved.
+\end{lemma}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Indoor Distance Bounds in the Geometric Layer}
+
+Consider an entity $e$ that is either an object or an $ind$R-tree node. If $e$ spans multiple floors, we use interval $[e.lf,e.uf]$ to represent all those floors. Note those floors must be consecutive. We define the minimum skeleton distance $|q,e|_{minK}$:
+
+\begin{figure}[tb]
+  \includegraphics[width=0.7\columnwidth]{figures/2-6/2-6-12.pdf}
+\end{figure}
+
+With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much smaller range compared to if use the Euclidean distance bounds.
+
+\end{frame}
