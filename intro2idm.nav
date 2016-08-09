@@ -89,6 +89,18 @@
 \headcommand {\beamer@framepages {45}{45}}
 \headcommand {\slideentry {2}{7}{38}{46/46}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
 \headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {2}{7}{39}{47/47}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {2}{7}{40}{48/48}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {2}{7}{41}{49/49}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {2}{7}{42}{50/50}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {2}{7}{43}{51/51}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {2}{7}{44}{52/52}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {52}{52}}
 \headcommand {\beamer@subsectionentry {0}{2}{1}{5}{2.1 Graph Model Based Indoor Tracking}}\headcommand {\beamer@subsectionpages {4}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{2}{5}{2.2 Scalable Continuous Range Monitoring of Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{3}{5}{2.3 Probabilistic Threshold k Nearest Neighbor Queries over Moving Objects in Symbolic Indoor Space}}\headcommand {\beamer@subsectionpages {5}{4}}
@@ -96,34 +108,34 @@
 \headcommand {\beamer@subsectionentry {0}{2}{5}{5}{2.5 A Foundation for Efficient Indoor Distance-aware Query Processing}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{6}{5}{2.6 Efficient Distance-aware Query Evaluation on Indoor Moving Objects}}\headcommand {\beamer@subsectionpages {5}{4}}
 \headcommand {\beamer@subsectionentry {0}{2}{7}{5}{2.7 Distance-Aware Join for Indoor Moving Objects}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\slideentry {2}{7}{39}{47/47}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
-\headcommand {\beamer@framepages {47}{47}}
-\headcommand {\slideentry {2}{7}{39}{47/48}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
-\headcommand {\beamer@framepages {47}{48}}
-\headcommand {\beamer@subsectionentry {0}{2}{8}{49}{2.8 Extracting Indoor Spatial Objects from CAD Models}}\headcommand {\beamer@subsectionpages {5}{48}}
-\headcommand {\sectionentry {3}{3. Indoor Data Cleansing}{49}{3. Indoor Data Cleansing}{0}}
-\headcommand {\beamer@sectionpages {4}{48}}
-\headcommand {\beamer@subsectionpages {49}{48}}
-\headcommand {\slideentry {3}{0}{1}{49/49}{}{0}}
-\headcommand {\beamer@framepages {49}{49}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{50}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {49}{49}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{50}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {50}{49}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{50}{3.3 Handling False Negatives in Indoor RFID Data}}\headcommand {\beamer@subsectionpages {50}{49}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{50}{3.4 Offline Cleaning of RFID Trajectory Data (PART I)}}\headcommand {\beamer@subsectionpages {50}{49}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{50}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}}\headcommand {\beamer@subsectionpages {50}{49}}
-\headcommand {\beamer@subsectionentry {0}{3}{6}{50}{3.5 Learning-Based Cleansing for Indoor RFID Data}}\headcommand {\beamer@subsectionpages {50}{49}}
-\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{50}{4. Indoor Movement Analysis}{0}}
-\headcommand {\beamer@sectionpages {49}{49}}
-\headcommand {\beamer@subsectionpages {50}{49}}
-\headcommand {\slideentry {4}{0}{1}{50/50}{}{0}}
-\headcommand {\beamer@framepages {50}{50}}
-\headcommand {\sectionentry {5}{5. Appendix}{51}{5. Appendix}{0}}
-\headcommand {\beamer@sectionpages {50}{50}}
-\headcommand {\beamer@subsectionpages {50}{50}}
-\headcommand {\slideentry {5}{0}{2}{51/51}{}{0}}
-\headcommand {\beamer@framepages {51}{51}}
-\headcommand {\beamer@partpages {1}{51}}
-\headcommand {\beamer@subsectionpages {52}{51}}
-\headcommand {\beamer@sectionpages {51}{51}}
-\headcommand {\beamer@documentpages {51}}
-\headcommand {\def \inserttotalframenumber {47}}
+\headcommand {\slideentry {2}{7}{45}{53/53}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {2}{7}{45}{53/54}{2.7 Distance-Aware Join for Indoor Moving Objects}{0}}
+\headcommand {\beamer@framepages {53}{54}}
+\headcommand {\beamer@subsectionentry {0}{2}{8}{55}{2.8 Extracting Indoor Spatial Objects from CAD Models}}\headcommand {\beamer@subsectionpages {5}{54}}
+\headcommand {\sectionentry {3}{3. Indoor Data Cleansing}{55}{3. Indoor Data Cleansing}{0}}
+\headcommand {\beamer@sectionpages {4}{54}}
+\headcommand {\beamer@subsectionpages {55}{54}}
+\headcommand {\slideentry {3}{0}{1}{55/55}{}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{56}{3.1 Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}}\headcommand {\beamer@subsectionpages {55}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{56}{3.2 Spatiotemporal Data Cleansing for Indoor RFID Tracking Data}}\headcommand {\beamer@subsectionpages {56}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{56}{3.3 Handling False Negatives in Indoor RFID Data}}\headcommand {\beamer@subsectionpages {56}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{56}{3.4 Offline Cleaning of RFID Trajectory Data (PART I)}}\headcommand {\beamer@subsectionpages {56}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{56}{3.4 Offline Cleaning of RFID Trajectory Data (PART II)}}\headcommand {\beamer@subsectionpages {56}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{6}{56}{3.5 Learning-Based Cleansing for Indoor RFID Data}}\headcommand {\beamer@subsectionpages {56}{55}}
+\headcommand {\sectionentry {4}{4. Indoor Movement Analysis}{56}{4. Indoor Movement Analysis}{0}}
+\headcommand {\beamer@sectionpages {55}{55}}
+\headcommand {\beamer@subsectionpages {56}{55}}
+\headcommand {\slideentry {4}{0}{1}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\sectionentry {5}{5. Appendix}{57}{5. Appendix}{0}}
+\headcommand {\beamer@sectionpages {56}{56}}
+\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\slideentry {5}{0}{2}{57/57}{}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\beamer@partpages {1}{57}}
+\headcommand {\beamer@subsectionpages {58}{57}}
+\headcommand {\beamer@sectionpages {57}{57}}
+\headcommand {\beamer@documentpages {57}}
+\headcommand {\def \inserttotalframenumber {53}}

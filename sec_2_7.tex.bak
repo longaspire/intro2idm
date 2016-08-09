@@ -1,7 +1,7 @@
 \begin{frame}
 \frametitle{About This Work...}
 
-\emph{Distance-aware join for indoor moving objects}.~\cite{xie2015distance} \\
+\emph{Leveraging Spatio-Temporal Redundancy for RFID Data Cleansing}.~\cite{xie2015distance} \\
 X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
 
 \begin{itemize}
@@ -63,7 +63,7 @@ X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
 
 \begin{definition}[Semi-range Join]
   \ssize{
-  Given two sets of indoor objects $\mathbb{Q}$ and $\mathbb{O}$, and a distance threshold $\epsilon$, the semi-range join of the two sets returns all pairs $\{ \langle Q, O \rangle \}$ of objects, such that the distance from $Q$ to $O$ are within $\epsilon$. Formally:
+  Given two sets of indoor objects $\mathbb{Q}$ and $\mathbb{O}$, and a distance theshold $\epsilon$, the semi-range join of the two sets returns all pairs $\{ \langle Q, O \rangle \}$ of objects, such that the distance from $Q$ to $O$ are within $\epsilon$. Formally:
   }
   \begin{equation*}
     \mathbb{Q} \underset{\epsilon}{\ltimes} \mathbb{O} = \{ (Q, O) \in \mathbb{Q} \times \mathbb{O} | |Q,O|_I \leq \epsilon \}
@@ -90,9 +90,9 @@ X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
 
 \begin{itemize}
   \setlength{\itemsep}{30pt}
-  \item to study semi-joins instead of full joins, $\underset{k}{\Join}$ and $\underset{\epsilon}{\Join}$
+  \item to study semi-joins instead of ful joins, $\underset{k}{\Join}$ and $\underset{\epsilon}{\Join}$
   \begin{fitemize}
-    \item indoor space is a quasimetric space where distances are not symmetric
+    \item indoor space is a quasimetric space where distances are not symmetrics
     \item full joins can be easily implemented by semi-joins, e.g., $Q \underset{k}{\Join} O = Q \underset{k}{\ltimes} O \cap O \underset{k}{\ltimes} Q$
   \end{fitemize}
   \item call $\mathbb{Q}$ the \conceptbf{query objects}, and $\mathbb{O}$ the \conceptbf{target objects}.
@@ -120,7 +120,7 @@ X.~Xie, H.~Lu, and T.~B. Pedersen.\\~\\
   \item the accuracy of indoor positioning is limited, typically varying from a few to 100 meters
 \end{itemize}
 
-\textrm{To address these challenges, we need to support indoor distances that take into account topological constraints, temporal variations and location uncertainties.}
+\textrm{To address these challenges, we need to support indoor distances taht take into account topological constraints, temporal variations and location uncertainties.}
 
 \end{frame}
 
@@ -264,12 +264,12 @@ $|Q[i],O[j]|_I$ is calculated according to case I or case II.
 
 \conceptbf{Geometric Layer Lower Bounds}\\
 \ssize{
-Fot two indoor uncertain objects $Q$ and $O$, the (virtual) Euclidean distance between them is the lower bound of their distance in the indoor space. Therefore, it has $|Q,O|_{minE} \leq |Q,O|_{minI}$, where $|Q, O|_{minE} = \min_{q \in Q, o \in O}|q,o|_E$.
+Fot two indoor uncertain objects $Q$ and $O$, the (virtual) euclidean distance between them is the lower bound of their distance in the indoor space. Therefore, it has $|Q,O|_{minE} \leq |Q,O|_{minI}$, where $|Q, O|_{minE} = \min_{q \in Q, o \in O}|q,o|_E$.
 }
 
 \vspace{10pt}
 \begin{lemma}[Geometric Lower Bounds]
-  Given indoor object $Q$ denoted by $\odot(c_Q, r_Q)$, and $O$ denoted by $\odot(c_O, r_O)$, the geometric lower bound property can be rewritten as:
+  Given indoor object $Q$ denoted by $\odot(c_Q, r_Q)$, and $O$ denoted by $\odot(c_O, r_O)$, the geomtric lower bound property can be rewritten as:
   \begin{equation}
     |c_Q, c_O|_E - r_Q - r_O \geq |Q, O|_{minI}
   \end{equation}
@@ -376,7 +376,7 @@ For two objects $Q = \bigcup_{i = 1}^{m} Q[i]$ and $O = \bigcup_{j = 1}^{n} O[j]
 \frametitle{Bounds for Indoor Distances}
 
 \fsize{
-The simplified versions of ULBounds are more efficient since they only take one shortest path instead of $O(mn)$ paths. To generalize the single-partition case to multiple-partition scenarios, \conceptbf{star-connected region} is defined.
+The simplified versions of ULBounds are more efficient since they only take one shortest path instead of $O(mn)$ paths. To generalize the single-parition case to multiple-partition scenarios, \conceptbf{star-connected region} is defined.
 }
 
 \begin{definition}[Star-connected regions]
@@ -476,7 +476,7 @@ The simplified versions of ULBounds are more efficient since they only take one 
   \column{0.7\textwidth}
   \begin{example}
     \ssize{
-      Given a predefined $\beta$ value, the $\beta$-region can be constructed b first sorting an object's samples according to their distances from the centroid. Count and summarize their probabilities until $\beta$ is reached. The distance between the last counted sample point and the centroid is $r^\beta$. Thus, $O$'s $\beta$-region $O^\beta$ is determined by a circle $\odot(c, r^\beta)$.
+      Given a predefined $\beta$ balue, the $\beta$-region can be constructed b first sorting an object's samples according to their distances from the centroid. Count and summarize their probabilities until $\beta$ is reached. The distance between the last counted sample point and the centroid is $r^\beta$. Thus, $O$'s $\beta$-region $O^\beta$ is determined by a circle $\odot(c, r^\beta)$.
     }
   \end{example}
 
@@ -667,7 +667,7 @@ The simplified versions of ULBounds are more efficient since they only take one 
 
 \vspace{20pt}
 
-To maintain the partial order property that eases join processing, it augments each tree node $t$ with two attributes, $\{ t.r_{max}, t.r_{count} \}$.
+To maintain the partial order property taht eases join processing, it augments each tree node $t$ with two attributes, $\{ t.r_{max}, t.r_{count} \}$.
 \begin{fitemize}
   \item measure an object's size by the length of its MBR's longest dimension
   \item $t.r_{max}$ to represent the largest object size of $t$'s subtree
@@ -794,7 +794,7 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
   \item \emph{filtering} \quad retrieves candidate partitions as well as candidate objects for objects for join pairs.
   \item \emph{subgraph} \quad constructs a subgraph based on candidate partitions, and uses the doors of the partition containing query objects as sources to compute the shortest path that are to be used in the subsequent two phases.
   \item \emph{pruning} \quad upper/lower distance bounds for objects are calculated to further reduce the number of candidate join pairs.
-  \item \emph{refinement} \quad the indoor distances for the remaining pairs are computed and the qualifying results are returned as the query results.
+  \item \emph{refinement} \quad the indoor distances for the remaining pairs are computed and the qualifiying results are returned as the qurey results.
 \end{enumerate}
 
 \end{frame}
@@ -809,7 +809,7 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
 \end{lemma}
 
 \begin{proof}{}
-  Suppose region $R = P^Q \oplus P^Q.t_{max}$, we need to show that if $|R,P|_{minI} \geq \epsilon$ then $|Q, P|_{minI}$. From $R$'s definition, $Q$ must be totally covered by $R$. Then, we can have $|R,P|_{minI} \geq |Q,P|_{minI}$. So, if $|R,P|_{minI}$ is greater than $\epsilon$, $|Q,P|_{minI}$ must be greater than $\epsilon$. The lemma is proved.
+  Suppose region $R = P^Q \oplus P^Q.t_{max}$, we need to show that if $|R,P|_{minI} \geq \epsilon$ then $|Q, P|_{minI}$. From $R$'s definition, $Q$ must be totally coverd by $R$. Then, we can have $|R,P|_{minI} \geq |Q,P|_{minI}$. So, if $|R,P|_{minI}$ is greater than $\epsilon$, $|Q,P|_{minI}$ must be greater than $\epsilon$. The lemma is proved.
 \end{proof}
 
 \end{frame}
@@ -856,9 +856,9 @@ With $|q,e|_{minK}$, one can constrain the search via the $ind$R-tree to a much 
   \column{0.5\textwidth}
   \begin{sitemize}
     \item Line 3: calls \emph{Semi-range-filtering} to quickly qualify the joining pairs.
-    \item Lines 5--7: calls \emph{Range-Search} to search target objects for each element in $C$, $R_P$ and $R_O$ are guaranteed to avoid false negatives.
+    \item Lines 5--7: calls \emph{Range-Search} to search traget objects for each element in $C$, $R_P$ and $R_O$ are guaranteed to avoid false negatives.
     \item Line 8: \emph{Dijkstra} Algorithm is called to calculate single-source shortest paths starting at the doors of the partition $Q^P$.
-    \item Lines 9--12: makes use of the topological and object upper/lower bounds to approximate indoor distances and compare them to $\epsilon$.
+    \item Lines 9--12: makes use of the topological and object upper/lower bounds to appoximate indoor distances and compare them to $\epsilon$.
     \item Lines 13--15: the exact indoor distances are only computed for those object pairs whose distance bounds cover $\epsilon$.
   \end{sitemize}
 
