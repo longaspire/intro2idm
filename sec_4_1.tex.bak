@@ -22,7 +22,7 @@ H.~Lu, C.~Guo, B.~Yang, C.S.~Jensen.\\~\\
   \setlength{\itemsep}{15pt}
   \item The indoor movements of people are increasingly datafied due to advances in indoor positioning.\cite{InLoc0:online}
     \begin{fitemize}
-      \item indoor tracking data is being accumulated in a variety of formats determined by the particular indoor positioning systems.
+      \item indoor tracking data is being accumulated in a veriety of formats determined by the particular indoor positioning systems.
     \end{fitemize}
 
   \item Analyzing indoor tracking data can reveal how different parts of an indoor space are used.
@@ -78,7 +78,7 @@ H.~Lu, C.~Guo, B.~Yang, C.S.~Jensen.\\~\\
 \frametitle{Problem Definitions}
 
 \begin{itemize}
-  \item each indoor POI $p$ has some fixed extend modeled by a polygon.
+  \item each indoor POI $p$ has some fiexed extend modeled by a polygon.
   \item Given an object $o$, $UR(o, t)$ is $o$'s \conceptbf{snapshot uncertainty region} at time $t$. $UR(o, [t_s, t_e])$ is $o$'s \conceptbf{interval uncertainty region} during time interval $[t_s, t_e]$.
 \end{itemize}
 
@@ -117,15 +117,15 @@ H.~Lu, C.~Guo, B.~Yang, C.S.~Jensen.\\~\\
 
 \begin{problem}[Snapshot Top-$k$ Indoor POIs Query]
   \small
-  Given a set $P$ of indoor POIs, a time point $t$, and an integer $k$ ($0 < k \leq |P|$), return a $k$-subset $P_T$ of $P$ such that $\forall p \in P_T (\forall p' \in P \setminus P_T (\Phi_{t}(p) \geq \Phi_{t}(p')))$.
+  Given a set $P$ of indoor POIs, a time point $t$, and an interger $k$ ($0 < k \leq |P|$), return a $k$-subset $P_T$ of $P$ such that $\forall p \in P_T (\forall p' \in P \setminus P_T (\Phi_{t}(p) \geq \Phi_{t}(p')))$.
 \end{problem}
 
 \begin{problem}[Interval Top-$k$ Indoor POIs Query]
   \small
-  Given a set $P$ of indoor POIs, a time interval $[t_s, t_e]$, and an integer $k$ ($0 < k \leq |P|$), return a $k$-subset $P_T$ of $P$ such that $\forall p \in P_T (\forall p' \in P \setminus P_T (\Phi_{t_s, t_e}(p) \geq \Phi_{t_s, t_e}(p')))$.
+  Given a set $P$ of indoor POIs, a time interval $[t_s, t_e]$, and an interger $k$ ($0 < k \leq |P|$), return a $k$-subset $P_T$ of $P$ such that $\forall p \in P_T (\forall p' \in P \setminus P_T (\Phi_{t_s, t_e}(p) \geq \Phi_{t_s, t_e}(p')))$.
 \end{problem}
 
-\textrm{Most popular shops in a shopping mall / Possible bottlenecks that slow down movement}
+\textrm{Most popular shops in a shopping mall / Possble bottlenecks that slow down movement}
 
 \end{frame}
 
@@ -203,7 +203,7 @@ H.~Lu, C.~Guo, B.~Yang, C.S.~Jensen.\\~\\
   \includegraphics[width=0.6\columnwidth]{figures/4-1/4-1-4.pdf}
 \end{figure}
 
-For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive readings), object $o$'s location can be constrained by an ellipse, the length of the ellipse's major axis is $2a = V_{max} \cdot (rd_j.t_s - rd_i.t_e)$. Such a region covered by the ellipse is denoted by $\Theta(dev_i, dev_j, rd_i.t_e, rd_j.t_s)$.
+For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive readings), object $o$'s location can be constrained by an ellipse, the length of the ellipse's major axis is $2a = V_{max} \cdot (rd_j.t_s - rd_i.t_e)$. Suach a region covered by the ellipse is denoted by $\Theta(dev_i, dev_j, rd_i.t_e, rd_j.t_s)$.
 
 \end{frame}
 
@@ -424,7 +424,7 @@ For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive 
     Lines 1--11: build an in-memory aggregate R-tree $R_I$ for all objects whose augmented tracking interval covers query time $t$.
     \begin{sitemize}
         \item Line 5: if object is inactive, obtain the MBRs of the two proximity detection devices' detection ranges.
-        \item Lines 6--8: extend each of them by the corresponding maximum possible distance (merge them to form the object's MBRs).
+        \item Lines 6--8: extend each of them by the correponding maximum possible distance (merge them to form the object's MBRs).
         \item Lines 10: otherwise, the MBR of device $dev_{cov}$'s detection range is used for active state.
     \end{sitemize}
 
@@ -449,7 +449,7 @@ For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive 
   \column{.65\textwidth}
     Lines 12--18: the initialization for joining the POI R-tree $R_P$ and the aggregate object R-tree $R_I$.
     \begin{sitemize}
-        \item Line 12: a priority queue $Q$ is initialized that gives higher priority to $R_P$ node entries (group of POIs) that potentially have higher flow values.
+        \item Line 12: a priority queue $Q$ is initialized that gives higher priority to $R_P$ node entries (group of POIs) that potentally have higher flow values.
         \item Lines 13--18: when two tree roots are joined initially, the $count$ values in the $R_I$ entries are used to upper bound the flow values as an object's presence in any POI never exceeds 1.
     \end{sitemize}
 
@@ -479,7 +479,7 @@ For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive 
         \item Lines 28--32: otherwise, if the list contain leaf entries, derive the uncertainty region and presence for each object in the join list.
         \item Line 35: procedure expandList is called to join $e_P$ with sub-entries from the join list.
         \item Lines 37--43: if the current $e_P$ is non-leaf node and the join list contains leaf entries, the join algorithm overestimates the flow value for each of $e_P$'s sub-entries when joining them with the relevant entries.
-        \item Lines 47--48: procedure expandList is called.
+        \item Lines 47--48: procedure expendList is called.
     \end{sitemize}
 
 \end{columns}
@@ -490,7 +490,7 @@ For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Snapshot Query Algorithms: expandList}
+\frametitle{Snapshot Query Algorithms: expendList}
 
 \begin{columns}[c]
 
@@ -526,7 +526,7 @@ For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive 
   \begin{fitemize}
       \item Line 3: use a range query on A1R-tree to obtain the relevant leaf entries and objects that overlap the query time interval.
       \item Lines 4--6: a hash table to form the sequences for all objects obtained.
-      \item Lines 8--9: the uncertainty region of each object is calculated.
+      \item Lines 8--9: the uncertainty region of each object is calcuated.
   \end{fitemize}
 
 \end{columns}
@@ -594,7 +594,7 @@ For time interval $[rd_i.t_e, rd_j.t_s]$ ($rd_i$ and $rd_j$ are two consecutive 
   \setlength{\itemsep}{10pt}
   \item Instead of simply check whether two MBRs intersect, it does additional checks when a leaf node entry $e'_I$ is taken from $R_I$.
   \begin{fitemize}
-    \item if $e'_I$ is a leaf node entry and its MBR intersects $e_P$'s, continue to check $e_P$'s MBR against the smaller MBR covered by $e'_I$ as described above.
+    \item if $e'_I$ is a leaf node entry and its MBR intersects $e_P$'s, continue to check $e_P$'s MBR against the smaller MBR coverd by $e'_I$ as described above.
   \end{fitemize}
   \item In similar fashion, apply the additional MBR intersection checks to the Join Algorithm  when it processes leaf entries from $R_I$.
 \end{itemize}

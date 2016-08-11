@@ -18,4 +18,5 @@
 \beamer@subsectionintoc {3}{6}{3.5 Learning-Based Cleansing for Indoor RFID Data}{6}{0}{3}
 \beamer@sectionintoc {4}{4. Indoor Movement Analysis}{6}{0}{4}
 \beamer@subsectionintoc {4}{1}{4.1 Finding Frequently Visited Indoor POIs Using Symbolic Indoor Tracking Data}{7}{0}{4}
-\beamer@sectionintoc {5}{5. Appendix}{12}{0}{5}
+\beamer@sectionintoc {5}{5. Appendix}{39}{0}{5}
+\beamer@subsectionintoc {5}{1}{5.1 Managing Evolving Uncertainty in Trajectory Databases}{40}{0}{5}
